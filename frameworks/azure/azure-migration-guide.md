@@ -24,11 +24,13 @@ This guide provides a structured, phased approach to migrating workloads to Micr
 - Build a cloud business case with TCO analysis using the [Azure TCO Calculator](https://azure.microsoft.com/pricing/tco/calculator/)
 - Identify executive sponsor and Cloud Adoption Team members
 - Align to relevant compliance requirements (GDPR, ISO 27001, HIPAA, FedRAMP)
+- ✅ **Run Microsoft SMART Assessment** — complete the [Strategic Migration Assessment and Readiness Tool](https://learn.microsoft.com/en-us/assessments/Strategic-Migration-Assessment/) to establish a baseline readiness score across all 10 SMART categories. Use the accelerator's [SMART Assessment Guide](../../assessments/smart-migration-assessment.md) for facilitated deep-dive discovery.
 
 **Deliverables:**
 - Cloud Strategy Document
 - Business Case & ROI Model
 - Executive Stakeholder Alignment Sign-off
+- **SMART Readiness Index (SRI) — baseline scores for all 10 categories**
 
 ---
 
@@ -38,6 +40,7 @@ This guide provides a structured, phased approach to migrating workloads to Micr
 
 **Key Activities:**
 - Complete full application portfolio inventory (use [Azure Migrate](https://azure.microsoft.com/products/azure-migrate/) for discovery)
+- ✅ **Address SMART Category 3 (Discovery & Assessment):** Deploy Azure Migrate appliances; run dependency analysis; produce rationalization register. See [SMART Category 3 guidance](../../assessments/smart-migration-assessment.md#category-3-discovery--assessment).
 - Apply the **5 Rs of Rationalization**:
   - **Rehost** (Lift & Shift) — Move as-is to Azure IaaS
   - **Refactor** — Minor code changes to use PaaS (e.g., Azure App Service, Azure SQL)
@@ -54,6 +57,7 @@ This guide provides a structured, phased approach to migrating workloads to Micr
 - Migration Wave Plan
 - Azure Subscription Design
 - Skills Readiness Plan
+- **SMART Categories 3, 4, 5, 6 scores updated (post-Plan phase)**
 
 ---
 
@@ -94,6 +98,7 @@ Management Group Hierarchy
 - Network Architecture Diagram
 - Azure Policy Baseline
 - RBAC Role Assignments Matrix
+- **SMART Category 7 (Landing Zone) score ≥ 80 before Wave 1 migration begins**
 
 ---
 
@@ -128,6 +133,7 @@ Management Group Hierarchy
 - Migration Wave Runbook
 - Go/No-Go Checklist (per wave)
 - Post-Migration Validation Report
+- **SMART Category 8 (Migration Execution) score updated post-Wave 1**
 
 ---
 
@@ -157,6 +163,21 @@ Management Group Hierarchy
 - Cloud Operations Runbook
 - Monthly Cost Optimization Report
 - Well-Architected Review Report
+- **SMART Categories 9 (Governance) and 10 (Management) scores ≥ 80 — target for full program completion**
+
+---
+
+## SMART Gate Criteria per Migration Phase
+
+The following table defines the minimum SMART category scores required before advancing to each phase:
+
+| Migration Phase | SMART Categories | Minimum Score | Gate Check |
+|---|---|---|---|
+| Advance to **Plan** | Business Strategy (1), Business Case (4) | ≥ 60 | Phase 1 gate |
+| Advance to **Ready** | Discovery & Assessment (3), Migration Plan (5), Technical Skilling (6), Partner Support (2) | ≥ 60 | Phase 2 gate |
+| Advance to **Migrate** (Wave 1) | Landing Zone (7) | ≥ 80 | Phase 3 gate |
+| Advance to **Migrate** (at-scale) | Migration Execution (8) | ≥ 60 | Post-Wave 1 gate |
+| **Program Complete** | Governance (9), Management (10) | ≥ 80 | Final gate |
 
 ---
 
@@ -185,4 +206,4 @@ Management Group Hierarchy
 
 ---
 
-*See also: [Multi-Cloud Strategy](../multi-cloud/multi-cloud-strategy.md) | [Security Framework](../../security/security-compliance-framework.md) | [Governance Framework](../../governance/cloud-governance-framework.md)*
+*See also: [SMART Migration Assessment](../../assessments/smart-migration-assessment.md) | [Multi-Cloud Strategy](../multi-cloud/multi-cloud-strategy.md) | [Security Framework](../../security/security-compliance-framework.md) | [Governance Framework](../../governance/cloud-governance-framework.md)*

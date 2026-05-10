@@ -12,6 +12,21 @@ This playbook equips pre-sales architects and alliance partners with the tools, 
 
 ---
 
+## Microsoft Assessment Toolkit for Pre-Sales
+
+The following Microsoft assessments should be used in sequence during the Azure pre-sales motion:
+
+| Assessment | When to Run | Duration | Output |
+|---|---|---|---|
+| **[SMART — Strategic Migration Assessment](https://learn.microsoft.com/en-us/assessments/Strategic-Migration-Assessment/)** | Early discovery (before proposal) | 15 min (online) / 2 hrs (facilitated) | 10-category SRI score + personalized recommendations |
+| **[Cloud Adoption Strategy Evaluator](https://learn.microsoft.com/assessments/cloud-journey-tracker/)** | Alongside SMART | 15 min | Strategy maturity score + adoption guidance |
+| **[Azure Well-Architected Review](https://learn.microsoft.com/assessments/azure-architecture-review/)** | Per workload (post-migration) | 30–60 min | WAF pillar scores + workload-specific recommendations |
+| **[Microsoft Defender for Cloud Secure Score](https://azure.microsoft.com/products/defender-for-cloud/)** | Post-landing zone deployment | Continuous | Security posture score (target: >60%) |
+
+> **Pre-Sales Tip:** Lead with SMART in the first or second customer meeting. The personalized Microsoft-generated report creates credibility, surfaces customer pain points objectively, and naturally leads to a proposal addressing the identified gaps.
+
+---
+
 ## Opportunity Qualification Framework
 
 ### The MEDDPICC Qualification Model for Cloud Deals
@@ -183,8 +198,11 @@ This playbook equips pre-sales architects and alliance partners with the tools, 
 
 ### Assessment Phase
 - [ ] Delivered Cloud Readiness Assessment ([assessments/cloud-readiness-assessment.md](../assessments/cloud-readiness-assessment.md))
+- [ ] **Run Microsoft SMART Assessment** — complete with customer at [learn.microsoft.com/en-us/assessments/Strategic-Migration-Assessment/](https://learn.microsoft.com/en-us/assessments/Strategic-Migration-Assessment/) (≈15 mins) and/or run facilitated deep-dive using the [SMART Assessment Guide](../assessments/smart-migration-assessment.md)
+- [ ] SMART Readiness Index (SRI) baseline established — scores recorded for all 10 categories
+- [ ] Gaps identified from SMART; priority actions agreed with customer
 - [ ] Proposed landing zone architecture aligned to customer requirements
-- [ ] Built directional TCO/ROI business case
+- [ ] Built directional TCO/ROI business case (SMART Category 4 gap if business case score <60)
 
 ### Proposal Phase
 - [ ] Proposed phased migration roadmap (3-year horizon)
@@ -200,4 +218,4 @@ This playbook equips pre-sales architects and alliance partners with the tools, 
 
 ---
 
-*See also: [Cloud Readiness Assessment](../assessments/cloud-readiness-assessment.md) | [Multi-Cloud Strategy](../frameworks/multi-cloud/multi-cloud-strategy.md) | [FinOps Framework](../cost-optimization/finops-framework.md)*
+*See also: [SMART Migration Assessment](../assessments/smart-migration-assessment.md) | [Cloud Readiness Assessment](../assessments/cloud-readiness-assessment.md) | [Multi-Cloud Strategy](../frameworks/multi-cloud/multi-cloud-strategy.md) | [FinOps Framework](../cost-optimization/finops-framework.md)*

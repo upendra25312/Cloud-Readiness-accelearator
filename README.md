@@ -24,6 +24,8 @@ It provides a structured, repeatable approach to cloud readiness — from initia
 ```
 Cloud-Readiness-Accelerator/
 ├── assessments/                  # Cloud Readiness Assessment questionnaires & scorecards
+│   ├── cloud-readiness-assessment.md   # Multi-cloud, 6-domain maturity assessment
+│   └── smart-migration-assessment.md   # Microsoft SMART — 10-category Azure migration readiness
 ├── frameworks/
 │   ├── azure/                    # Azure-specific architecture patterns & migration guides
 │   ├── aws/                      # AWS-specific architecture patterns & migration guides
@@ -42,7 +44,7 @@ Cloud-Readiness-Accelerator/
 
 ## Quick Start
 
-1. **Assess** — Begin with [`assessments/cloud-readiness-assessment.md`](assessments/cloud-readiness-assessment.md) to baseline your organization's cloud maturity.
+1. **Assess** — For Azure migrations, start with the [Microsoft SMART Assessment](assessments/smart-migration-assessment.md) to get a 10-category Azure migration readiness score. For multi-cloud, use [`assessments/cloud-readiness-assessment.md`](assessments/cloud-readiness-assessment.md).
 2. **Plan** — Use the relevant cloud framework in `frameworks/` to architect your target state.
 3. **Secure** — Apply the Zero Trust and compliance controls in `security/`.
 4. **Govern** — Establish landing zones and policies with `governance/`.
@@ -55,7 +57,8 @@ Cloud-Readiness-Accelerator/
 
 | Domain | Document |
 |---|---|
-| Cloud Readiness Assessment | [assessments/cloud-readiness-assessment.md](assessments/cloud-readiness-assessment.md) |
+| Cloud Readiness Assessment (Multi-Cloud) | [assessments/cloud-readiness-assessment.md](assessments/cloud-readiness-assessment.md) |
+| **Microsoft SMART Migration Assessment (Azure)** | [**assessments/smart-migration-assessment.md**](assessments/smart-migration-assessment.md) |
 | Azure Migration Guide | [frameworks/azure/azure-migration-guide.md](frameworks/azure/azure-migration-guide.md) |
 | AWS Migration Guide | [frameworks/aws/aws-migration-guide.md](frameworks/aws/aws-migration-guide.md) |
 | GCP Migration Guide | [frameworks/gcp/gcp-migration-guide.md](frameworks/gcp/gcp-migration-guide.md) |

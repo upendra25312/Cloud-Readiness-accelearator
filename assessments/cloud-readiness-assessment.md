@@ -12,6 +12,23 @@ This assessment provides a structured scoring model to evaluate an organization'
 
 Each domain is scored 1–5 (1 = Initial/Ad-hoc, 5 = Optimized). Use the [scorecard template](../templates/readiness-scorecard.md) to record results.
 
+> **Azure Migrations:** Complement this assessment with the **[Microsoft SMART Assessment](smart-migration-assessment.md)** (Strategic Migration Assessment and Readiness Tool). SMART provides 10-category, Azure-specific readiness scoring directly aligned to the Microsoft Cloud Adoption Framework. Run both assessments for the most complete picture.
+
+---
+
+## Assessment Framework Alignment
+
+This Cloud Readiness Assessment (CRA) is intentionally **cloud-agnostic** and covers organizational, technical, and operational maturity across Azure, AWS, and GCP. The Microsoft SMART assessment provides additional **Azure-specific depth** across its 10 categories.
+
+| CRA Domain | SMART Category (Azure-Specific) | AWS CAF Perspective | GCP Adoption Theme |
+|---|---|---|---|
+| 1. Strategy & Business Alignment | Business Strategy (1) · Business Case (4) | Business | Lead |
+| 2. Organization & Skills Readiness | Technical Skilling (6) · Partner Support (2) | People | Learn |
+| 3. Platform & Technical Readiness | Discovery & Assessment (3) · Migration Plan (5) · Migration Execution (8) | Platform | Scale |
+| 4. Security & Compliance | Landing Zone (7) — security controls | Security | Secure |
+| 5. Governance & Financial Management | Governance (9) | Governance | Lead |
+| 6. Operations & Resilience | Management (10) | Operations | Scale |
+
 ---
 
 ## Assessment Domains
@@ -148,3 +165,5 @@ Based on your maturity score:
 ---
 
 *For assessment facilitation guidance, see [docs/assessment-facilitation-guide.md](../docs/assessment-facilitation-guide.md).*
+
+*For Azure-specific migration readiness, also run the [Microsoft SMART Assessment](smart-migration-assessment.md).*

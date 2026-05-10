@@ -8,7 +8,12 @@
 
 ## Overview
 
-This guide provides facilitators with step-by-step instructions for running the [Cloud Readiness Assessment](../assessments/cloud-readiness-assessment.md) workshop with an enterprise customer or internal team.
+This guide provides facilitators with step-by-step instructions for running cloud readiness assessment workshops with enterprise customers or internal teams. It covers two complementary assessments:
+
+1. **Cloud Readiness Assessment (CRA)** — [assessments/cloud-readiness-assessment.md](../assessments/cloud-readiness-assessment.md): Multi-cloud, 6-domain organizational maturity assessment
+2. **Microsoft SMART Assessment** — [assessments/smart-migration-assessment.md](../assessments/smart-migration-assessment.md): Azure-specific, 10-category migration readiness assessment (aligned to Microsoft CAF)
+
+**Recommended approach for Azure migrations:** Run both. Start with the 15-minute online [SMART tool](https://learn.microsoft.com/en-us/assessments/Strategic-Migration-Assessment/) to generate a Microsoft-curated report, then use this facilitation guide to run the deeper discovery workshops for both CRA and SMART.
 
 ---
 
@@ -27,22 +32,57 @@ Identify and invite the right participants for each assessment domain:
 | Governance & Financial Management | FinOps Lead, Finance Manager, Cloud Platform Lead |
 | Operations & Resilience | SRE/Ops Lead, NOC Manager, BCDR Lead |
 
+For **SMART-specific categories**, ensure these additional participants are available:
+
+| SMART Category | Key Participant |
+|---|---|
+| Business Strategy | CEO/CIO/CFO — business strategy owner |
+| Partner Support | Procurement Lead, IT Vendor Manager |
+| Business Case | CFO, Finance Director |
+| Technical Skilling | HR/L&D, IT Training Manager |
+
 ### Pre-Read Materials (Send to Participants)
 - Cloud Readiness Assessment questionnaire (blank copy)
+- SMART Assessment overview: [assessments/smart-migration-assessment.md](../assessments/smart-migration-assessment.md)
 - Organization's current cloud strategy document (if available)
 - Current infrastructure overview / IT landscape summary
+- Request participants **complete the online SMART tool** at [learn.microsoft.com/en-us/assessments/Strategic-Migration-Assessment/](https://learn.microsoft.com/en-us/assessments/Strategic-Migration-Assessment/) before the workshop
 
 ---
 
 ## Workshop Format
 
-### Recommended Format
-- **Duration:** Full day (6–7 hours) or two half-day sessions
+### Option A: Combined CRA + SMART Deep-Dive (Recommended for Azure migrations)
+
+- **Duration:** Full day (7–8 hours) or two half-day sessions
 - **Mode:** In-person preferred; virtual acceptable (Microsoft Teams, Zoom)
 - **Facilitator:** Lead Cloud Architect or Pre-Sales Architect
 - **Scribe:** Project Manager or Associate Architect
+- **Pre-work:** Participants complete online SMART tool before the session
 
-### Agenda (Full Day)
+### Option B: CRA Only (Multi-cloud / cloud-agnostic)
+
+- **Duration:** Full day (6–7 hours)
+- **Suitable for:** Organizations assessing multi-cloud or AWS/GCP-primary workloads
+
+### Agenda (Option A — Full Day, Azure Focus)
+
+| Time | Session | Assessment Coverage |
+|---|---|---|
+| 09:00–09:30 | Introduction, objectives, review SMART online report | SMART Overview |
+| 09:30–10:15 | Business Strategy + Business Case deep-dive | SMART Cat. 1, 4 · CRA Domain 1 |
+| 10:15–10:30 | Break | |
+| 10:30–11:00 | Partner Support + Technical Skilling | SMART Cat. 2, 6 · CRA Domain 2 |
+| 11:00–12:00 | Discovery & Assessment + Migration Plan + Execution | SMART Cat. 3, 5, 8 · CRA Domain 3 |
+| 12:00–13:00 | Lunch Break | |
+| 13:00–14:00 | Landing Zone readiness | SMART Cat. 7 · CRA Domain 3, 4 |
+| 14:00–14:45 | Security & Compliance | CRA Domain 4 |
+| 14:45–15:30 | Governance (policies, cost management) | SMART Cat. 9 · CRA Domain 5 |
+| 15:30–16:00 | Management & Operations | SMART Cat. 10 · CRA Domain 6 |
+| 16:00–16:30 | Scoring, heat map, preliminary findings | All |
+| 16:30–17:00 | Priority action plan and next steps | All |
+
+### Agenda (Option B — CRA Only, Full Day)
 
 | Time | Session | Domain |
 |---|---|---|
@@ -85,18 +125,27 @@ When scoring each question (1–5), use these anchor definitions:
 
 ## Scoring & Report Generation
 
+### CRA Scoring
 1. Compile scores from all domain scorecards
-2. Enter into [readiness scorecard template](../templates/readiness-scorecard.md)
+2. Enter into [readiness scorecard template](../templates/readiness-scorecard.md) — CRA section
 3. Calculate domain % scores and overall maturity level
 4. Identify top 5 gaps (lowest-scoring questions by domain)
 5. Draft recommended 90-day action plan with owners
 
-### Report Sections (Deliverable)
-- Executive Summary (1 page)
-- Domain-by-Domain Findings (scored + narrative)
-- Heat Map (visual maturity by domain)
-- Top Gaps and Priority Recommendations
-- Proposed Cloud Readiness Roadmap (90-day + 12-month)
+### SMART Scoring
+1. Review the automatically generated SMART online report (from the pre-work)
+2. Record SMART category scores (0–100) in the [readiness scorecard template](../templates/readiness-scorecard.md) — SMART section
+3. Supplement with workshop findings from the [SMART Assessment Guide](../assessments/smart-migration-assessment.md)
+4. Identify any SMART categories scoring below 60 — these are blockers that must be addressed before migration proceeds
+5. Map SMART remediation actions to accelerator resources (see the SMART assessment guide for per-category links)
+
+### Report Sections (Combined Deliverable)
+- Executive Summary (1 page): CRA maturity level + SMART Readiness Index (SRI)
+- SMART Category Scores — radar/spider chart (10 categories)
+- CRA Domain Scores — bar chart (6 domains)
+- Combined Heat Map (visual maturity across all dimensions)
+- Top Gaps and Priority Recommendations (linked to accelerator remediation resources)
+- Proposed Migration Roadmap (90-day + 12-month), with SMART gate criteria
 
 ---
 
@@ -112,4 +161,4 @@ When scoring each question (1–5), use these anchor definitions:
 
 ---
 
-*Reference: [Cloud Readiness Assessment](../assessments/cloud-readiness-assessment.md) | [Readiness Scorecard Template](../templates/readiness-scorecard.md) | [Pre-Sales Playbook](../presales/presales-playbook.md)*
+*Reference: [Cloud Readiness Assessment](../assessments/cloud-readiness-assessment.md) | [SMART Migration Assessment](../assessments/smart-migration-assessment.md) | [Readiness Scorecard Template](../templates/readiness-scorecard.md) | [Pre-Sales Playbook](../presales/presales-playbook.md)*
