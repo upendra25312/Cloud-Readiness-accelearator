@@ -24,7 +24,7 @@ Use it to scope, deliver, and report a cloud readiness engagement — from first
 > I need to deliver a cloud readiness assessment for a customer.
 
 1. Read [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md) — understand the four phases and what you deliver in each
-2. Open [`Discovery-Phase-Guide.md`](Discovery-Phase-Guide.md) — start here for Phase 1 activities
+2. Open [`docs/guides/01-discovery-phase-guide.md`](docs/guides/01-discovery-phase-guide.md) — start here for Phase 1 activities
 3. Go to [`Templates/`](Templates/) — pick the templates for your current phase (see map below)
 4. See [`Examples/`](Examples/) — real assessment outputs to calibrate your own work
 

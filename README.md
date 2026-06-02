@@ -38,18 +38,20 @@ Total typical engagement: 12–23 weeks
 ```text
 ├── START-HERE.md                                   ← Start here — 5-minute orientation
 ├── docs/
-│   └── METHODOLOGY.md                             ← Full four-phase methodology
+│   ├── METHODOLOGY.md                             ← Full four-phase methodology
+│   ├── guides/
+│   │   ├── 01-discovery-phase-guide.md            ← Phase 1 delivery guide
+│   │   ├── 02-analysis-phase-guide.md             ← Phase 2 delivery guide
+│   │   ├── 03-evaluation-phase-guide.md           ← Phase 3 delivery guide
+│   │   └── 04-planning-phase-guide.md             ← Phase 4 delivery guide
+│   ├── integration/                               ← CMDB, monitoring, cloud tool integrations
+│   ├── customization/                             ← Industry and size adaptations
+│   ├── governance/                                ← Data validation and QA checklist
+│   └── reference/                                 ← Azure CAF and other reference PDFs
 ├── Templates/                                      ← All 16+ assessment templates
 ├── Examples/
 │   ├── AWS Example/                               ← AWS TCO and business case outputs
 │   └── Azure Example -1/                          ← Azure Migrate assessment outputs
-├── Discovery-Phase-Guide.md                        ← Phase 1 delivery guide
-├── Analysis-Phase-Guide.md                         ← Phase 2 delivery guide
-├── Evaluation-Phase-Guide.md                       ← Phase 3 delivery guide
-├── Planning-Phase-Guide.md                         ← Phase 4 delivery guide
-├── Customization-Guides/                           ← Industry and size adaptations
-├── Integration-Guides/                             ← CMDB, monitoring, cloud tool integrations
-├── Quality-Assurance/                              ← Data validation and QA checklist
 ├── Cloud_Readiness_Assessment_Project_Plan.xlsx    ← Project plan with milestones and RACI
 ├── Cloud_Readiness_Assessment_SoW.docx             ← SOW template
 ├── CLOUD-READINESS-ACCELERATOR-PLAN.md             ← Framework strategy and roadmap
@@ -74,10 +76,10 @@ Read [docs/METHODOLOGY.md](docs/METHODOLOGY.md). It defines entry criteria, acti
 
 | Phase | Guide |
 | --- | --- |
-| Discovery | [Discovery-Phase-Guide.md](Discovery-Phase-Guide.md) |
-| Analysis | [Analysis-Phase-Guide.md](Analysis-Phase-Guide.md) |
-| Evaluation | [Evaluation-Phase-Guide.md](Evaluation-Phase-Guide.md) |
-| Planning | [Planning-Phase-Guide.md](Planning-Phase-Guide.md) |
+| Discovery | [docs/guides/01-discovery-phase-guide.md](docs/guides/01-discovery-phase-guide.md) |
+| Analysis | [docs/guides/02-analysis-phase-guide.md](docs/guides/02-analysis-phase-guide.md) |
+| Evaluation | [docs/guides/03-evaluation-phase-guide.md](docs/guides/03-evaluation-phase-guide.md) |
+| Planning | [docs/guides/04-planning-phase-guide.md](docs/guides/04-planning-phase-guide.md) |
 
 ### Step 4 — Use the templates
 
