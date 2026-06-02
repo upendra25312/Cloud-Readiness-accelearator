@@ -45,3 +45,11 @@ logs/
 # Claude Code local settings
 .claude/
 .sixth/
+
+# Sensitive customer data — never publish
+Examples/Azure Example -2/DMG RFP - SOFT PERKS - Non Protected.pdf
+Examples/Azure Example -2/DMG RFP - SOFT PERKS - Notes Non Protected.pdf
+Examples/Azure Example -2/Microsoft Unified for DMG Media.pptx
+Examples/Azure Example -2/Hyperscaler_Decision_Matrix_Microsoft_Completed.xlsx
+Reports format example/
+SOW/
