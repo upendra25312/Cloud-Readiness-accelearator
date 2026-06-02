@@ -36,8 +36,8 @@ Use it to scope, deliver, and report a cloud readiness engagement — from first
 
 1. Read [`CLOUD-READINESS-ACCELERATOR-PLAN.md`](CLOUD-READINESS-ACCELERATOR-PLAN.md) — strategy, scope, and what the framework produces
 2. Read [`CLOUD-READINESS-ACCELERATOR-PRD.md`](CLOUD-READINESS-ACCELERATOR-PRD.md) — full requirements and quality standards
-3. Use [`Cloud_Readiness_Assessment_Project_Plan.xlsx`](Cloud_Readiness_Assessment_Project_Plan.xlsx) — project plan template with milestones and RACI
-4. Use [`Cloud_Readiness_Assessment_SoW.docx`](Cloud_Readiness_Assessment_SoW.docx) — SOW template to scope the engagement
+3. Use [`docs/reference/cra-project-plan-template.xlsx`](docs/reference/cra-project-plan-template.xlsx) — project plan template with milestones and RACI
+4. Use [`Templates/04-planning/sow-template.docx`](Templates/04-planning/sow-template.docx) — SOW template to scope the engagement
 
 ---
 

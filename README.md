@@ -48,12 +48,17 @@ Total typical engagement: 12–23 weeks
 │   ├── customization/                             ← Industry and size adaptations
 │   ├── governance/                                ← Data validation and QA checklist
 │   └── reference/                                 ← Azure CAF and other reference PDFs
-├── Templates/                                      ← All 16+ assessment templates
+├── Templates/
+│   ├── 01-discovery/                              ← Application inventory, infra profiling, dependency mapping
+│   ├── 02-analysis/                               ← Readiness scoring, governance foundations
+│   ├── 03-evaluation/                             ← TCO models (AWS/Azure/GCP), hyperscaler decision matrix, business case
+│   ├── 04-planning/                               ← Migration waves, risk register, governance model, SOW
+│   └── executive-reporting/                       ← Assessment report and executive summary templates
 ├── Examples/
 │   ├── AWS Example/                               ← AWS TCO and business case outputs
 │   └── Azure Example -1/                          ← Azure Migrate assessment outputs
-├── Cloud_Readiness_Assessment_Project_Plan.xlsx    ← Project plan with milestones and RACI
-├── Cloud_Readiness_Assessment_SoW.docx             ← SOW template
+├── docs/reference/cra-project-plan-template.xlsx   ← Project plan with milestones and RACI
+├── Templates/04-planning/sow-template.docx         ← SOW template
 ├── CLOUD-READINESS-ACCELERATOR-PLAN.md             ← Framework strategy and roadmap
 ├── CLOUD-READINESS-ACCELERATOR-PRD.md              ← Full requirements and quality standards
 ├── CHANGELOG.md                                    ← Version history
@@ -83,26 +88,27 @@ Read [docs/METHODOLOGY.md](docs/METHODOLOGY.md). It defines entry criteria, acti
 
 ### Step 4 — Use the templates
 
-All templates are in [Templates/](Templates/). Pick by phase:
+All templates are in [Templates/](Templates/), organised by phase:
 
 | Phase | Template | What It Produces |
 | --- | --- | --- |
-| Discovery | `Application Scoping & Profiling - template.xlsx` | Application inventory with tech stack, VM/DB counts, readiness flag |
-| Discovery | `Infrastructure-Profiling-Template.xlsx` | Server specs, OS, hypervisor, DC location, storage |
-| Discovery | `Dependency-Mapping-Template.xlsx` | App-to-app and app-to-infrastructure dependency map |
-| Analysis | `Cloud-Readiness-Assessment-v2.xlsx` | 5-dimension readiness scores — Technical, Operational, Security, Financial, Business |
-| Analysis | `Readiness-Scoring-Criteria-Template.xlsx` | Scoring definitions and weighting guide |
-| Analysis | `CRA - LITE Governance Foundations Alignment Tool - Template.xlsx` | Cloud governance maturity assessment |
-| Evaluation | `Hyperscaler-Decision-Matrix-Template.xlsx` | Weighted score across AWS, Azure, GCP — produces primary recommendation |
-| Evaluation | `AWS-Evaluation-Template.xlsx` | AWS TCO: On-Demand, 3-year Reserved Instances, Savings Plans |
-| Evaluation | `Azure-Evaluation-Template.xlsx` | Azure TCO: PAYG and 3-year RI, per region |
-| Evaluation | `GCP-Evaluation-Template.xlsx` | GCP TCO: On-Demand and 3-year CUDs |
-| Evaluation | `Business-Case-Template.xlsx` | Full TCO comparison, ROI, NPV, on-premises vs cloud |
-| Planning | `Migration-Wave-Planning-Template.xlsx` | Application sequencing into migration waves by priority |
-| Planning | `Risk-Assessment-Template.xlsx` | Technical, licensing, data, and timeline risk register |
-| Planning | `Governance-Model-Template.xlsx` | RACI, operating model, cloud governance design |
-| Reporting | `Cloud_Readiness_Assessment_Report_Template_v3_Audited.docx` | Full assessment report (30–50 pages) |
-| Reporting | `Cloud_Readiness_Assessment_Executive_Summary_Template_v3_Audited.pptx` | Executive summary deck for CTO/board |
+| Discovery | `01-discovery/application-scoping-profiling.xlsx` | Application inventory with tech stack, VM/DB counts, readiness flag |
+| Discovery | `01-discovery/infrastructure-profiling.xlsx` | Server specs, OS, hypervisor, DC location, storage |
+| Discovery | `01-discovery/dependency-mapping.xlsx` | App-to-app and app-to-infrastructure dependency map |
+| Analysis | `02-analysis/cloud-readiness-scoring-v2.xlsx` | 5-dimension readiness scores — Technical, Operational, Security, Financial, Business |
+| Analysis | `02-analysis/readiness-scoring-criteria.xlsx` | Scoring definitions and weighting guide |
+| Analysis | `02-analysis/governance-foundations-alignment.xlsx` | Cloud governance maturity assessment |
+| Evaluation | `03-evaluation/hyperscaler-decision-matrix.xlsx` | Weighted score across AWS, Azure, GCP — produces primary recommendation |
+| Evaluation | `03-evaluation/aws-evaluation.xlsx` | AWS TCO: On-Demand, 3-year Reserved Instances, Savings Plans |
+| Evaluation | `03-evaluation/azure-evaluation.xlsx` | Azure TCO: PAYG and 3-year RI, per region |
+| Evaluation | `03-evaluation/gcp-evaluation.xlsx` | GCP TCO: On-Demand and 3-year CUDs |
+| Evaluation | `03-evaluation/business-case-tco-roi.xlsx` | Full TCO comparison, ROI, NPV, on-premises vs cloud |
+| Planning | `04-planning/migration-wave-planner.xlsx` | Application sequencing into migration waves by priority |
+| Planning | `04-planning/risk-assessment.xlsx` | Technical, licensing, data, and timeline risk register |
+| Planning | `04-planning/governance-model.xlsx` | RACI, operating model, cloud governance design |
+| Planning | `04-planning/sow-template.docx` | SOW template — scope, deliverables, pricing model |
+| Reporting | `executive-reporting/cra-assessment-report-template-v3.docx` | Full assessment report (30–50 pages) |
+| Reporting | `executive-reporting/cra-executive-summary-v3.pptx` | Executive summary deck for CTO/board |
 
 ### Step 5 — Calibrate against reference examples
 
@@ -130,7 +136,7 @@ Full requirements are in [CLOUD-READINESS-ACCELERATOR-PRD.md](CLOUD-READINESS-AC
 
 Delivery scope, business case, and roadmap are in [CLOUD-READINESS-ACCELERATOR-PLAN.md](CLOUD-READINESS-ACCELERATOR-PLAN.md).
 
-Engagement scope and SOW language are in [Cloud_Readiness_Assessment_SoW.docx](Cloud_Readiness_Assessment_SoW.docx).
+Engagement scope and SOW language are in [Templates/04-planning/sow-template.docx](Templates/04-planning/sow-template.docx).
 
 ---
 
