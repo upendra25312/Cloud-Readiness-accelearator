@@ -1,342 +1,149 @@
-# 🚀 START HERE
-## Cloud Readiness Accelerator - Publishing Strategy
+# Start Here — Cloud Readiness Accelerator
 
-**Status**: ✅ Ready for Implementation
-**Date**: May 2026
+> **Read time: 5 minutes.** This is the only file you need to read before using the framework.
 
 ---
 
-## 📋 What You Asked For
+## What Is This?
 
-1. ✅ **Copilot Prompt** - Detailed markdown prompt to use with Copilot
-2. ✅ **Expert Recommendation** - SharePoint vs GitHub analysis
-3. ✅ **Implementation Plan** - Complete strategy and timeline
+The **Rackspace Cloud Readiness Accelerator (CRA)** is a complete, reusable toolkit for delivering professional cloud readiness assessments. It gives you:
 
----
+- A proven **four-phase methodology** (Discovery → Analysis → Evaluation → Planning)
+- **30+ templates** for every assessment deliverable — application inventory, TCO models, hyperscaler decision matrix, risk register, executive reports
+- **Reference examples** showing what real assessment outputs look like
+- **Executive presentations** ready for VP/CIO and alliance partner audiences
 
-## 📁 What You Have
-
-### **1. Copilot Prompt** 
-**File**: `COPILOT-SHAREPOINT-PROMPT.md`
-
-A detailed, step-by-step prompt you can copy and paste into Microsoft Copilot to:
-- Create SharePoint site structure
-- Upload all documents
-- Create pages and lists
-- Configure permissions
-- Set up training
-- Launch the site
-
-**How to Use**:
-1. Open `COPILOT-SHAREPOINT-PROMPT.md`
-2. Copy all content
-3. Paste into Copilot chat (copilot.microsoft.com)
-4. Follow the day-by-day instructions
+Use it to scope, deliver, and report a cloud readiness engagement — from first customer meeting to board-ready recommendation.
 
 ---
 
-### **2. Expert Recommendation**
-**File**: `SHAREPOINT-VS-GITHUB-ANALYSIS.md`
+## Jump to Your Role
 
-Expert team analysis recommending:
+### I am a Cloud Architect or Cloud Engineer
 
-**HYBRID APPROACH** (Best):
-- **SharePoint** (Primary) - 80% of content
-  - Enterprise users
-  - Business stakeholders
-  - Internal team
-  
-- **GitHub** (Secondary) - 20% of content
-  - Developers
-  - External partners
-  - Community
+> I need to deliver a cloud readiness assessment for a customer.
 
-**Why Hybrid**:
-- ✅ Enterprise security + community collaboration
-- ✅ Maximum reach (internal + external)
-- ✅ Version control and automation
-- ✅ Future-proof strategy
+1. Read [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md) — understand the four phases and what you deliver in each
+2. Open [`Discovery-Phase-Guide.md`](Discovery-Phase-Guide.md) — start here for Phase 1 activities
+3. Go to [`Templates/`](Templates/) — pick the templates for your current phase (see map below)
+4. See [`Examples/`](Examples/) — real assessment outputs to calibrate your own work
 
 ---
 
-### **3. Implementation Files**
-**Location**: `Cloud Readiness acceleartor/` folder
+### I am a Delivery Manager or Practice Lead
 
-**All files ready**:
-- ✅ 24+ templates
-- ✅ 12+ guides
-- ✅ 8+ customization guides
-- ✅ Case studies
-- ✅ Resources
-- ✅ SharePoint publishing files
-- ✅ Implementation guides
+> I need to scope an engagement, set milestones, and ensure quality.
+
+1. Read [`CLOUD-READINESS-ACCELERATOR-PLAN.md`](CLOUD-READINESS-ACCELERATOR-PLAN.md) — strategy, scope, and what the framework produces
+2. Read [`CLOUD-READINESS-ACCELERATOR-PRD.md`](CLOUD-READINESS-ACCELERATOR-PRD.md) — full requirements and quality standards
+3. Use [`Cloud_Readiness_Assessment_Project_Plan.xlsx`](Cloud_Readiness_Assessment_Project_Plan.xlsx) — project plan template with milestones and RACI
+4. Use [`Cloud_Readiness_Assessment_SoW.docx`](Cloud_Readiness_Assessment_SoW.docx) — SOW template to scope the engagement
 
 ---
 
-## 🎯 Quick Decision Matrix
+### I am a VP, Director, or Alliance Partner
 
-### **Option 1: SharePoint Only**
-- **Timeline**: 6 days (May 2-7)
-- **Effort**: 40 hours
-- **Cost**: $9,000
-- **Users**: Internal only
-- **Best For**: Fast deployment
+> I need to understand what this framework is and what it produces.
 
-### **Option 2: Hybrid (Recommended)**
-- **Timeline**: 6 weeks (May 2 - June 12)
-- **Effort**: 60 hours
-- **Cost**: $12,000
-- **Users**: Internal + External
-- **Best For**: Maximum reach
+1. Open [`Cloud_Readiness_Accelerator_Rackspace_V1.1.pptx`](Cloud_Readiness_Accelerator_Rackspace_V1.1.pptx) — executive overview presentation
+2. Read [`CLOUD-READINESS-ACCELERATOR-PLAN.md`](CLOUD-READINESS-ACCELERATOR-PLAN.md) — business case, market positioning, and roadmap
+3. See [`README.md`](README.md) — full framework overview with alliance partner alignment
 
 ---
 
-## 🚀 Next Steps (Choose One)
+## The Four-Phase Framework
 
-### **If You Choose SharePoint Only**:
+```text
+Phase 1: Discovery          Phase 2: Analysis           Phase 3: Evaluation         Phase 4: Planning
+─────────────────────       ─────────────────────       ─────────────────────       ─────────────────────
+What you do:                What you do:                What you do:                What you do:
+• Application inventory     • Score readiness across    • Build TCO models for      • Define migration waves
+• Infrastructure profiling    5 dimensions                AWS, Azure, GCP           • Create risk register
+• Dependency mapping        • Identify gaps and risks   • Run hyperscaler           • Design governance model
+• SaaS assessment           • Cloud maturity workshop     decision matrix           • Write Part 2 entry point
 
-1. **Today**:
-   - Read: `SHAREPOINT-EXECUTIVE-SUMMARY.md`
-   - Approve: SharePoint deployment
+Key templates:              Key templates:              Key templates:              Key templates:
+Application Scoping &       Cloud-Readiness-            AWS/Azure/GCP-Evaluation    Migration-Wave-Planning
+  Profiling.xlsx              Assessment-v2.xlsx          -Template.xlsx              -Template.xlsx
+Infrastructure-Profiling    Readiness-Scoring-          Hyperscaler-Decision-       Risk-Assessment-
+  -Template.xlsx              Criteria-Template.xlsx      Matrix-Template.xlsx        Template.xlsx
+Dependency-Mapping          Governance-Foundations-     Business-Case-Template      Governance-Model-
+  -Template.xlsx               Alignment-Tool.xlsx         .xlsx                       Template.xlsx
 
-2. **May 2-7**:
-   - Use: `COPILOT-SHAREPOINT-PROMPT.md`
-   - Follow: 6-day timeline
-   - Execute: Day-by-day tasks
+Typical duration: 4-8 wks  Typical duration: 3-6 wks  Typical duration: 3-5 wks  Typical duration: 2-4 wks
+```
 
-3. **May 8**:
-   - Launch: SharePoint site
-   - Go-live: Framework available
-
----
-
-### **If You Choose Hybrid (Recommended)**:
-
-1. **Today**:
-   - Read: `SHAREPOINT-VS-GITHUB-ANALYSIS.md`
-   - Approve: Hybrid approach
-
-2. **May 2-15** (Phase 1):
-   - Use: `COPILOT-SHAREPOINT-PROMPT.md`
-   - Deploy: SharePoint site
-   - Launch: Internal access
-
-3. **May 16-29** (Phase 2):
-   - Create: GitHub repository
-   - Mirror: Documentation
-   - Enable: Community access
-
-4. **May 30 - June 12** (Phase 3):
-   - Integrate: Both platforms
-   - Set up: Automation
-   - Launch: Public access
+Total typical engagement: 12–23 weeks
 
 ---
 
-## 📊 Comparison
+## Template Quick Reference
 
-| Aspect | SharePoint Only | Hybrid |
-|--------|-----------------|--------|
-| Internal Access | ✅ | ✅ |
-| External Access | ❌ | ✅ |
-| Community | ❌ | ✅ |
-| Version Control | ⚠️ | ✅ |
-| Timeline | 6 days | 6 weeks |
-| Effort | 40 hours | 60 hours |
-| Cost | $9,000 | $12,000 |
+All templates are in [`Templates/`](Templates/). Pick by phase:
 
----
-
-## 📋 Files to Read (In Order)
-
-### **1. Executive Summary** (5 min)
-`SHAREPOINT-EXECUTIVE-SUMMARY.md`
-- Business case
-- ROI analysis
-- Strategic recommendations
-
-### **2. Expert Recommendation** (10 min)
-`SHAREPOINT-VS-GITHUB-ANALYSIS.md`
-- SharePoint vs GitHub comparison
-- Hybrid approach recommendation
-- Implementation roadmap
-
-### **3. Final Strategy** (5 min)
-`FINAL-PUBLISHING-STRATEGY.md`
-- Summary of all options
-- Next steps
-- Success criteria
-
-### **4. Implementation Guide** (Reference)
-`COPILOT-SHAREPOINT-PROMPT.md`
-- Use with Copilot
-- Day-by-day instructions
-- Detailed tasks
+| Phase | Template | Purpose |
+| --- | --- | --- |
+| **Discovery** | `Application Scoping & Profiling - template.xlsx` | Capture app inventory, tech stack, VM/DB counts, cloud readiness |
+| **Discovery** | `Infrastructure-Profiling-Template.xlsx` | Server specs, OS, hypervisor, DC location, storage |
+| **Discovery** | `Dependency-Mapping-Template.xlsx` | App-to-app and app-to-infra dependency map |
+| **Analysis** | `Cloud-Readiness-Assessment-v2.xlsx` | 5-dimension readiness scoring (Technical, Operational, Security, Financial, Business) |
+| **Analysis** | `Readiness-Scoring-Criteria-Template.xlsx` | Scoring definitions and weighting guide |
+| **Analysis** | `CRA - LITE Governance Foundations Alignment Tool - Template.xlsx` | Cloud governance maturity assessment |
+| **Evaluation** | `Hyperscaler-Decision-Matrix-Template.xlsx` | Weighted scoring across AWS, Azure, GCP — produces primary recommendation |
+| **Evaluation** | `AWS-Evaluation-Template.xlsx` | AWS TCO: On-Demand, 3-year RI, Savings Plans |
+| **Evaluation** | `Azure-Evaluation-Template.xlsx` | Azure TCO: PAYG and 3-year RI, per region |
+| **Evaluation** | `GCP-Evaluation-Template.xlsx` | GCP TCO: On-Demand and 3-year CUD |
+| **Evaluation** | `Business-Case-Template.xlsx` | Full TCO comparison, ROI, NPV, on-prem vs cloud |
+| **Planning** | `Migration-Wave-Planning-Template.xlsx` | Sequence apps into migration waves by priority |
+| **Planning** | `Risk-Assessment-Template.xlsx` | Technical, licensing, data, and timeline risk register |
+| **Planning** | `Governance-Model-Template.xlsx` | RACI, operating model, cloud governance design |
+| **Reporting** | `Cloud_Readiness_Assessment_Report_Template_v3_Audited.docx` | Full assessment report (30-50 pages) |
+| **Reporting** | `Cloud_Readiness_Assessment_Executive_Summary_Template_v3_Audited.pptx` | Executive summary deck for CTO/board |
 
 ---
 
-## 🎯 Recommended Path
+## Reference Examples
 
-### **STEP 1: Make Decision** (Today)
-- [ ] Read: `SHAREPOINT-VS-GITHUB-ANALYSIS.md`
-- [ ] Decide: SharePoint Only OR Hybrid
-- [ ] Approve: Budget and resources
+Use these to calibrate what your outputs should look like:
 
-### **STEP 2: Allocate Resources** (Today)
-- [ ] Assign: SharePoint Administrator
-- [ ] Assign: Content Manager
-- [ ] Assign: SharePoint Designer
-- [ ] Assign: QA Team
-- [ ] Assign: Training Team
-- [ ] Assign: Support Team
-
-### **STEP 3: Execute Implementation** (May 2+)
-- [ ] Use: `COPILOT-SHAREPOINT-PROMPT.md`
-- [ ] Follow: 6-day timeline
-- [ ] Execute: Day-by-day tasks
-- [ ] Test: Thoroughly
-- [ ] Launch: May 8
-
-### **STEP 4: Monitor & Support** (May 8+)
-- [ ] Track: Usage metrics
-- [ ] Collect: Feedback
-- [ ] Address: Issues
-- [ ] Plan: Improvements
+| Folder | What It Contains | Use It To |
+| --- | --- | --- |
+| [`Examples/AWS Example/`](Examples/AWS%20Example/) | AWS MPA pricing files (3 regions), business case decks (lift-and-shift, DB refactoring, storage) | See how AWS TCO and business case outputs look |
+| [`Examples/Azure Example -1/`](Examples/Azure%20Example%20-1/) | Azure Migrate assessments — PAYG and 3-year RI, across 3 regions (UK, Ireland, Germany) | See how Azure like-for-like and RI assessments look |
 
 ---
 
-## 💡 Expert Team Recommendation
+## Key Reference Documents
 
-**PROCEED WITH HYBRID APPROACH**
-
-**Why**:
-- ✅ Best of both worlds
-- ✅ Enterprise security + community collaboration
-- ✅ Maximum reach and impact
-- ✅ Future-proof strategy
-- ✅ Strong ROI
-
-**Timeline**:
-- Phase 1 (SharePoint): May 2-15
-- Phase 2 (GitHub): May 16-29
-- Phase 3 (Integration): May 30 - June 12
+| Document | What It Is |
+| --- | --- |
+| [`README.md`](README.md) | Full framework overview — read after this file |
+| [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md) | Detailed four-phase methodology with entry/exit criteria |
+| [`CLOUD-READINESS-ACCELERATOR-PLAN.md`](CLOUD-READINESS-ACCELERATOR-PLAN.md) | Strategic plan: business case, architecture, GitHub strategy |
+| [`CLOUD-READINESS-ACCELERATOR-PRD.md`](CLOUD-READINESS-ACCELERATOR-PRD.md) | Product requirements: functional, non-functional, quality standards |
+| [`CHANGELOG.md`](CHANGELOG.md) | Version history |
+| [`CONTRIBUTING.md`](CONTRIBUTING.md) | How to contribute templates, examples, or improvements |
 
 ---
 
-## 📞 Support
+## Alliance Partner Alignment
 
-### **Questions About**:
-
-**Copilot Prompt**:
-- File: `COPILOT-SHAREPOINT-PROMPT.md`
-- Use: Copy and paste into Copilot
-- Follow: Day-by-day instructions
-
-**Expert Recommendation**:
-- File: `SHAREPOINT-VS-GITHUB-ANALYSIS.md`
-- Read: Complete analysis
-- Decide: SharePoint or Hybrid
-
-**Implementation Details**:
-- File: `SHAREPOINT-IMPLEMENTATION-PLAN.md`
-- Reference: Detailed timeline
-- Execute: Task by task
+| Partner Program | How CRA Aligns |
+| --- | --- |
+| **Microsoft CAF** | CRA phases map to CAF stages: Strategy, Plan, Ready, Migrate, Govern |
+| **Microsoft AMM** | CRA TCO outputs and hyperscaler recommendation support AMM funding requests |
+| **AWS MAP** | CRA assessment phase maps to MAP Assess; outputs support deal registration |
+| **Google PSO** | CRA Discovery and Analysis outputs align with Google Migration Center inputs |
 
 ---
 
-## ✅ Checklist
+## Need Help?
 
-### **Preparation**
-- [ ] Read `SHAREPOINT-VS-GITHUB-ANALYSIS.md`
-- [ ] Make decision (SharePoint or Hybrid)
-- [ ] Get stakeholder approval
-- [ ] Allocate resources
-
-### **Team Assignment**
-- [ ] SharePoint Administrator
-- [ ] Content Manager
-- [ ] SharePoint Designer
-- [ ] QA Team
-- [ ] Training Team
-- [ ] Support Team
-
-### **Execution**
-- [ ] Use `COPILOT-SHAREPOINT-PROMPT.md`
-- [ ] Follow 6-day timeline
-- [ ] Execute day-by-day tasks
-- [ ] Test thoroughly
-- [ ] Launch May 8
+- **Something missing from a template?** Open an issue or see [`CONTRIBUTING.md`](CONTRIBUTING.md)
+- **Questions about the methodology?** Read [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md) first
+- **Using this for a real engagement?** Read the phase guide for your current phase before starting
 
 ---
 
-## 🎯 Success Metrics
-
-### **Launch Day (May 8)**
-- ✅ All pages live
-- ✅ All documents accessible
-- ✅ All links functional
-- ✅ Support team ready
-
-### **Week 1 (May 8-14)**
-- ✅ 50+ users
-- ✅ 10+ templates downloaded
-- ✅ 5+ feedback submissions
-
-### **Month 1 (May 8 - June 8)**
-- ✅ 200+ users
-- ✅ 50+ templates downloaded
-- ✅ 3+ projects using framework
-
----
-
-## 📋 Files in This Package
-
-### **Copilot & Implementation**
-- `COPILOT-SHAREPOINT-PROMPT.md` ← **USE THIS WITH COPILOT**
-- `SHAREPOINT-IMPLEMENTATION-PLAN.md`
-- `SHAREPOINT-DEPLOYMENT-GUIDE.md`
-
-### **Analysis & Strategy**
-- `SHAREPOINT-VS-GITHUB-ANALYSIS.md` ← **READ THIS FIRST**
-- `SHAREPOINT-EXECUTIVE-SUMMARY.md`
-- `FINAL-PUBLISHING-STRATEGY.md`
-
-### **Framework Content**
-- 24+ templates
-- 12+ guides
-- 8+ customization guides
-- Case studies
-- Resources
-
----
-
-## 🚀 Ready to Go
-
-**Everything is prepared and ready for implementation.**
-
-**Next Action**: 
-1. Read `SHAREPOINT-VS-GITHUB-ANALYSIS.md`
-2. Make decision (SharePoint or Hybrid)
-3. Use `COPILOT-SHAREPOINT-PROMPT.md` with Copilot
-4. Execute 6-day timeline
-5. Launch May 8
-
----
-
-## 💬 Final Word
-
-You have everything you need to successfully publish the Cloud Readiness Accelerator framework. The Copilot prompt provides detailed, step-by-step instructions. The expert recommendation provides strategic guidance. The implementation files provide all necessary content.
-
-**Recommendation**: Proceed with Hybrid Approach for maximum reach and impact.
-
-**Timeline**: 6 weeks (May 2 - June 12, 2026)
-
-**Expected Outcome**: Production-ready cloud readiness assessment platform with enterprise security and community collaboration.
-
----
-
-**Status**: ✅ Ready for Implementation
-**Next**: Read `SHAREPOINT-VS-GITHUB-ANALYSIS.md`
-**Then**: Use `COPILOT-SHAREPOINT-PROMPT.md` with Copilot
-
-**Let's Deploy! 🚀**
+*Rackspace Cloud Solutions Architecture — Cloud Readiness Accelerator*  
+*© Rackspace Technology. All rights reserved.*
