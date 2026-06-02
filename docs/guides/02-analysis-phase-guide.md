@@ -1,5 +1,15 @@
 # Cloud Readiness Accelerator - Analysis Phase Guide
 
+**Who should read this:** Cloud Architects and Solutions Engineers running Phase 2 of a CRA engagement. Also relevant for Security Analysts and Compliance leads who will contribute to the readiness scoring workshops.
+
+**What this guide covers:** How to transform Phase 1 discovery data into application-level cloud readiness scores across five dimensions: Technical, Operational, Security, Compliance, and Business. The output of this phase is the evidence base for the hyperscaler recommendation in Phase 3.
+
+**What comes before and after:** Phase 2 starts approximately 1 week before Phase 1 ends (as soon as the validated infrastructure inventory is available — utilisation data does not need to be complete). Phase 3 (Evaluation) follows; it requires the readiness scores from this phase plus ≥2 weeks of clean utilisation data from Phase 1.
+
+**Time to read this guide:** 15–20 minutes
+
+---
+
 ## Phase Overview
 
 The Analysis Phase transforms the discovery data into actionable insights through systematic evaluation of applications across multiple dimensions. This phase focuses on assessing technical, operational, security, compliance, and business readiness for each application. The primary objectives are to evaluate applications against readiness criteria, identify remediation needs, and prepare comprehensive analysis for the Evaluation Phase.
@@ -17,10 +27,11 @@ The Analysis Phase transforms the discovery data into actionable insights throug
 
 ### Phase Duration and Resources
 
-- **Typical Duration**: 2-3 weeks (varies by organization size)
-- **Small Organizations (10-50 apps)**: 1-2 weeks
-- **Mid-Market Organizations (50-200 apps)**: 2-3 weeks
-- **Enterprise Organizations (200+ apps)**: 3-4 weeks
+- **Mid-Market Default (50–200 apps)**: **4 weeks** (parallelized with the back half of Phase 1)
+- **Small Organizations (10–50 apps)**: 3 weeks
+- **Enterprise Organizations (200+ apps)**: 5–6 weeks
+
+> **Timing note:** Phase 2 begins approximately one week before Phase 1 ends. Application-owner interviews, criticality classification, and compliance review only require a validated inventory — not a completed utilisation dataset. Starting Phase 2 early compresses overall elapsed time by 25–30% without compromising data quality. Phase 3 cannot start until at least 2 weeks of clean utilisation data has been collected regardless of parallelisation choices.
 
 ### Resource Requirements
 
@@ -784,3 +795,44 @@ The Analysis Phase transforms discovery data into actionable insights through sy
 Success in the Analysis Phase requires expert involvement, consistent methodology, data-driven assessment, and stakeholder validation. By following the step-by-step instructions, best practices, and addressing common challenges, assessment teams can conduct effective analysis and prepare for the Evaluation Phase.
 
 The deliverables from the Analysis Phase—readiness scores, assessment reports, and remediation recommendations—form the foundation for multi-cloud evaluation, business case development, and migration planning in the Evaluation and Planning phases.
+
+---
+
+## Example Output — What Phase 2 Looks Like When Done
+
+The following is drawn from the DMG Media UK engagement. Use this as a quality reference.
+
+### Application Readiness Score Distribution (excerpt)
+
+At the end of Phase 2, you should have a scored readiness profile for every in-scope application. The distribution tells you the migration complexity profile of the estate.
+
+| Readiness Band | Score Range | % of Estate | Migration Approach |
+| --- | --- | --- | --- |
+| Cloud Ready | 8–10 | ~35% | Rehost — minimal preparation |
+| Cloud Friendly | 5–7 | ~40% | Replatform / minor remediation |
+| Cloud Challenged | 2–4 | ~20% | Rearchitect or significant prep required |
+| Cloud Blocked | 0–1 | ~5% | Retain on-prem or retire |
+
+> In the DMG Media UK engagement, Oracle RAC clusters and Redis OSS instances drove the "Cloud Challenged" category. These workloads require specialist planning and are good candidates for Wave 4 (late migration) rather than early waves.
+
+### Key Flags Surfaced in Phase 2 (DMG Media UK)
+
+These were identified in Analysis and fed directly into the Phase 3 TCO and hyperscaler scoring:
+
+| Finding | Detail | Impact |
+| --- | --- | --- |
+| End-of-Life OS | 340+ servers on Windows 2012 or RHEL 6 | ESU cost modelled in TCO; upgrade wave prioritised |
+| Oracle RAC | 18 clusters — requires BYOL or OCI | Major licensing cost driver; Oracle practice engaged |
+| Redis OSS | 140+ instances — OSS licence → Redis Enterprise commercial | Commercial licensing negotiation required |
+| SQL Server AHB eligibility | 347 SQL Server instances | £Xm saving via AHB; flagged for Azure preference in Phase 3 |
+| Compliance — FCA / GDPR | Customer is a regulated media company | UK-region cloud placement required; data residency constraints |
+
+### Phase 2 Exit Checklist
+
+- [ ] All in-scope applications scored across all five readiness dimensions
+- [ ] Cloud Challenged and Cloud Blocked applications documented with specific blockers
+- [ ] EoL OS, Oracle, and third-party licence flags surfaced and quantified (even if rough)
+- [ ] Compliance and data residency requirements captured per application
+- [ ] Governance maturity baseline completed
+- [ ] Readiness report issued to customer for validation — no surprises at Phase 3 presentation
+- [ ] Phase 3 team briefed — readiness scores handed off; TCO modelling can begin

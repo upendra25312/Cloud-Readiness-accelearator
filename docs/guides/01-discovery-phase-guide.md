@@ -1,5 +1,15 @@
 # Cloud Readiness Accelerator - Discovery Phase Guide
 
+**Who should read this:** Cloud Architects and Solutions Engineers running or preparing to run Phase 1 of a CRA engagement. If you are a Delivery Manager or PM, read Sections 1–3 (objectives, duration, resources) and the Example Output section at the end.
+
+**What this guide covers:** How to execute Phase 1 — from stakeholder identification through to validated infrastructure inventory and utilisation data. Phase 1 is the only phase that sets the data quality floor for the entire engagement. Shortcuts here propagate errors into every subsequent deliverable.
+
+**What comes before and after:** This is Phase 1 of 4. There is no predecessor phase. Phase 2 (Analysis) begins approximately 1 week before Phase 1 ends once the validated inventory is available. Phase 3 (Evaluation) cannot start until at least 2 weeks of clean utilisation data has been collected in Phase 1 — this is a mandatory phase gate requirement.
+
+**Time to read this guide:** 15–20 minutes
+
+---
+
 ## Phase Overview
 
 The Discovery Phase is the foundation of the cloud readiness assessment. This phase focuses on understanding the current state of the organization's applications, infrastructure, and business context. The primary objectives are to establish a complete inventory of applications and infrastructure, identify key stakeholders, define assessment scope, and collect baseline data for subsequent analysis phases.
@@ -16,10 +26,11 @@ The Discovery Phase is the foundation of the cloud readiness assessment. This ph
 
 ### Phase Duration and Resources
 
-- **Typical Duration**: 2-4 weeks (varies by organization size)
-- **Small Organizations (10-50 apps)**: 1-2 weeks
-- **Mid-Market Organizations (50-200 apps)**: 2-3 weeks
-- **Enterprise Organizations (200+ apps)**: 3-4 weeks
+- **Mid-Market Default (50–200 apps, 200–1,500 servers)**: **7 weeks**
+- **Small Organizations (10–50 apps, < 200 servers)**: 5–6 weeks
+- **Enterprise Organizations (200+ apps, 1,500+ servers)**: 9–10 weeks
+
+> **Note on timing:** The 7-week estimate separates the tooling setup floor (3 weeks, driven by CAB (Change Advisory Board) lead time for firewall changes and Azure Migrate/Migration Center appliance deployment) from the data collection window (4 weeks, driven by utilisation seasonality — month-end batch, payroll cycles). Real-world engagements have required the full 7-week window. Always schedule 7 weeks for mid-market Phase 1.
 
 ### Resource Requirements
 
@@ -725,3 +736,55 @@ The Discovery Phase establishes the foundation for the entire cloud readiness as
 Success in the Discovery Phase requires strong stakeholder engagement, systematic data collection, rigorous data validation, and clear communication. By following the step-by-step instructions, best practices, and addressing common challenges, assessment teams can conduct effective discovery activities and prepare for the Analysis Phase.
 
 The deliverables from the Discovery Phase—application inventory, infrastructure profiles, dependency maps, and validated data—form the foundation for readiness scoring, business case development, and migration planning in subsequent phases.
+
+---
+
+## Example Output — What Phase 1 Looks Like When Done
+
+The following is drawn from the DMG Media UK engagement. Use this as a quality reference when reviewing your own Phase 1 deliverables.
+
+### Infrastructure Inventory (excerpt)
+
+At the end of Phase 1, the infrastructure inventory should look like this:
+
+| Asset Type | Count | Source Tool | Data Quality |
+| --- | --- | --- | --- |
+| Virtual Machines | 4,212 | GCP Migration Center | ✅ 100% profiled |
+| Physical Servers | 48 | Manual survey | ✅ 100% profiled |
+| Oracle RAC Clusters | 18 | Manual survey + AWR reports | ✅ Profiled |
+| SQL Server Instances | 347 | Azure Migrate ADS | ✅ 98% profiled |
+| Applications (in scope) | 280 | Application scoping workshops | ✅ Owner confirmed |
+| Data Centres | 2 | Network topology review | ✅ Confirmed |
+
+> A completed inventory with >95% profile coverage and owner confirmation is the Phase 1 exit criterion. Anything below 90% profile coverage requires a scope decision: extend Phase 1 or accept the gap with a documented risk.
+
+### Utilisation Data Quality Check
+
+Before Phase 3 can start, confirm the following:
+
+| Check | Target | DMG Media UK Actual |
+| --- | --- | --- |
+| Collection duration | ≥2 weeks | 4 weeks |
+| % VMs with ≥14 days of CPU/RAM data | ≥90% | 94% |
+| Month-end batch cycle captured? | Yes | Yes |
+| Peaks vs. average documented? | Yes | Yes (3–7× peak-to-average ratio) |
+
+### What a Phase 1 Scope Variance Looks Like
+
+In the DMG Media UK engagement, the initial SOW estimate was 2,700 VMs. Final assessed estate was 4,212 VMs — a 57% variance. This happened because:
+
+1. The customer's CMDB had not been updated in 18 months
+2. Shadow IT and business-unit-managed infrastructure were not included in the initial estimate
+3. DR and test environments were initially treated as out-of-scope but required profiling to determine migration approach
+
+**Action:** When the inventory exceeds the SOW estimate by more than 15%, raise a scope variance discussion with the customer immediately. Do not proceed silently — the Phase 3 TCO and Phase 4 wave plan both scale with VM count.
+
+### Phase 1 Exit Checklist
+
+- [ ] Application inventory complete — owner confirmed for every in-scope application
+- [ ] Infrastructure profiling complete — CPU, RAM, storage, OS, hypervisor for ≥90% of servers
+- [ ] Dependency mapping complete — high-level app-to-app dependencies captured
+- [ ] Utilisation data collected — ≥2 weeks of clean CPU/RAM/network/storage data
+- [ ] Scope variance documented — any estate growth above SOW estimate flagged and agreed
+- [ ] Phase 2 team briefed — inventory handed off; Phase 2 scoring workshops scheduled
+- [ ] CAB changes submitted — any required firewall rules in place for continued tooling operation

@@ -346,7 +346,7 @@ The Evaluation phase synthesizes analysis findings into readiness scores, evalua
 - Develop migration wave plans
 - Produce strategic recommendations and prioritization
 
-> **Hard gate.** Phase 3 cannot start until at least two weeks of clean utilization data has been captured in Phase 1. Right-sizing recommendations issued without this minimum are flagged as low-confidence and require remediation in a follow-up cycle.
+> **Mandatory phase gate.** Phase 3 cannot start until at least two weeks of clean utilisation data has been captured in Phase 1. Right-sizing recommendations issued without this minimum are flagged as low-confidence and require remediation in a follow-up cycle.
 
 ### Phase Activities
 

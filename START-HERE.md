@@ -70,10 +70,10 @@ Infrastructure-Profiling    Readiness-Scoring-          Hyperscaler-Decision-   
 Dependency-Mapping          Governance-Foundations-     Business-Case-Template      Governance-Model-
   -Template.xlsx               Alignment-Tool.xlsx         .xlsx                       Template.xlsx
 
-Typical duration: 4-8 wks  Typical duration: 3-6 wks  Typical duration: 3-5 wks  Typical duration: 2-4 wks
+Typical duration: 7 wks    Typical duration: 4 wks    Typical duration: 3 wks    Typical duration: 6 wks
 ```
 
-Total typical engagement: 12–23 weeks
+Total typical engagement: 16–20 weeks (mid-market)
 
 ---
 
@@ -83,22 +83,22 @@ All templates are in [`Templates/`](Templates/). Pick by phase:
 
 | Phase | Template | Purpose |
 | --- | --- | --- |
-| **Discovery** | `Application Scoping & Profiling - template.xlsx` | Capture app inventory, tech stack, VM/DB counts, cloud readiness |
-| **Discovery** | `Infrastructure-Profiling-Template.xlsx` | Server specs, OS, hypervisor, DC location, storage |
-| **Discovery** | `Dependency-Mapping-Template.xlsx` | App-to-app and app-to-infra dependency map |
-| **Analysis** | `Cloud-Readiness-Assessment-v2.xlsx` | 5-dimension readiness scoring (Technical, Operational, Security, Financial, Business) |
-| **Analysis** | `Readiness-Scoring-Criteria-Template.xlsx` | Scoring definitions and weighting guide |
-| **Analysis** | `CRA - LITE Governance Foundations Alignment Tool - Template.xlsx` | Cloud governance maturity assessment |
-| **Evaluation** | `Hyperscaler-Decision-Matrix-Template.xlsx` | Weighted scoring across AWS, Azure, GCP — produces primary recommendation |
-| **Evaluation** | `AWS-Evaluation-Template.xlsx` | AWS TCO: On-Demand, 3-year RI, Savings Plans |
-| **Evaluation** | `Azure-Evaluation-Template.xlsx` | Azure TCO: PAYG and 3-year RI, per region |
-| **Evaluation** | `GCP-Evaluation-Template.xlsx` | GCP TCO: On-Demand and 3-year CUD |
-| **Evaluation** | `Business-Case-Template.xlsx` | Full TCO comparison, ROI, NPV, on-prem vs cloud |
-| **Planning** | `Migration-Wave-Planning-Template.xlsx` | Sequence apps into migration waves by priority |
-| **Planning** | `Risk-Assessment-Template.xlsx` | Technical, licensing, data, and timeline risk register |
-| **Planning** | `Governance-Model-Template.xlsx` | RACI, operating model, cloud governance design |
-| **Reporting** | `Cloud_Readiness_Assessment_Report_Template_v3_Audited.docx` | Full assessment report (30-50 pages) |
-| **Reporting** | `Cloud_Readiness_Assessment_Executive_Summary_Template_v3_Audited.pptx` | Executive summary deck for CTO/board |
+| **Discovery** | `Templates/01-discovery/application-scoping-profiling.xlsx` | Capture app inventory, tech stack, VM/DB counts, cloud readiness |
+| **Discovery** | `Templates/01-discovery/infrastructure-profiling.xlsx` | Server specs, OS, hypervisor, DC location, storage |
+| **Discovery** | `Templates/01-discovery/dependency-mapping.xlsx` | App-to-app and app-to-infra dependency map |
+| **Analysis** | `Templates/02-analysis/cloud-readiness-scoring-v2.xlsx` | 5-dimension readiness scoring (Technical, Operational, Security, Compliance, Business) |
+| **Analysis** | `Templates/02-analysis/readiness-scoring-criteria.xlsx` | Scoring definitions and weighting guide |
+| **Analysis** | `Templates/02-analysis/governance-foundations-alignment.xlsx` | Cloud governance maturity assessment |
+| **Evaluation** | `Templates/03-evaluation/hyperscaler-decision-matrix.xlsx` | Weighted scoring across AWS, Azure, GCP — produces primary recommendation |
+| **Evaluation** | `Templates/03-evaluation/aws-evaluation.xlsx` | AWS TCO (Total Cost of Ownership): On-Demand, 3-year Reserved Instances (RI), Savings Plans |
+| **Evaluation** | `Templates/03-evaluation/azure-evaluation.xlsx` | Azure TCO: PAYG and 3-year RI, per region; includes Azure Hybrid Benefit (AHB) overlay |
+| **Evaluation** | `Templates/03-evaluation/gcp-evaluation.xlsx` | GCP TCO: On-Demand and 3-year Committed Use Discounts (CUD) |
+| **Evaluation** | `Templates/03-evaluation/business-case-tco-roi.xlsx` | Full 7-layer TCO comparison, ROI, NPV, on-prem vs cloud |
+| **Planning** | `Templates/04-planning/migration-wave-planner.xlsx` | Sequence apps into migration waves by priority |
+| **Planning** | `Templates/04-planning/risk-assessment.xlsx` | Technical, licensing, data, and timeline risk register |
+| **Planning** | `Templates/04-planning/governance-model.xlsx` | RACI (Responsible, Accountable, Consulted, Informed) matrix, operating model, cloud governance design |
+| **Reporting** | `Templates/executive-reporting/cra-assessment-report-template-v3.docx` | Full assessment report (30–50 pages) |
+| **Reporting** | `Templates/executive-reporting/cra-executive-summary-v3.pptx` | Executive summary deck for CTO/board |
 
 ---
 
@@ -128,12 +128,12 @@ Use these to calibrate what your outputs should look like:
 
 ## Alliance Partner Alignment
 
-| Partner Program | How CRA Aligns |
+| Partner Programme | How CRA Aligns |
 | --- | --- |
-| **Microsoft CAF** | CRA phases map to CAF stages: Strategy, Plan, Ready, Migrate, Govern |
-| **Microsoft AMM** | CRA TCO outputs and hyperscaler recommendation support AMM funding requests |
-| **AWS MAP** | CRA assessment phase maps to MAP Assess; outputs support deal registration |
-| **Google PSO** | CRA Discovery and Analysis outputs align with Google Migration Center inputs |
+| **Microsoft CAF (Cloud Adoption Framework)** | CRA phases map to CAF stages: Strategy, Plan, Ready, Migrate, Govern |
+| **Microsoft AMM (Azure Migration and Modernisation)** | CRA TCO (Total Cost of Ownership) outputs and hyperscaler recommendation support AMM funding requests |
+| **AWS MAP (Migration Acceleration Programme)** | CRA assessment phase maps to MAP Assess; outputs support deal registration in AWS ACE (AWS Customer Engagements) |
+| **Google Cloud PSO (Professional Services Organisation) credits** | CRA Discovery and Analysis outputs align with Google Migration Center inputs; supports PSO and RAMP (Rapid Migration Programme) eligibility |
 
 ---
 

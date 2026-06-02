@@ -1,5 +1,17 @@
 # Cloud Readiness Accelerator - Planning Phase Guide
 
+**Who should read this:** Lead Architects, Delivery Managers, and Programme Managers running Phase 4. Also essential reading for any Rackspace commercial team member involved in Part 2 SOW scoping.
+
+**What this guide covers:** How to translate the Phase 3 hyperscaler recommendation into a detailed migration plan, governance framework, and Part 2 Entry Point document — the commercial handoff that initiates the migration execution engagement.
+
+**What comes before and after:** Phase 4 requires the hyperscaler recommendation, business case, and risk register from Phase 3. The primary output — the Part 2 Entry Point — is a commercial document presented to the customer's CTO/CFO for sign-off. Customer approval of the Part 2 Entry Point initiates the Part 2 SOW and migration execution.
+
+**Critical action in this phase:** Alliance partner deal registration (AMM / MAP / PSO) must be completed before the Part 2 SOW is signed. Do not let this slip to "we'll do it after commercial sign-off."
+
+**Time to read this guide:** 20–25 minutes
+
+---
+
 ## Phase Overview
 
 The Planning Phase translates evaluation results into detailed, actionable plans for cloud migration execution. This phase focuses on developing comprehensive migration roadmaps, planning resources and timelines, establishing governance structures, and aligning stakeholders on migration strategy and execution approach. The primary objectives are to create detailed migration plans, establish governance and organizational structures, plan resource requirements, and prepare the organization for migration execution.
@@ -17,10 +29,11 @@ The Planning Phase translates evaluation results into detailed, actionable plans
 
 ### Phase Duration and Resources
 
-- **Typical Duration**: 2-4 weeks (varies by organization size)
-- **Small Organizations (10-50 apps)**: 1-2 weeks
-- **Mid-Market Organizations (50-200 apps)**: 2-3 weeks
-- **Enterprise Organizations (200+ apps)**: 3-4 weeks
+- **Mid-Market Default (50–200 apps)**: **6 weeks** (2 wks wave planning + 2 wks report authoring & QA + 2 wks review & sign-off)
+- **Small Organizations (10–50 apps)**: 3–4 weeks
+- **Enterprise Organizations (200+ apps)**: 8–10 weeks
+
+> **Note on timing:** The 6-week estimate includes two full review-and-revision cycles — one technical, one executive. Both are required. Compressing to 4 weeks is only viable for small organisations with a straightforward hyperscaler recommendation. For enterprise engagements, the executive playback cycle alone can take 2–3 weeks due to scheduling availability of the CTO, CFO, and steering committee.
 
 ### Resource Requirements
 
@@ -579,6 +592,75 @@ The Planning Phase is complete when:
 
 ---
 
+## Part 2 Entry Point: SoW Template and Scoping
+
+### What the Part 2 Entry Point Is
+
+The Part 2 Entry Point is the final deliverable of Phase 4 (Planning). It is a scoping document — not a delivery plan — that defines what a cloud migration execution engagement (Part 2) would cover, what it would cost, and what partner funding is available.
+
+It serves two purposes:
+
+1. **Customer sign-off gate** — gives the customer enough information to decide whether to proceed with migration execution
+2. **Commercial handoff** — gives the Rackspace account team a defined scope to build a Part 2 SoW from
+
+The template for this deliverable is at: `Templates/executive-reporting/part2-entry-point-template.docx`
+
+---
+
+### SoW Template: Structure and Usage
+
+The generic CRA SoW template covers Part 1 (assessment) scope. It is at: `Templates/04-planning/sow-template.docx`
+
+**When to use it:**
+
+- At the start of a new CRA engagement, before Phase 1 begins
+- Adapt the scope section to reflect the specific customer's application estate size, discovery tooling, and hyperscaler scope
+- All cost layers, deliverables, and acceptance criteria should mirror what the customer agreed to at kick-off
+
+**Key SoW sections and what they must contain:**
+
+| SoW Section | What It Must Include | Common Omissions to Avoid |
+| --- | --- | --- |
+| Scope definition | In-scope application count, infrastructure count, business units, hyperscalers to evaluate | Vague "all applications" without a count; leads to scope disputes |
+| Deliverables | Named deliverables per phase (inventory, readiness scores, TCO, decision matrix, wave plan, Part 2 entry point) | Missing Part 2 entry point as a named deliverable |
+| Timeline | Phase durations with explicit start dates; utilization data window called out explicitly | Compressing Phase 1 below 5 weeks for mid-market estates |
+| TCO scope | Named cost layers: L4L, optimised, licensing overlay, on-prem status quo, Year 1 dual-running, partner credits | Missing licensing overlay; Oracle and SQL Server licences are a major cost item |
+| Assumptions | What the customer must provide and when (CMDB access, firewall CAB, stakeholder availability) | Not specifying CAB lead time for discovery tooling; causes Phase 1 delays |
+| Exclusions | What is explicitly out of scope (Part 2 migration execution, cloud landing zone build, application refactoring) | Leaving Part 2 boundary undefined; customers assume it is included |
+| Acceptance criteria | Named sign-off conditions per phase gate and for the final report | No defined acceptance criteria leads to open-ended revision cycles |
+
+---
+
+### Scope Variance Management
+
+The DMG Media UK engagement experienced 57% scope growth above the original SoW estimate (from ~2,700 VMs scoped to 4,212 VMs discovered). This is a named risk in the CRA framework.
+
+**How to manage scope variance:**
+
+1. **Include a scope buffer in the SoW.** For mid-market customers without a maintained CMDB, add 20–30% contingency to the discovery scope estimate. Customers routinely understate their estate.
+
+2. **Define a scope change procedure.** The SoW should state that scope additions above the agreed count trigger a formal change request with cost and timeline implications.
+
+3. **Stage the SoW.** If the CMDB is unreliable, consider a two-stage SoW: Phase 1 at a fixed price to establish the true estate size, then a revised SoW for Phases 2–4 based on the discovered count.
+
+4. **Document scope assumptions explicitly.** The SoW should state: "This engagement assumes approximately [N] in-scope applications and [M] physical/virtual servers based on information provided by [Client] on [date]. If the actual count differs by more than 20%, Rackspace reserves the right to adjust scope, timeline, and commercial terms."
+
+---
+
+### Partner Funding in the Part 2 Entry Point
+
+The Part 2 Entry Point should include a named section on available partner funding. This is what customers ask about most in the executive playback and it directly accelerates sign-off for Part 2:
+
+| Partner Programme | Funding Type | CRA Deliverable Required |
+| --- | --- | --- |
+| Microsoft AMM | Assessment funding (up to $25K) + migration execution funding | CRA Phase 1–4 outputs + AMM eligibility screening (see docs/MICROSOFT-CAF-ALIGNMENT.md) |
+| AWS MAP | Assessment credits + migration credits | CRA Phase 1–2 MRA outputs + ACE deal registration (see docs/AWS-MAP-ALIGNMENT.md) |
+| Google Cloud RAMP | Migration credits | CRA Phase 1–4 outputs + Google Partner Advantage registration (see docs/GOOGLE-PSO-ALIGNMENT.md) |
+
+> Including a completed partner funding table in the Part 2 Entry Point reduces the net cost of Part 2 in the customer's eyes and makes the migration business case stronger. Identify which programmes apply and quantify the benefit in the entry point document.
+
+---
+
 ### Activity 8: Executive Readiness and Sign-off
 
 **Objective**: Prepare organization for migration execution and obtain executive sign-off
@@ -950,3 +1032,57 @@ The Planning Phase translates evaluation results into detailed, actionable plans
 Success in the Planning Phase requires strong program management, comprehensive planning, clear governance, and effective stakeholder engagement. By following the step-by-step instructions, best practices, and addressing common challenges, planning teams can develop effective plans and prepare the organization for migration execution.
 
 The deliverables from the Planning Phase—detailed roadmap, resource plan, governance structure, risk mitigation plans, and change management plans—form the foundation for successful migration execution and organizational transformation.
+
+---
+
+## Example Output — What Phase 4 Looks Like When Done
+
+The following is drawn from the DMG Media UK engagement. Use this as a quality reference.
+
+### Migration Wave Plan (indicative structure)
+
+At the end of Phase 4, the wave plan should sequence every in-scope workload into a named wave with a target completion window.
+
+| Wave | Workload Type | VM Count | Approach | Target Window |
+| --- | --- | --- | --- | --- |
+| Wave 0 — PoC | Dev/test (lowest risk, no prod dependencies) | ~50 | Rehost | Weeks 1–4 of Part 2 |
+| Wave 1 — Non-Critical | Internal tools, staging, analytics | ~400 | Rehost | Weeks 5–12 |
+| Wave 2 — Business Apps | CRM, HR, finance, mid-tier | ~900 | Rehost / Replatform | Weeks 13–20 |
+| Wave 3 — Tier-1 Production | Customer-facing, revenue-critical | ~1,800 | Rehost with DR validated | Weeks 21–32 |
+| Wave 4 — Oracle / Complex | Oracle RAC, Redis, legacy | ~700 | Replatform / Rearchitect | Weeks 33–44 |
+| Wave 5 — DC Exit | Remaining + decommission | ~362 | Rehost + DC exit validation | Weeks 45–52 |
+
+> **Lesson from DMG Media UK:** Oracle RAC clusters were placed in Wave 4 deliberately — not because they are unimportant, but because they require the longest specialist lead time. The Oracle practice engagement, licensing confirmation, and test migration all take 6–8 weeks minimum. Plan for this in Phase 4, not in Part 2 week 1.
+
+### Part 2 Entry Point — What the Sign-Off Document Contains
+
+The Part 2 Entry Point presented to the customer at Phase 4 completion should include all of the following. If any section is missing, the document is not ready for customer presentation.
+
+| Section | Content | Status Gate |
+| --- | --- | --- |
+| Executive summary | One-page standalone; CTO can extract for board | ✅ Required |
+| Scope of Part 1 assessment | Estate summary; scope variance note if applicable | ✅ Required |
+| Hyperscaler recommendation | Scoring matrix + rationale + multi-cloud exceptions | ✅ Required |
+| Three-year TCO summary | All scenarios; dual-running Year 1 explicitly called out | ✅ Required |
+| Licensing overlay | AHB / BYOL / Oracle / third-party quantified | ✅ Required |
+| Partner funding table | AMM / MAP / PSO eligibility + estimated value + registration status | ✅ Required |
+| Migration approach | Wave plan summary; 7Rs estate view | ✅ Required |
+| Risk register summary | Top 5 risks with mitigations | ✅ Required |
+| Oracle modernisation | If Oracle in estate — separate named section | If applicable |
+| Part 2 engagement model | Deliverables, indicative timeline, investment | ✅ Required |
+| Next steps table | Numbered actions, owners, target dates | ✅ Required |
+
+> Template for this document: `Templates/executive-reporting/part2-entry-point-template.docx`  
+> Content specification: `Templates/executive-reporting/part2-entry-point-template-CONTENT.md`
+
+### Phase 4 Exit Checklist
+
+- [ ] Migration wave plan complete — all in-scope workloads assigned to a wave
+- [ ] 7Rs estate view complete — each application tagged with migration pattern
+- [ ] Risk register finalised — top risks from all phases consolidated
+- [ ] Governance framework drafted — RACI, operating model, cloud operating procedures
+- [ ] Part 2 Entry Point document complete — all required sections present
+- [ ] Alliance partner deal registration submitted — AMM / MAP / PSO before SOW signature
+- [ ] Part 2 Entry Point reviewed by Delivery Director before customer presentation
+- [ ] Customer presentation scheduled — CTO, CFO, and steering committee in attendance
+- [ ] Customer sign-off obtained — Part 2 SOW issued within 5 business days of sign-off

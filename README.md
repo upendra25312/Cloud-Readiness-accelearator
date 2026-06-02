@@ -14,7 +14,7 @@ A complete, reusable toolkit for delivering professional cloud readiness assessm
 
 The **Cloud Readiness Accelerator (CRA)** gives a delivery team everything needed to scope, execute, and report a cloud readiness engagement — from first customer meeting to a board-ready recommendation. It packages a proven four-phase methodology with the templates, scoring tools, and reporting formats that make each phase repeatable and auditable.
 
-The framework is cloud-agnostic and hyperscaler-agnostic. It supports AWS, Azure, and GCP evaluations and aligns to Microsoft CAF/AMM, AWS MAP, and Google PSO programme requirements.
+The framework is cloud-agnostic and hyperscaler-agnostic. It supports AWS, Azure, and GCP evaluations and aligns to Microsoft Cloud Adoption Framework (CAF) / Azure Migration and Modernisation (AMM) programme, AWS Migration Acceleration Programme (MAP), and Google Cloud PSO (Professional Services Organisation) programme requirements.
 
 ---
 
@@ -30,10 +30,10 @@ profiling            Cloud maturity         decision matrix       Part 2 entry p
 Dependency           workshop outputs       Business case         
 mapping                                     ROI / NPV             
 
-4–8 weeks            3–6 weeks              3–5 weeks             2–4 weeks
+7 weeks              4 weeks                3 weeks               6 weeks
 ```
 
-Total typical engagement: 12–23 weeks
+Total typical engagement: 16–20 weeks (mid-market)
 
 ---
 
@@ -124,6 +124,49 @@ All templates are in [Templates/](Templates/), organised by phase:
 | [Examples/aws/](Examples/aws/) | AWS MPA pricing (3 regions — Frankfurt, Ireland, London), business case decks — lift-and-shift, DB refactoring, storage | Calibrate AWS TCO outputs |
 | [Examples/azure/](Examples/azure/) | Azure Migrate assessments — PAYG and 3-year RI across UK South, North Europe, Germany West Central | Calibrate Azure like-for-like assessments |
 | [Examples/media-entertainment/](Examples/media-entertainment/) | DMG Media UK — full CRA engagement case study: 4,200+ VM estate, 3-way hyperscaler evaluation, Azure recommendation with AMM funding | See a complete real-world CRA engagement end-to-end |
+
+---
+
+## Quick Decision Guide: SMART vs CRA
+
+Not every engagement needs a full CRA. This table shows when to use each tool.
+
+| Question | Use Microsoft SMART | Use Rackspace CRA |
+| --- | --- | --- |
+| Azure-only evaluation? | Yes — free, 15-minute self-service | Only if multi-cloud comparison needed |
+| Fewer than 50 applications? | Yes | Consider CRA for complex estates |
+| Customer needs a quick readiness check, no deliverable required? | Yes | Overkill |
+| Customer requires a board or CIO sign-off deliverable? | No — not a formal deliverable | Yes — CRA produces a 30–50 page assessment report |
+| Multi-cloud evaluation (AWS + Azure + GCP)? | No — Azure only | Yes |
+| 50+ applications or complex infrastructure? | No | Yes |
+| Regulatory or compliance requirements? | No | Yes — CRA includes security and data residency dimensions |
+| Seeking Microsoft AMM, AWS MAP, or GCP PSO funding? | No | Yes — CRA outputs directly support co-sell funding submissions |
+
+```text
+Customer Journey:
+──────────────────────────────────────────────────────────────────
+ Initial Awareness    Pre-Sales          Engagement        Post-Migration
+      │                   │                  │                   │
+      ▼                   ▼                  ▼                   ▼
+ [SMART Tool]    [Rackspace CRA     [Full CRA        [Optimization
+ 15 min; Azure   Scoping Call]      Execution]        & Governance]
+ only; self-     Uses CRA           12–23 weeks;      CRA baseline
+ serve           templates to       all 3 clouds;     enables
+                 scope & price      full deliverables  continuous
+                 the engagement                        improvement
+```
+
+---
+
+## Who Should Use This
+
+| Your Role | Where to Start | What You Need |
+| --- | --- | --- |
+| **Cloud Architect / SA** | [START-HERE.md](START-HERE.md) → [docs/METHODOLOGY.md](docs/METHODOLOGY.md) | Framework orientation, then dive into the phase guide for your current engagement phase |
+| **Delivery Manager / PM** | [START-HERE.md](START-HERE.md) → [docs/reference/cra-project-plan-template.xlsx](docs/reference/cra-project-plan-template.xlsx) | Project plan template and phase timelines |
+| **VP / Director** | [CLOUD-READINESS-ACCELERATOR-PLAN.md](CLOUD-READINESS-ACCELERATOR-PLAN.md) | Business case, competitive positioning, and success metrics |
+| **Alliance Partner (Microsoft / AWS / GCP)** | [Alliance Partner Alignment](#alliance-partner-alignment) section below | How CRA aligns to CAF, MAP, and PSO programmes |
+| **New to CRA?** | [START-HERE.md](START-HERE.md) | 5-minute orientation; maps the entire framework |
 
 ---
 

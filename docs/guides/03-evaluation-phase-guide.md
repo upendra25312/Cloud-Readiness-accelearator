@@ -1,5 +1,17 @@
 # Cloud Readiness Accelerator - Evaluation Phase Guide
 
+**Who should read this:** Lead Architects and Cloud Architects running Phase 3, and Financial Analysts contributing to TCO modelling. Pre-Sales Architects should read this guide before any customer TCO conversation.
+
+**What this guide covers:** How to produce the three-cloud TCO comparison, weighted hyperscaler scoring, and documented recommendation that form the commercial core of the CRA. This is the phase customers remember — the evidence must be airtight.
+
+**What comes before and after:** Phase 3 requires validated readiness scores from Phase 2 AND ≥2 weeks of clean utilisation data from Phase 1 — both are hard prerequisites. The output feeds directly into Phase 4 (Planning), which translates the recommendation into a migration plan and Part 2 Entry Point document.
+
+**Phase gate requirement:** Do not start this phase without confirming the utilisation data quality gate has been met. Check with the Phase 1 lead before proceeding.
+
+**Time to read this guide:** 15–20 minutes
+
+---
+
 ## Phase Overview
 
 The Evaluation Phase builds on the analysis results to evaluate multi-cloud options, develop comprehensive business cases, and prepare recommendations for stakeholder decision-making. This phase focuses on assessing AWS, Azure, and Google Cloud platforms, developing financial models, evaluating risks and compliance, and producing actionable recommendations for cloud platform selection and migration strategy.
@@ -17,10 +29,11 @@ The Evaluation Phase builds on the analysis results to evaluate multi-cloud opti
 
 ### Phase Duration and Resources
 
-- **Typical Duration**: 2-3 weeks (varies by organization size)
-- **Small Organizations (10-50 apps)**: 1-2 weeks
-- **Mid-Market Organizations (50-200 apps)**: 2-3 weeks
-- **Enterprise Organizations (200+ apps)**: 3-4 weeks
+- **Mid-Market Default (50–200 apps)**: **3 weeks**
+- **Small Organizations (10–50 apps)**: 2 weeks
+- **Enterprise Organizations (200+ apps)**: 4 weeks
+
+> **Mandatory phase gate:** Phase 3 cannot start until at least 2 weeks of clean utilisation data has been captured in Phase 1. Right-sizing recommendations issued without this minimum are flagged as low-confidence and require a follow-up remediation cycle. Do not let timeline pressure bypass this requirement — an undercooked TCO (Total Cost of Ownership) model undermines the credibility of the entire board business case.
 
 ### Resource Requirements
 
@@ -800,3 +813,49 @@ The Evaluation Phase builds on analysis results to evaluate multi-cloud options,
 Success in the Evaluation Phase requires cloud platform expertise, financial analysis rigor, comprehensive risk assessment, and strong stakeholder engagement. By following the step-by-step instructions, best practices, and addressing common challenges, assessment teams can conduct effective evaluation and prepare for the Planning Phase.
 
 The deliverables from the Evaluation Phase—hyperscaler recommendations, business case, risk assessment, and migration roadmap—form the foundation for detailed planning and execution in the Planning Phase.
+
+---
+
+## Example Output — What Phase 3 Looks Like When Done
+
+The following is drawn from the DMG Media UK engagement. Use this as a quality reference.
+
+### Three-Cloud TCO Summary (illustrative structure)
+
+At the end of Phase 3, the TCO output should compare all three clouds across at minimum two scenarios: Like-for-Like and Optimised.
+
+| Scenario | Azure (UK South) | AWS (eu-west-2) | GCP (europe-west2) |
+| --- | --- | --- | --- |
+| Like-for-Like (3yr, PAYG) | £13.1M | £14.2M | £13.8M |
+| Optimised (3yr RI/CUD + AHB where applicable) | £11.2M | £12.8M | £12.1M |
+| vs. On-Prem Status Quo (£18.4M) | **−39%** | −30% | −34% |
+| + Partner Credits (AMM/MAP/PSO) | **−£1.0M est.** | −£0.4M est. | −£0.2M est. |
+
+> Note: Figures above are illustrative of structure and relative magnitude — not published DMG Media UK numbers (private). Your own TCO table must trace to the Excel model tabs.
+
+### Hyperscaler Scoring Summary (illustrative)
+
+The weighted scoring matrix should produce a clear primary recommendation with documented rationale.
+
+| Criterion | Weight | Azure | AWS | GCP |
+| --- | --- | --- | --- | --- |
+| TCO (3-year optimised) | 30% | 8.5 | 7.2 | 7.8 |
+| Licensing advantage (AHB/BYOL) | 20% | 9.0 | 6.5 | 5.0 |
+| Regulatory / compliance | 20% | 8.5 | 8.0 | 7.5 |
+| Partner commercial (AMM/MAP/PSO) | 15% | 8.5 | 7.0 | 6.0 |
+| Technical fit (workload types) | 15% | 8.0 | 7.5 | 7.5 |
+| **Weighted Score** | **100%** | **8.6** | **7.2** | **6.8** |
+| **Outcome** | | **Primary** | Secondary | Tertiary |
+
+> **Lesson from DMG Media UK:** The Azure AHB advantage on 1,200+ Windows Server and 347 SQL Server licences was the single largest differentiator. When an estate has substantial Microsoft licensing, AHB typically swings the TCO comparison by 15–25%. Always model AHB explicitly.
+
+### Phase 3 Exit Checklist
+
+- [ ] All three hyperscalers modelled — Like-for-Like and Optimised scenarios
+- [ ] Licensing overlay applied — AHB, BYOL, Oracle, third-party
+- [ ] Partner credits identified and quantified — AMM / MAP / PSO
+- [ ] Weighted hyperscaler scoring matrix complete — primary recommendation documented
+- [ ] Three-year TCO summary validated by Financial Analyst or Delivery Director
+- [ ] Risk register populated — technical, licensing, operational, and timeline risks
+- [ ] Customer pre-read issued — no recommendation surprises at Phase 3 playback meeting
+- [ ] Phase 4 team briefed — recommendation and TCO handed off; wave planning can begin
