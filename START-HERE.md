@@ -108,8 +108,8 @@ Use these to calibrate what your outputs should look like:
 
 | Folder | What It Contains | Use It To |
 | --- | --- | --- |
-| [`Examples/AWS Example/`](Examples/AWS%20Example/) | AWS MPA pricing files (3 regions), business case decks (lift-and-shift, DB refactoring, storage) | See how AWS TCO and business case outputs look |
-| [`Examples/Azure Example -1/`](Examples/Azure%20Example%20-1/) | Azure Migrate assessments — PAYG and 3-year RI, across 3 regions (UK, Ireland, Germany) | See how Azure like-for-like and RI assessments look |
+| [`Examples/aws/`](Examples/aws/) | AWS MPA pricing (3 regions — Frankfurt, Ireland, London), business case decks (lift-and-shift, DB refactoring, storage) | See how AWS TCO and business case outputs look |
+| [`Examples/azure/`](Examples/azure/) | Azure Migrate assessments — PAYG and 3-year RI across UK South, North Europe, Germany West Central | See how Azure like-for-like and RI assessments look |
 
 ---
 

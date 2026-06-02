@@ -58,8 +58,8 @@ Total typical engagement: 12–23 weeks
 │   ├── 04-planning/                               ← Migration waves, risk register, governance model, SOW
 │   └── executive-reporting/                       ← Assessment report and executive summary templates
 ├── Examples/
-│   ├── AWS Example/                               ← AWS TCO and business case outputs
-│   └── Azure Example -1/                          ← Azure Migrate assessment outputs
+│   ├── aws/                                       ← AWS MPA pricing (3 regions) and business case examples
+│   └── azure/                                     ← Azure Migrate assessments — PAYG and 3-year RI across 3 regions
 ├── docs/reference/cra-project-plan-template.xlsx   ← Project plan with milestones and RACI
 ├── Templates/04-planning/sow-template.docx         ← SOW template
 ├── CLOUD-READINESS-ACCELERATOR-PLAN.md             ← Framework strategy and roadmap
@@ -117,8 +117,8 @@ All templates are in [Templates/](Templates/), organised by phase:
 
 | Folder | Contents | Use It To |
 | --- | --- | --- |
-| [Examples/AWS Example/](Examples/AWS%20Example/) | AWS MPA pricing (3 regions), business case decks — lift-and-shift, DB refactoring, storage | Calibrate AWS TCO outputs |
-| [Examples/Azure Example -1/](Examples/Azure%20Example%20-1/) | Azure Migrate assessments — PAYG and 3-year RI across UK, Ireland, Germany | Calibrate Azure like-for-like assessments |
+| [Examples/aws/](Examples/aws/) | AWS MPA pricing (3 regions — Frankfurt, Ireland, London), business case decks — lift-and-shift, DB refactoring, storage | Calibrate AWS TCO outputs |
+| [Examples/azure/](Examples/azure/) | Azure Migrate assessments — PAYG and 3-year RI across UK South, North Europe, Germany West Central | Calibrate Azure like-for-like assessments |
 
 ---
 
