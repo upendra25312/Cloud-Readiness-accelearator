@@ -251,7 +251,7 @@ For markdown/GitHub content, use Rackspace colors in SVG badges, shields, and an
 ### Phase 1: Foundation (Weeks 1–4)
 - [ ] Reorganize GitHub repo to target structure
 - [ ] Apply Rackspace branding to all executive artifacts
-- [ ] Create anonymized DMG reference case study
+- [ ] Create anonymized reference case study (see Epic 6)
 - [ ] Write executive README (VP/Director quality)
 - [ ] Publish v1.0 on GitHub
 

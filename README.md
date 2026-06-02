@@ -1,5 +1,6 @@
 # Cloud Readiness Accelerator
 
+[![Built by Rackspace](https://img.shields.io/badge/Built%20by-Rackspace%20Technology-E31C3D?style=flat)](https://www.rackspace.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![GitHub Stars](https://img.shields.io/github/stars/upendra25312/Cloud-Readiness-accelearator?style=social)](https://github.com/upendra25312/Cloud-Readiness-accelearator)
 [![GitHub Issues](https://img.shields.io/github/issues/upendra25312/Cloud-Readiness-accelearator)](https://github.com/upendra25312/Cloud-Readiness-accelearator/issues)

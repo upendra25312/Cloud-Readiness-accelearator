@@ -128,7 +128,7 @@ The Cloud Readiness Accelerator is a comprehensive, modular framework for conduc
 | `NEXT-STEPS-ACTION-PLAN.md` | Detailed action plan with weekly execution |
 | `PARALLEL-WORKSTREAMS-PLAN.md` | Weeks 2-3 parallel execution plan |
 | `PHASE-1-DEPLOYMENT-CHECKLIST.md` | Week 1 deployment checklist |
-| `HYPERSCALER-INTEGRATION-SUMMARY.md` | DMG hyperscaler response integration plan |
+| `hyperscaler-integration-summary.md` | Hyperscaler response integration reference (moved to `_internal-only/`) |
 
 ---
 
