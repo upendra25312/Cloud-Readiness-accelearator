@@ -46,10 +46,22 @@ logs/
 .claude/
 .sixth/
 
-# Sensitive customer data — never publish
+# Sensitive customer data — never publish to public repo
+# These files are staged locally for migration to rxt-mpc/ps-ind-cloud-readiness-accelerator (private)
+# Remove these entries when migrating to the private repo
 Examples/Azure Example -2/DMG RFP - SOFT PERKS - Non Protected.pdf
 Examples/Azure Example -2/DMG RFP - SOFT PERKS - Notes Non Protected.pdf
 Examples/Azure Example -2/Microsoft Unified for DMG Media.pptx
 Examples/Azure Example -2/Hyperscaler_Decision_Matrix_Microsoft_Completed.xlsx
 Reports format example/
 SOW/
+
+# DMG Media UK case study reference files — customer data; public repo only
+# Include in private rxt-mpc migration (remove these 3 entries at that point)
+Examples/media-entertainment/DMG - CRA - Executive Summary.pptx
+Examples/media-entertainment/DMG - CRA Cost model - Part1_Discount_v2.xlsx
+Examples/media-entertainment/DMG_Cloud_Readiness_Assessment_Part_1_Report_v2.0.docx
+
+# Internal Rackspace commercial data — never publish to any GitHub repo
+# Keep on SharePoint/OneDrive only
+PS Margin Calculator 2025_CRA Phase II_v2.xlsm
