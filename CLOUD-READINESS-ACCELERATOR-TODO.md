@@ -433,11 +433,20 @@
 
 ## Progress Summary
 
+> Last updated: 2026-06-02
+
 | Epic | Total Tasks | Complete | In Progress | Not Started | % Done |
 |---|---|---|---|---|---|
-| 0. File Triage & Professionalization | 52 | 0 | 0 | 52 | 0% |
-| 1. Repository Restructure | 10 | 4 | 0 | 6 | 40% |
-| 2. README & Branding | 10 | 0 | 0 | 10 | 0% |
+| 0A. Sensitive & Customer-Data Files | 11 | 9 | 0 | 2 | 82% |
+| 0B. Operational Meta-Files | 16 | 16 | 0 | 0 | 100% |
+| 0C. GitHub Standard Files | 6 | 6 | 0 | 0 | 100% |
+| 0D. Framework Content Reorganize | 14 | 14 | 0 | 0 | 100% |
+| 0E. Templates Rename & Reorganize | 26 | 24 | 0 | 2 | 92% |
+| 0F. Presentations | 5 | 5 | 0 | 0 | 100% |
+| 0G. Examples Anonymize | 10 | 9 | 0 | 1 | 90% |
+| 0H. Project Plan & SOW | 2 | 2 | 0 | 0 | 100% |
+| 1. Repository Restructure | 10 | 10 | 0 | 0 | 100% |
+| 2. README & Branding | 10 | 4 | 0 | 6 | 40% |
 | 3. Methodology Docs | 8 | 0 | 0 | 8 | 0% |
 | 4A. Discovery Phase Templates | 5 | 0 | 0 | 5 | 0% |
 | 4B. TCO Analysis Templates (SOW critical) | 9 | 0 | 0 | 9 | 0% |
@@ -446,11 +455,22 @@
 | 4E. Cloud Maturity & Governance Templates | 4 | 0 | 0 | 4 | 0% |
 | 5. Executive Presentations | 10 | 0 | 0 | 10 | 0% |
 | 6. Case Study | 8 | 0 | 0 | 8 | 0% |
-| 7. GitHub Publication | 10 | 0 | 0 | 10 | 0% |
+| 7. GitHub Publication | 10 | 3 | 0 | 7 | 30% |
 | 8. Alliance Alignment | 8 | 0 | 0 | 8 | 0% |
 | 9. Internal Enablement | 5 | 0 | 0 | 5 | 0% |
-| 10. Self-Explanatory Design | 10 | 0 | 0 | 10 | 0% |
-| **TOTAL** | **158** | **4** | **0** | **154** | **3%** |
+| 10. Self-Explanatory Design | 10 | 5 | 0 | 5 | 50% |
+| **TOTAL** | **186** | **107** | **0** | **79** | **58%** |
+
+### Remaining Release 1.0 Gates
+
+| # | Task | Blocker |
+| --- | --- | --- |
+| 0E.18 | Debrand `Templates/executive-reporting/cra-executive-summary-template.pptx` content | Manual — open in PowerPoint |
+| 0E.19 | Debrand `Templates/executive-reporting/cra-phase1-report-template.docx` content | Manual — open in Word |
+| 0G.10 | Review `Examples/Azure Example -2/Hyperscaler_Decision_Matrix_Microsoft_Completed.xlsx` for anonymization | Manual review |
+| 2.2 | Add Rackspace logo SVG badge to README | Requires logo URL from brand.rackspace.com |
+| 2.8/2.9 | Apply Rackspace branding to PPTX presentations | Manual — open in PowerPoint |
+| 7.6 | Sensitive-data scan before public sharing | Run before any external link-sharing |
 
 ---
 

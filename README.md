@@ -1,6 +1,9 @@
 # Cloud Readiness Accelerator
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub Stars](https://img.shields.io/github/stars/upendra25312/Cloud-Readiness-accelearator?style=social)](https://github.com/upendra25312/Cloud-Readiness-accelearator)
+[![GitHub Issues](https://img.shields.io/github/issues/upendra25312/Cloud-Readiness-accelearator)](https://github.com/upendra25312/Cloud-Readiness-accelearator/issues)
+[![Maintained](https://img.shields.io/badge/Maintained-yes-green.svg)](https://github.com/upendra25312/Cloud-Readiness-accelearator/commits/main)
 
 A complete, reusable toolkit for delivering professional cloud readiness assessments. Built by Rackspace Cloud Solutions Architecture for use across any enterprise cloud engagement.
 
