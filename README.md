@@ -1,253 +1,148 @@
-# Cloud Readiness Accelerator Framework
+# Cloud Readiness Accelerator
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![GitHub Stars](https://img.shields.io/github/stars/upendra-29003/Cloud-Readiness-acceleartor)](https://github.com/upendra-29003/Cloud-Readiness-acceleartor)
-[![GitHub Issues](https://img.shields.io/github/issues/upendra-29003/Cloud-Readiness-acceleartor)](https://github.com/upendra-29003/Cloud-Readiness-acceleartor/issues)
-[![GitHub Forks](https://img.shields.io/github/forks/upendra-29003/Cloud-Readiness-acceleartor)](https://github.com/upendra-29003/Cloud-Readiness-acceleartor)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-## 📋 Overview
-
-The **Cloud Readiness Accelerator** is a comprehensive, reusable framework designed to enable organizations to conduct systematic cloud readiness assessments. This enterprise-grade accelerator provides structured methodology, reusable templates, and integration patterns applicable to any cloud migration or modernization initiative.
-
-### Key Features
-
-- ✅ **Systematic Assessment Methodology** - Four-phase approach (Discovery → Analysis → Evaluation → Planning)
-- ✅ **Multi-Dimensional Scoring** - Technical, Operational, Security, Compliance, and Business readiness evaluation
-- ✅ **Multi-Cloud Evaluation** - AWS, Azure, and Google Cloud platform comparison
-- ✅ **Financial Analysis** - TCO, ROI, payback period, and NPV calculations
-- ✅ **Risk & Compliance Assessment** - Security, operational, and compliance risk evaluation
-- ✅ **Migration Planning** - Dependency mapping and wave sequencing
-- ✅ **Enterprise Governance** - Stakeholder management and decision frameworks
-
-### Framework Statistics
-
-- **20** Comprehensive Requirements
-- **12** Modular Components
-- **24+** Reusable Templates
-- **4** Assessment Phases
-- **5** Scoring Dimensions
-- **3** Hyperscalers (AWS, Azure, GCP)
-- **8** Customization Guides
-- **100%** Reusable Across Projects
-
-## 🚀 Quick Start
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/upendra-29003/Cloud-Readiness-acceleartor.git
-cd Cloud-Readiness-acceleartor
-
-# Install dependencies (optional)
-npm install
-```
-
-### Usage
-
-1. **Review the Framework**
-   - Start with [GETTING_STARTED.md](docs/GETTING_STARTED.md)
-   - Review [METHODOLOGY.md](docs/METHODOLOGY.md)
-
-2. **Download Templates**
-   - Browse [templates/](templates/) directory
-   - Select templates for your assessment phase
-
-3. **Follow Phase Guides**
-   - Discovery Phase: [guides/phase-guides/](guides/phase-guides/)
-   - Analysis Phase: [guides/phase-guides/](guides/phase-guides/)
-   - Evaluation Phase: [guides/phase-guides/](guides/phase-guides/)
-   - Planning Phase: [guides/phase-guides/](guides/phase-guides/)
-
-4. **Customize for Your Organization**
-   - Review [CUSTOMIZATION_GUIDES.md](docs/CUSTOMIZATION_GUIDES.md)
-   - Select industry-specific guide
-   - Adapt templates for your context
-
-5. **Execute Assessment**
-   - Complete discovery and profiling
-   - Execute readiness scoring
-   - Develop business case
-   - Plan migration strategy
-
-## 📁 Repository Structure
-
-```
-Cloud-Readiness-acceleartor/
-├── docs/                          # Documentation
-│   ├── GETTING_STARTED.md
-│   ├── METHODOLOGY.md
-│   ├── ARCHITECTURE.md
-│   ├── INTEGRATION_GUIDES.md
-│   ├── CUSTOMIZATION_GUIDES.md
-│   └── FAQ.md
-├── templates/                     # 24+ Assessment Templates
-│   ├── discovery/
-│   ├── scoring/
-│   ├── business-case/
-│   ├── risk-compliance/
-│   ├── governance/
-│   └── reporting/
-├── guides/                        # 12+ Guides
-│   ├── phase-guides/
-│   ├── integration-guides/
-│   ├── customization-guides/
-│   └── quality-assurance/
-├── case-studies/                  # Real-world Examples
-│   └── dmg-media-uk/
-├── resources/                     # Reference Materials
-│   ├── industry-benchmarks/
-│   ├── cloud-comparisons/
-│   └── glossary/
-├── examples/                      # Sample Assessments
-│   └── sample-assessments/
-├── .github/                       # GitHub Configuration
-│   ├── workflows/
-│   └── ISSUE_TEMPLATE/
-├── README.md
-├── LICENSE
-├── CONTRIBUTING.md
-├── CODE_OF_CONDUCT.md
-├── CHANGELOG.md
-├── ROADMAP.md
-└── package.json
-```
-
-## 📚 Documentation
-
-- [Getting Started Guide](docs/GETTING_STARTED.md)
-- [Methodology Overview](docs/METHODOLOGY.md)
-- [Architecture & Design](docs/ARCHITECTURE.md)
-- [Integration Guides](docs/INTEGRATION_GUIDES.md)
-- [Customization Guides](docs/CUSTOMIZATION_GUIDES.md)
-- [FAQ](docs/FAQ.md)
-
-## 🎯 Use Cases
-
-### For Cloud Architects
-- Design cloud migration strategies
-- Evaluate cloud readiness
-- Develop business cases
-- Plan migration roadmaps
-
-### For Project Managers
-- Plan and execute migration programs
-- Manage stakeholder engagement
-- Track assessment progress
-- Manage risks and compliance
-
-### For Consultants
-- Conduct cloud readiness assessments
-- Develop customer business cases
-- Provide migration recommendations
-- Support customer decision-making
-
-### For Organizations
-- Assess cloud migration readiness
-- Evaluate multi-cloud options
-- Develop migration strategies
-- Plan cloud adoption
-
-## 🔧 Integration
-
-The framework integrates with:
-
-- **CMDB Systems**: ServiceNow, BMC, and other CMDB platforms
-- **Monitoring Tools**: Splunk, Datadog, New Relic, Prometheus
-- **Cloud Assessment**: AWS Migration Evaluator, Azure Migrate, Google Cloud Assessment
-- **Financial Systems**: SAP, Oracle, NetSuite, and other ERP systems
-
-See [INTEGRATION_GUIDES.md](docs/INTEGRATION_GUIDES.md) for detailed integration procedures.
-
-## 🎓 Customization
-
-The framework supports customization for:
-
-- **Industries**: Financial Services, Healthcare, Retail, Manufacturing
-- **Organization Sizes**: Small (10-50 apps), Mid-Market (50-200 apps), Enterprise (200+ apps)
-- **Technology Landscapes**: Legacy, Modern, Hybrid environments
-
-See [CUSTOMIZATION_GUIDES.md](docs/CUSTOMIZATION_GUIDES.md) for detailed customization guidance.
-
-## 📊 Case Studies
-
-Real-world examples demonstrating framework effectiveness:
-
-- [DMG Media UK Reference Project](case-studies/dmg-media-uk/)
-  - Application inventory assessment
-  - Readiness scoring results
-  - Business case development
-  - Migration roadmap planning
-
-## 🤝 Contributing
-
-We welcome contributions from the community! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on:
-
-- Reporting issues
-- Submitting pull requests
-- Suggesting improvements
-- Sharing case studies
-
-## 📋 Code of Conduct
-
-Please review our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for community guidelines and expectations.
-
-## 📄 License
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
-
-## 🗺️ Roadmap
-
-See [ROADMAP.md](ROADMAP.md) for planned features and improvements.
-
-## 📞 Support
-
-- **Issues**: [GitHub Issues](https://github.com/upendra-29003/Cloud-Readiness-acceleartor/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/upendra-29003/Cloud-Readiness-acceleartor/discussions)
-- **Email**: cloud-readiness@rackspace.com
-
-## 🌟 Acknowledgments
-
-This framework was developed by the Cloud Solutions Architecture team at Rackspace Global with contributions from:
-
-- Microsoft Expert Azure Cloud Architects
-- Senior Project Managers
-- AI Architects at Microsoft, Google, and AWS
-- Pre-Sales Architects at Microsoft, AWS, and Google Cloud
-- Alliance Partners at Microsoft, AWS, and Google Cloud
-- Senior Directors of Cloud Solutions Architecture
-
-## 📈 Statistics
-
-- **Downloads**: [View on GitHub](https://github.com/upendra-29003/Cloud-Readiness-acceleartor)
-- **Stars**: ⭐ [Star us on GitHub](https://github.com/upendra-29003/Cloud-Readiness-acceleartor)
-- **Contributors**: [View Contributors](https://github.com/upendra-29003/Cloud-Readiness-acceleartor/graphs/contributors)
-
-## 🚀 Get Started
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/upendra-29003/Cloud-Readiness-acceleartor.git
-   ```
-
-2. **Read the documentation**
-   - Start with [GETTING_STARTED.md](docs/GETTING_STARTED.md)
-
-3. **Download templates**
-   - Browse [templates/](templates/) directory
-
-4. **Customize for your organization**
-   - Review [CUSTOMIZATION_GUIDES.md](docs/CUSTOMIZATION_GUIDES.md)
-
-5. **Execute assessment**
-   - Follow phase guides
-   - Complete templates
-   - Share results
+A complete, reusable toolkit for delivering professional cloud readiness assessments. Built by Rackspace Cloud Solutions Architecture for use across any enterprise cloud engagement.
 
 ---
 
-**Version**: 1.0
-**Last Updated**: May 2026
-**Status**: Production Ready ✅
+## What It Is
 
-**[⬆ back to top](#cloud-readiness-accelerator-framework)**
+The **Cloud Readiness Accelerator (CRA)** gives a delivery team everything needed to scope, execute, and report a cloud readiness engagement — from first customer meeting to a board-ready recommendation. It packages a proven four-phase methodology with the templates, scoring tools, and reporting formats that make each phase repeatable and auditable.
+
+The framework is cloud-agnostic and hyperscaler-agnostic. It supports AWS, Azure, and GCP evaluations and aligns to Microsoft CAF/AMM, AWS MAP, and Google PSO programme requirements.
+
+---
+
+## The Four Phases
+
+```text
+Discovery          →  Analysis           →  Evaluation          →  Planning
+─────────────────     ─────────────────     ─────────────────     ─────────────────
+Application          Readiness scoring      TCO modelling         Migration waves
+inventory            across 5 dimensions    (AWS, Azure, GCP)     Risk register
+Infrastructure       Gap identification     Hyperscaler           Governance model
+profiling            Cloud maturity         decision matrix       Part 2 entry point
+Dependency           workshop outputs       Business case         
+mapping                                     ROI / NPV             
+
+4–8 weeks            3–6 weeks              3–5 weeks             2–4 weeks
+```
+
+Total typical engagement: 12–23 weeks
+
+---
+
+## What Is in This Repository
+
+```text
+├── START-HERE.md                                   ← Start here — 5-minute orientation
+├── docs/
+│   └── METHODOLOGY.md                             ← Full four-phase methodology
+├── Templates/                                      ← All 16+ assessment templates
+├── Examples/
+│   ├── AWS Example/                               ← AWS TCO and business case outputs
+│   └── Azure Example -1/                          ← Azure Migrate assessment outputs
+├── Discovery-Phase-Guide.md                        ← Phase 1 delivery guide
+├── Analysis-Phase-Guide.md                         ← Phase 2 delivery guide
+├── Evaluation-Phase-Guide.md                       ← Phase 3 delivery guide
+├── Planning-Phase-Guide.md                         ← Phase 4 delivery guide
+├── Customization-Guides/                           ← Industry and size adaptations
+├── Integration-Guides/                             ← CMDB, monitoring, cloud tool integrations
+├── Quality-Assurance/                              ← Data validation and QA checklist
+├── Cloud_Readiness_Assessment_Project_Plan.xlsx    ← Project plan with milestones and RACI
+├── Cloud_Readiness_Assessment_SoW.docx             ← SOW template
+├── CLOUD-READINESS-ACCELERATOR-PLAN.md             ← Framework strategy and roadmap
+├── CLOUD-READINESS-ACCELERATOR-PRD.md              ← Full requirements and quality standards
+├── CHANGELOG.md                                    ← Version history
+└── CONTRIBUTING.md                                 ← How to contribute
+```
+
+---
+
+## How to Use It
+
+### Step 1 — Orient yourself
+
+Read [START-HERE.md](START-HERE.md). It maps the entire framework in 5 minutes and shows where every file fits.
+
+### Step 2 — Understand the methodology
+
+Read [docs/METHODOLOGY.md](docs/METHODOLOGY.md). It defines entry criteria, activities, exit criteria, and deliverables for each of the four phases.
+
+### Step 3 — Open the phase guide for your current phase
+
+| Phase | Guide |
+| --- | --- |
+| Discovery | [Discovery-Phase-Guide.md](Discovery-Phase-Guide.md) |
+| Analysis | [Analysis-Phase-Guide.md](Analysis-Phase-Guide.md) |
+| Evaluation | [Evaluation-Phase-Guide.md](Evaluation-Phase-Guide.md) |
+| Planning | [Planning-Phase-Guide.md](Planning-Phase-Guide.md) |
+
+### Step 4 — Use the templates
+
+All templates are in [Templates/](Templates/). Pick by phase:
+
+| Phase | Template | What It Produces |
+| --- | --- | --- |
+| Discovery | `Application Scoping & Profiling - template.xlsx` | Application inventory with tech stack, VM/DB counts, readiness flag |
+| Discovery | `Infrastructure-Profiling-Template.xlsx` | Server specs, OS, hypervisor, DC location, storage |
+| Discovery | `Dependency-Mapping-Template.xlsx` | App-to-app and app-to-infrastructure dependency map |
+| Analysis | `Cloud-Readiness-Assessment-v2.xlsx` | 5-dimension readiness scores — Technical, Operational, Security, Financial, Business |
+| Analysis | `Readiness-Scoring-Criteria-Template.xlsx` | Scoring definitions and weighting guide |
+| Analysis | `CRA - LITE Governance Foundations Alignment Tool - Template.xlsx` | Cloud governance maturity assessment |
+| Evaluation | `Hyperscaler-Decision-Matrix-Template.xlsx` | Weighted score across AWS, Azure, GCP — produces primary recommendation |
+| Evaluation | `AWS-Evaluation-Template.xlsx` | AWS TCO: On-Demand, 3-year Reserved Instances, Savings Plans |
+| Evaluation | `Azure-Evaluation-Template.xlsx` | Azure TCO: PAYG and 3-year RI, per region |
+| Evaluation | `GCP-Evaluation-Template.xlsx` | GCP TCO: On-Demand and 3-year CUDs |
+| Evaluation | `Business-Case-Template.xlsx` | Full TCO comparison, ROI, NPV, on-premises vs cloud |
+| Planning | `Migration-Wave-Planning-Template.xlsx` | Application sequencing into migration waves by priority |
+| Planning | `Risk-Assessment-Template.xlsx` | Technical, licensing, data, and timeline risk register |
+| Planning | `Governance-Model-Template.xlsx` | RACI, operating model, cloud governance design |
+| Reporting | `Cloud_Readiness_Assessment_Report_Template_v3_Audited.docx` | Full assessment report (30–50 pages) |
+| Reporting | `Cloud_Readiness_Assessment_Executive_Summary_Template_v3_Audited.pptx` | Executive summary deck for CTO/board |
+
+### Step 5 — Calibrate against reference examples
+
+| Folder | Contents | Use It To |
+| --- | --- | --- |
+| [Examples/AWS Example/](Examples/AWS%20Example/) | AWS MPA pricing (3 regions), business case decks — lift-and-shift, DB refactoring, storage | Calibrate AWS TCO outputs |
+| [Examples/Azure Example -1/](Examples/Azure%20Example%20-1/) | Azure Migrate assessments — PAYG and 3-year RI across UK, Ireland, Germany | Calibrate Azure like-for-like assessments |
+
+---
+
+## Alliance Partner Alignment
+
+| Partner Programme | Alignment |
+| --- | --- |
+| Microsoft Cloud Adoption Framework (CAF) | CRA phases map to CAF stages: Strategy → Plan → Ready → Migrate → Govern |
+| Microsoft Azure Migration and Modernisation (AMM) | CRA TCO outputs and hyperscaler recommendation directly support AMM funding submissions |
+| AWS Migration Acceleration Programme (MAP) | CRA Assessment phase maps to MAP Assess; outputs satisfy MAP deal registration requirements |
+| Google Cloud PSO / Migration Center | CRA Discovery and Analysis outputs align with Google Migration Center input requirements |
+
+---
+
+## Scope and Quality Standards
+
+Full requirements are in [CLOUD-READINESS-ACCELERATOR-PRD.md](CLOUD-READINESS-ACCELERATOR-PRD.md).
+
+Delivery scope, business case, and roadmap are in [CLOUD-READINESS-ACCELERATOR-PLAN.md](CLOUD-READINESS-ACCELERATOR-PLAN.md).
+
+Engagement scope and SOW language are in [Cloud_Readiness_Assessment_SoW.docx](Cloud_Readiness_Assessment_SoW.docx).
+
+---
+
+## Contributing
+
+Contributions are welcome — new templates, anonymized examples, improved phase guides, or methodology refinements. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+---
+
+## License
+
+MIT License — see [LICENSE](LICENSE).
+
+---
+
+*Rackspace Cloud Solutions Architecture — Cloud Readiness Accelerator*
+*© Rackspace Technology. All rights reserved.*
