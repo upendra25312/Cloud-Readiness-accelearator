@@ -48,6 +48,9 @@ Total typical engagement: 12–23 weeks
 │   ├── customization/                             ← Industry and size adaptations
 │   ├── governance/                                ← Data validation and QA checklist
 │   └── reference/                                 ← Azure CAF and other reference PDFs
+├── presentations/
+│   ├── executive/                                 ← CRA overview decks (v0, v1, v1.1)
+│   └── alliance/                                  ← Azure AMM delivery guide, Rackspace × Microsoft funding enablement
 ├── Templates/
 │   ├── 01-discovery/                              ← Application inventory, infra profiling, dependency mapping
 │   ├── 02-analysis/                               ← Readiness scoring, governance foundations

@@ -45,7 +45,7 @@ Use it to scope, deliver, and report a cloud readiness engagement — from first
 
 > I need to understand what this framework is and what it produces.
 
-1. Open [`Cloud_Readiness_Accelerator_Rackspace_V1.1.pptx`](Cloud_Readiness_Accelerator_Rackspace_V1.1.pptx) — executive overview presentation
+1. Open [`presentations/executive/cra-overview-v1.1.pptx`](presentations/executive/cra-overview-v1.1.pptx) — executive overview presentation
 2. Read [`CLOUD-READINESS-ACCELERATOR-PLAN.md`](CLOUD-READINESS-ACCELERATOR-PLAN.md) — business case, market positioning, and roadmap
 3. See [`README.md`](README.md) — full framework overview with alliance partner alignment
 
