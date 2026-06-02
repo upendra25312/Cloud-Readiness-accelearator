@@ -995,7 +995,7 @@ The Planning Phase is successful when:
 | Technical Migration Planning | 4-6 days | Cloud Architects, Technical Leads |
 | Success Criteria Definition | 2-3 days | Program Manager |
 | Executive Readiness | 2-3 days | Program Manager |
-| **Total** | **2-4 weeks** | **6-8 FTE** |
+| **Total** | **4–6 weeks** | **6-8 FTE** |
 
 ### Resource Allocation by Organization Size
 

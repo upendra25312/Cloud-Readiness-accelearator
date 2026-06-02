@@ -1,94 +1,115 @@
 # Contributing to Cloud Readiness Accelerator
 
-Thank you for your interest in contributing! This document provides guidelines and instructions for contributing to the Cloud Readiness Accelerator framework.
+The CRA framework improves through contributions from practitioners who have used it in the field. This document explains what kinds of contributions are needed and how to submit them.
 
-## Code of Conduct
+---
 
-Please review our [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) before contributing.
+## What We Welcome
+
+| Contribution Type | Examples |
+| --- | --- |
+| **New or improved templates** | Better application scoping worksheets, updated TCO models, improved scoring criteria |
+| **Anonymized examples** | Real-engagement outputs with all customer identifiers removed |
+| **Phase guide improvements** | Lessons learned, corrected estimates, additional context for complex scenarios |
+| **Methodology refinements** | Updated phase durations, new readiness dimensions, edge-case handling |
+| **Alliance alignment docs** | Mappings to CAF, MAP, PSO, or new co-sell programme requirements |
+| **Bug reports** | Broken links, formula errors in Excel templates, incorrect instructions |
+
+---
+
+## Quality Standards
+
+Every contribution must meet the following before it will be merged:
+
+- **Executive-readable**: No internal jargon. A VP reading a template for the first time must understand its purpose.
+- **Cloud-neutral**: If the contribution covers a single hyperscaler, label it clearly. Templates covering all scenarios must have AWS, Azure, and GCP sections.
+- **Peer-reviewed**: Add a `v[N]-audited` suffix to the filename when a peer has reviewed it (e.g. `readiness-scoring-v2-audited.xlsx`).
+- **Versioned**: Include a semantic version in the document header (e.g. `Version: 2.1`).
+- **No customer data**: All examples must be fully anonymized. Replace customer names with `[Client]`, financial figures with representative ranges, and remove any identifying infrastructure details.
+
+---
 
 ## How to Contribute
 
-### Reporting Issues
-
-1. Check existing [issues](https://github.com/upendra-29003/Cloud-Readiness-acceleartor/issues)
-2. Create a new issue with:
-   - Clear title
-   - Detailed description
-   - Steps to reproduce (if applicable)
-   - Expected vs actual behavior
-   - Screenshots or examples
-
-### Submitting Pull Requests
+### For template updates and doc improvements
 
 1. Fork the repository
-2. Create a feature branch: `git checkout -b feature/your-feature`
-3. Make your changes
-4. Commit with clear messages: `git commit -m 'Add feature description'`
-5. Push to your fork: `git push origin feature/your-feature`
-6. Create a Pull Request with:
-   - Clear title
-   - Description of changes
-   - Reference to related issues
-   - Screenshots or examples
+2. Create a branch: `git checkout -b contribution/your-description`
+3. Make your changes following the naming conventions below
+4. Submit a Pull Request with:
+   - What changed and why (link to issue if applicable)
+   - Which engagement or scenario surfaced the need
+   - Confirmation that no customer data is included
 
-### Suggesting Improvements
+### For anonymized examples
 
-1. Open a [GitHub Discussion](https://github.com/upendra-29003/Cloud-Readiness-acceleartor/discussions)
-2. Describe your suggestion
-3. Provide context and use cases
-4. Engage with community feedback
+1. Place the file in the appropriate `Examples/` subfolder (`aws/`, `azure/`, or `media-entertainment/`)
+2. Add a row to the case study markdown (or create a new one) explaining what the file demonstrates
+3. Confirm you have removed or replaced all customer-identifying information
+4. Submit a Pull Request with a short description of the engagement context (industry, scale, hyperscaler selected)
 
-### Sharing Case Studies
+### For bug reports
 
-1. Create a new directory in `case-studies/`
-2. Add your case study documentation
-3. Include:
-   - Organization overview
-   - Assessment results
-   - Business case outcomes
-   - Lessons learned
-4. Submit a Pull Request
+Open an issue using the [Content Update template](.github/ISSUE_TEMPLATE/) with:
 
-## Development Guidelines
+- Which file has the error
+- What the error is
+- What the correct content should be
 
-### Template Format
+---
 
-- Use Markdown format
-- Include clear sections
-- Provide examples
-- Add instructions
+## Naming Conventions
 
-### Documentation
+| Artifact type | Convention | Example |
+| --- | --- | --- |
+| Excel templates | `kebab-case-description-v[N].xlsx` | `readiness-scoring-v2.xlsx` |
+| Word/DOCX templates | `kebab-case-description-v[N].docx` | `sow-template-v3.docx` |
+| PPTX presentations | `CRA-[Audience]-[Topic]-v[N].pptx` | `CRA-Executive-Overview-v1.pptx` |
+| Markdown guides | `NN-kebab-case-description.md` | `01-discovery-phase-guide.md` |
+| Example files | Prefix with source context where useful | `azure-payg-lkl-uk-south.xlsx` |
 
-- Keep documentation up-to-date
-- Use clear, concise language
-- Include examples
-- Add links to related content
+---
 
-### Code Style
+## Folder Structure
 
-- Follow existing patterns
-- Use consistent formatting
-- Add comments for clarity
-- Test your changes
+Place contributions in the correct folder:
+
+```text
+Templates/01-discovery/        ← Application inventory, infra profiling
+Templates/02-analysis/         ← Readiness scoring, governance
+Templates/03-evaluation/       ← TCO models, hyperscaler decision matrix
+Templates/04-planning/         ← Migration waves, risk register, SOW
+Templates/executive-reporting/ ← Assessment report and exec summary templates
+Examples/aws/                  ← AWS pricing and business case examples
+Examples/azure/                ← Azure assessment examples
+Examples/media-entertainment/  ← DMG Media UK case study and supporting files
+docs/guides/                   ← Phase delivery guides
+docs/integration/              ← CMDB and tooling integration guides
+presentations/executive/       ← CIO/VP-ready decks
+presentations/alliance/        ← Partner-aligned decks
+```
+
+---
 
 ## Review Process
 
-1. Maintainers review your contribution
-2. Feedback and suggestions provided
-3. Make requested changes
-4. Contribution merged upon approval
+1. A maintainer will review your PR within 5 business days
+2. Feedback will be provided inline on the PR
+3. Once all comments are addressed, the contribution will be merged
+4. Significant additions will be noted in [CHANGELOG.md](CHANGELOG.md)
 
-## Recognition
+---
 
-Contributors will be recognized in:
-- [CHANGELOG.md](CHANGELOG.md)
-- [GitHub Contributors](https://github.com/upendra-29003/Cloud-Readiness-acceleartor/graphs/contributors)
-- Project documentation
+## Security
 
-## Questions?
+Never include customer names, financial figures, infrastructure IP addresses, or credentials in contributions. If you are unsure whether something is sensitive, remove it. See [SECURITY.md](SECURITY.md) for the security disclosure policy.
 
-- Open a [GitHub Discussion](https://github.com/upendra-29003/Cloud-Readiness-acceleartor/discussions)
-- Email: cloud-readiness@rackspace.com
+---
 
-Thank you for contributing!
+## Questions
+
+Open a [GitHub Discussion](https://github.com/upendra25312/Cloud-Readiness-accelearator/discussions) or raise an issue using the Question template.
+
+---
+
+Cloud Readiness Accelerator — Rackspace Technology

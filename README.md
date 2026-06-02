@@ -150,7 +150,7 @@ Customer Journey:
       ▼                   ▼                  ▼                   ▼
  [SMART Tool]    [Rackspace CRA     [Full CRA        [Optimization
  15 min; Azure   Scoping Call]      Execution]        & Governance]
- only; self-     Uses CRA           12–23 weeks;      CRA baseline
+ only; self-     Uses CRA           16–20 weeks;      CRA baseline
  serve           templates to       all 3 clouds;     enables
                  scope & price      full deliverables  continuous
                  the engagement                        improvement

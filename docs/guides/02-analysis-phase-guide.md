@@ -759,7 +759,7 @@ The Analysis Phase is successful when:
 | Compliance Assessment | 3-5 days | Compliance Analyst |
 | Business Assessment | 2-4 days | Business Analyst |
 | Readiness Scoring | 2-3 days | Assessment Lead, Analysts |
-| **Total** | **2-3 weeks** | **5-6 FTE** |
+| **Total** | **3–4 weeks** | **5-6 FTE** |
 
 ### Resource Allocation by Organization Size
 

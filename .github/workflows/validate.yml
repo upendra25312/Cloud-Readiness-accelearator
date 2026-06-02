@@ -11,66 +11,75 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Check markdown files
         run: |
           echo "Checking markdown files..."
           find . -name "*.md" -type f | wc -l
-          
+
       - name: Validate directory structure
         run: |
           echo "Validating directory structure..."
           test -d docs && echo "✓ docs directory exists" || echo "✗ docs directory missing"
-          test -d templates && echo "✓ templates directory exists" || echo "✗ templates directory missing"
-          test -d guides && echo "✓ guides directory exists" || echo "✗ guides directory missing"
-          test -d case-studies && echo "✓ case-studies directory exists" || echo "✗ case-studies directory missing"
-          test -d resources && echo "✓ resources directory exists" || echo "✗ resources directory missing"
-          test -d examples && echo "✓ examples directory exists" || echo "✗ examples directory missing"
-          
+          test -d docs/guides && echo "✓ docs/guides directory exists" || echo "✗ docs/guides directory missing"
+          test -d docs/integration && echo "✓ docs/integration directory exists" || echo "✗ docs/integration directory missing"
+          test -d docs/customization && echo "✓ docs/customization directory exists" || echo "✗ docs/customization directory missing"
+          test -d docs/governance && echo "✓ docs/governance directory exists" || echo "✗ docs/governance directory missing"
+          test -d Templates && echo "✓ Templates directory exists" || echo "✗ Templates directory missing"
+          test -d Examples && echo "✓ Examples directory exists" || echo "✗ Examples directory missing"
+          test -d presentations && echo "✓ presentations directory exists" || echo "✗ presentations directory missing"
+
       - name: Validate core files
         run: |
           echo "Validating core files..."
           test -f README.md && echo "✓ README.md exists" || echo "✗ README.md missing"
+          test -f START-HERE.md && echo "✓ START-HERE.md exists" || echo "✗ START-HERE.md missing"
           test -f LICENSE && echo "✓ LICENSE exists" || echo "✗ LICENSE missing"
           test -f CONTRIBUTING.md && echo "✓ CONTRIBUTING.md exists" || echo "✗ CONTRIBUTING.md missing"
           test -f CODE_OF_CONDUCT.md && echo "✓ CODE_OF_CONDUCT.md exists" || echo "✗ CODE_OF_CONDUCT.md missing"
           test -f CHANGELOG.md && echo "✓ CHANGELOG.md exists" || echo "✗ CHANGELOG.md missing"
           test -f ROADMAP.md && echo "✓ ROADMAP.md exists" || echo "✗ ROADMAP.md missing"
-          test -f package.json && echo "✓ package.json exists" || echo "✗ package.json missing"
-          
-      - name: Validate documentation files
+          test -f SECURITY.md && echo "✓ SECURITY.md exists" || echo "✗ SECURITY.md missing"
+
+      - name: Validate methodology and phase guides
         run: |
-          echo "Validating documentation files..."
-          test -f docs/GETTING_STARTED.md && echo "✓ docs/GETTING_STARTED.md exists" || echo "✗ docs/GETTING_STARTED.md missing"
+          echo "Validating methodology and phase guides..."
           test -f docs/METHODOLOGY.md && echo "✓ docs/METHODOLOGY.md exists" || echo "✗ docs/METHODOLOGY.md missing"
-          test -f docs/ARCHITECTURE.md && echo "✓ docs/ARCHITECTURE.md exists" || echo "✗ docs/ARCHITECTURE.md missing"
-          test -f docs/INTEGRATION_GUIDES.md && echo "✓ docs/INTEGRATION_GUIDES.md exists" || echo "✗ docs/INTEGRATION_GUIDES.md missing"
-          test -f docs/CUSTOMIZATION_GUIDES.md && echo "✓ docs/CUSTOMIZATION_GUIDES.md exists" || echo "✗ docs/CUSTOMIZATION_GUIDES.md missing"
-          test -f docs/FAQ.md && echo "✓ docs/FAQ.md exists" || echo "✗ docs/FAQ.md missing"
-          
+          test -f docs/guides/00-architect-onboarding-guide.md && echo "✓ 00-architect-onboarding-guide.md exists" || echo "✗ 00-architect-onboarding-guide.md missing"
+          test -f docs/guides/01-discovery-phase-guide.md && echo "✓ 01-discovery-phase-guide.md exists" || echo "✗ 01-discovery-phase-guide.md missing"
+          test -f docs/guides/02-analysis-phase-guide.md && echo "✓ 02-analysis-phase-guide.md exists" || echo "✗ 02-analysis-phase-guide.md missing"
+          test -f docs/guides/03-evaluation-phase-guide.md && echo "✓ 03-evaluation-phase-guide.md exists" || echo "✗ 03-evaluation-phase-guide.md missing"
+          test -f docs/guides/04-planning-phase-guide.md && echo "✓ 04-planning-phase-guide.md exists" || echo "✗ 04-planning-phase-guide.md missing"
+
+      - name: Validate alliance alignment docs
+        run: |
+          echo "Validating alliance alignment docs..."
+          test -f docs/MICROSOFT-CAF-ALIGNMENT.md && echo "✓ MICROSOFT-CAF-ALIGNMENT.md exists" || echo "✗ MICROSOFT-CAF-ALIGNMENT.md missing"
+          test -f docs/AWS-MAP-ALIGNMENT.md && echo "✓ AWS-MAP-ALIGNMENT.md exists" || echo "✗ AWS-MAP-ALIGNMENT.md missing"
+          test -f docs/GOOGLE-PSO-ALIGNMENT.md && echo "✓ GOOGLE-PSO-ALIGNMENT.md exists" || echo "✗ GOOGLE-PSO-ALIGNMENT.md missing"
+
       - name: Validate template structure
         run: |
           echo "Validating template structure..."
-          test -d templates/discovery && echo "✓ templates/discovery exists" || echo "✗ templates/discovery missing"
-          test -d templates/scoring && echo "✓ templates/scoring exists" || echo "✗ templates/scoring missing"
-          test -d templates/business-case && echo "✓ templates/business-case exists" || echo "✗ templates/business-case missing"
-          test -d templates/risk-compliance && echo "✓ templates/risk-compliance exists" || echo "✗ templates/risk-compliance missing"
-          test -d templates/governance && echo "✓ templates/governance exists" || echo "✗ templates/governance missing"
-          test -d templates/reporting && echo "✓ templates/reporting exists" || echo "✗ templates/reporting missing"
-          
-      - name: Validate guides structure
+          test -d Templates/01-discovery && echo "✓ Templates/01-discovery exists" || echo "✗ Templates/01-discovery missing"
+          test -d Templates/02-analysis && echo "✓ Templates/02-analysis exists" || echo "✗ Templates/02-analysis missing"
+          test -d Templates/03-evaluation && echo "✓ Templates/03-evaluation exists" || echo "✗ Templates/03-evaluation missing"
+          test -d Templates/04-planning && echo "✓ Templates/04-planning exists" || echo "✗ Templates/04-planning missing"
+          test -d Templates/executive-reporting && echo "✓ Templates/executive-reporting exists" || echo "✗ Templates/executive-reporting missing"
+
+      - name: Validate examples structure
         run: |
-          echo "Validating guides structure..."
-          test -d guides/phase-guides && echo "✓ guides/phase-guides exists" || echo "✗ guides/phase-guides missing"
-          test -d guides/integration-guides && echo "✓ guides/integration-guides exists" || echo "✗ guides/integration-guides missing"
-          test -d guides/customization-guides && echo "✓ guides/customization-guides exists" || echo "✗ guides/customization-guides missing"
-          test -d guides/quality-assurance && echo "✓ guides/quality-assurance exists" || echo "✗ guides/quality-assurance missing"
-          
-      - name: Validate JSON files
+          echo "Validating examples structure..."
+          test -d Examples/aws && echo "✓ Examples/aws exists" || echo "✗ Examples/aws missing"
+          test -d Examples/azure && echo "✓ Examples/azure exists" || echo "✗ Examples/azure missing"
+          test -d Examples/media-entertainment && echo "✓ Examples/media-entertainment exists" || echo "✗ Examples/media-entertainment missing"
+
+      - name: Validate presentations structure
         run: |
-          echo "Validating JSON files..."
-          python3 -m json.tool package.json > /dev/null && echo "✓ package.json is valid JSON" || echo "✗ package.json is invalid JSON"
-          
+          echo "Validating presentations structure..."
+          test -d presentations/executive && echo "✓ presentations/executive exists" || echo "✗ presentations/executive missing"
+          test -d presentations/alliance && echo "✓ presentations/alliance exists" || echo "✗ presentations/alliance missing"
+
       - name: Summary
         run: |
           echo "✅ Validation complete!"

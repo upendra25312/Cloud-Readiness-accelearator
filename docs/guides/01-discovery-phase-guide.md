@@ -703,7 +703,7 @@ The Discovery Phase is successful when:
 | Infrastructure Profiling | 3-5 days | Technical Lead, Operations |
 | Dependency Mapping | 5-7 days | Technical Lead, Application Owners |
 | Data Validation | 3-5 days | Data Analyst, Assessment Lead |
-| **Total** | **2-4 weeks** | **3-4 FTE** |
+| **Total** | **5–7 weeks** | **3-4 FTE** |
 
 ### Resource Allocation by Organization Size
 

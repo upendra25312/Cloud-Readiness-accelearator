@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      
+
       - name: Get version from tag
         id: tag_name
         run: |
           echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
-          
+
       - name: Create Release
         uses: actions/create-release@v1
         env:
@@ -25,47 +25,48 @@ jobs:
           release_name: Cloud Readiness Accelerator ${{ steps.tag_name.outputs.VERSION }}
           body: |
             # Cloud Readiness Accelerator ${{ steps.tag_name.outputs.VERSION }}
-            
+
             ## Release Notes
-            
+
             This release includes:
-            - Complete assessment framework
-            - 24+ reusable templates
-            - 12+ comprehensive guides
-            - Multi-cloud evaluation support
-            - Business case development tools
-            - Risk and compliance assessment
-            - Migration planning templates
-            
+            - Complete four-phase assessment framework (Discovery → Analysis → Evaluation → Planning)
+            - 30+ reusable templates covering every CRA deliverable
+            - Phase delivery guides for all four phases
+            - Multi-cloud evaluation framework (AWS, Azure, GCP)
+            - Business case and TCO development tools
+            - Risk and compliance assessment templates
+            - Alliance partner alignment guides (Microsoft CAF/AMM, AWS MAP, Google PSO)
+
             ## What's New
-            
+
             See [CHANGELOG.md](CHANGELOG.md) for detailed release notes.
-            
+
             ## Getting Started
-            
+
             1. Clone the repository
-            2. Review [README.md](README.md)
-            3. Follow [GETTING_STARTED.md](docs/GETTING_STARTED.md)
-            4. Download templates from `templates/` directory
-            
+            2. Read [START-HERE.md](START-HERE.md) — 5-minute framework orientation
+            3. Read [docs/METHODOLOGY.md](docs/METHODOLOGY.md) — full four-phase methodology
+            4. Open the phase guide for your current engagement phase
+            5. Download templates from the `Templates/` directory
+
             ## Documentation
-            
-            - [Getting Started](docs/GETTING_STARTED.md)
-            - [Methodology](docs/METHODOLOGY.md)
-            - [Architecture](docs/ARCHITECTURE.md)
-            - [Integration Guides](docs/INTEGRATION_GUIDES.md)
-            - [Customization Guides](docs/CUSTOMIZATION_GUIDES.md)
-            - [FAQ](docs/FAQ.md)
-            
+
+            - [START-HERE.md](START-HERE.md) — Framework orientation
+            - [docs/METHODOLOGY.md](docs/METHODOLOGY.md) — Assessment methodology
+            - [docs/guides/](docs/guides/) — Phase delivery guides
+            - [docs/MICROSOFT-CAF-ALIGNMENT.md](docs/MICROSOFT-CAF-ALIGNMENT.md) — Microsoft CAF and AMM alignment
+            - [docs/AWS-MAP-ALIGNMENT.md](docs/AWS-MAP-ALIGNMENT.md) — AWS MAP alignment
+            - [docs/GOOGLE-PSO-ALIGNMENT.md](docs/GOOGLE-PSO-ALIGNMENT.md) — Google Cloud PSO alignment
+
             ## Support
-            
-            - [GitHub Issues](https://github.com/upendra-29003/Cloud-Readiness-acceleartor/issues)
-            - [GitHub Discussions](https://github.com/upendra-29003/Cloud-Readiness-acceleartor/discussions)
-            - Email: cloud-readiness@rackspace.com
-            
+
+            - [GitHub Issues](https://github.com/upendra25312/Cloud-Readiness-acceleartor/issues)
+            - [GitHub Discussions](https://github.com/upendra25312/Cloud-Readiness-acceleartor/discussions)
+            - Email: security@rackspace.com
+
           draft: false
           prerelease: false
-          
+
       - name: Notify Release
         run: |
           echo "✅ Release ${{ steps.tag_name.outputs.VERSION }} created successfully!"
