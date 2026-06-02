@@ -1,0 +1,71 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Get version from tag
+        id: tag_name
+        run: |
+          echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+          
+      - name: Create Release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag_name.outputs.VERSION }}
+          release_name: Cloud Readiness Accelerator ${{ steps.tag_name.outputs.VERSION }}
+          body: |
+            # Cloud Readiness Accelerator ${{ steps.tag_name.outputs.VERSION }}
+            
+            ## Release Notes
+            
+            This release includes:
+            - Complete assessment framework
+            - 24+ reusable templates
+            - 12+ comprehensive guides
+            - Multi-cloud evaluation support
+            - Business case development tools
+            - Risk and compliance assessment
+            - Migration planning templates
+            
+            ## What's New
+            
+            See [CHANGELOG.md](CHANGELOG.md) for detailed release notes.
+            
+            ## Getting Started
+            
+            1. Clone the repository
+            2. Review [README.md](README.md)
+            3. Follow [GETTING_STARTED.md](docs/GETTING_STARTED.md)
+            4. Download templates from `templates/` directory
+            
+            ## Documentation
+            
+            - [Getting Started](docs/GETTING_STARTED.md)
+            - [Methodology](docs/METHODOLOGY.md)
+            - [Architecture](docs/ARCHITECTURE.md)
+            - [Integration Guides](docs/INTEGRATION_GUIDES.md)
+            - [Customization Guides](docs/CUSTOMIZATION_GUIDES.md)
+            - [FAQ](docs/FAQ.md)
+            
+            ## Support
+            
+            - [GitHub Issues](https://github.com/upendra-29003/Cloud-Readiness-acceleartor/issues)
+            - [GitHub Discussions](https://github.com/upendra-29003/Cloud-Readiness-acceleartor/discussions)
+            - Email: cloud-readiness@rackspace.com
+            
+          draft: false
+          prerelease: false
+          
+      - name: Notify Release
+        run: |
+          echo "✅ Release ${{ steps.tag_name.outputs.VERSION }} created successfully!"

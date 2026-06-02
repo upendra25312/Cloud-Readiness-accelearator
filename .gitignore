@@ -1,0 +1,47 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build
+dist/
+build/
+
+# Temporary
+*.tmp
+*.temp
+.cache/
+
+# Logs
+logs/
+*.log
+
+# Environment
+.env
+.env.local
+
+# OneDrive
+~$*
+.tmp.drivedownload/
+.tmp.driveupload/
+
+# LibreOffice / Office lock files
+.~lock.*#
+
+# Local IDE / spec configs
+.config.kiro
+
+# Claude Code local settings
+.claude/
+.sixth/

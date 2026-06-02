@@ -1,0 +1,86 @@
+{
+  "name": "cloud-readiness-accelerator",
+  "version": "1.0.0",
+  "description": "Enterprise cloud readiness assessment and migration planning framework",
+  "main": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/upendra-29003/Cloud-Readiness-acceleartor.git"
+  },
+  "keywords": [
+    "cloud",
+    "readiness",
+    "assessment",
+    "migration",
+    "aws",
+    "azure",
+    "gcp",
+    "framework",
+    "templates",
+    "methodology",
+    "cloud-migration",
+    "cloud-adoption",
+    "business-case",
+    "tco",
+    "roi",
+    "risk-assessment",
+    "compliance",
+    "governance"
+  ],
+  "author": "Rackspace Global",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/upendra-29003/Cloud-Readiness-acceleartor/issues"
+  },
+  "homepage": "https://github.com/upendra-29003/Cloud-Readiness-acceleartor#readme",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "validate": "node scripts/validate.js",
+    "build": "node scripts/build.js",
+    "docs": "echo \"Documentation available at docs/ directory\""
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "markdown-lint": "^0.0.5"
+  },
+  "files": [
+    "README.md",
+    "LICENSE",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
+    "CHANGELOG.md",
+    "ROADMAP.md",
+    "docs/",
+    "templates/",
+    "guides/",
+    "case-studies/",
+    "resources/",
+    "examples/"
+  ],
+  "directories": {
+    "doc": "docs",
+    "example": "examples"
+  },
+  "contributors": [
+    {
+      "name": "Microsoft Expert Azure Cloud Architects"
+    },
+    {
+      "name": "Senior Project Managers"
+    },
+    {
+      "name": "AI Architects at Microsoft, Google, and AWS"
+    },
+    {
+      "name": "Pre-Sales Architects at Microsoft, AWS, and Google Cloud"
+    },
+    {
+      "name": "Alliance Partners at Microsoft, AWS, and Google Cloud"
+    },
+    {
+      "name": "Senior Directors of Cloud Solutions Architecture"
+    }
+  ]
+}
