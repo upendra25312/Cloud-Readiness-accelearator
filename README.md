@@ -123,6 +123,7 @@ All templates are in [Templates/](Templates/), organised by phase:
 | --- | --- | --- |
 | [Examples/aws/](Examples/aws/) | AWS MPA pricing (3 regions — Frankfurt, Ireland, London), business case decks — lift-and-shift, DB refactoring, storage | Calibrate AWS TCO outputs |
 | [Examples/azure/](Examples/azure/) | Azure Migrate assessments — PAYG and 3-year RI across UK South, North Europe, Germany West Central | Calibrate Azure like-for-like assessments |
+| [Examples/media-entertainment/](Examples/media-entertainment/) | DMG Media UK — full CRA engagement case study: 4,200+ VM estate, 3-way hyperscaler evaluation, Azure recommendation with AMM funding | See a complete real-world CRA engagement end-to-end |
 
 ---
 

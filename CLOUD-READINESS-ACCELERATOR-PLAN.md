@@ -98,7 +98,7 @@ Rackspace Cloud Readiness Accelerator
 │   └── Technical overview       ← For architects and leads
 │
 ├── 04-Examples/                 ← Reference implementations
-│   ├── Media & Entertainment    ← Anonymized real engagement
+│   ├── Media & Entertainment    ← DMG Media UK (4,200+ VMs, Azure recommendation)
 │   └── Enterprise generic       ← Generalizable reference case
 │
 ├── 05-Tools/                    ← Calculation engines
