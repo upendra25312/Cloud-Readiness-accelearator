@@ -47,17 +47,18 @@ The status quo is that every CRA engagement is custom-built. An architect spends
 
 | Signal | What It Means for Rackspace |
 |---|---|
+| **VMware/Broadcom subscription-only licensing — 3–5× cost increase at renewal** | **The #1 migration trigger in enterprise accounts right now; every VMware shop is a CRA prospect** |
 | 70% of enterprises accelerating cloud migration post-2024 | High inbound demand for formal readiness assessments |
-| Average CRA deal size: $250K–$1.5M | Premium revenue per engagement |
+| Average CRA Part 1 deal size: $250K–$1.5M; Part 2 migration execution: $2M–$8M+ | Premium revenue per engagement — Part 1 creates Part 2 |
 | Microsoft / AWS / GCP all have FREE 15-min assessment tools | We must differentiate on depth, deliverables, and alliance leverage |
 | Customers cite "lack of internal capability" as #1 migration barrier | CRA directly addresses the most cited blocker |
-| Alliance partners reward assessment-led deal creation | Every CRA engagement is a co-sell opportunity |
+| Alliance partners reward assessment-led deal creation | Every CRA engagement is a co-sell opportunity worth $1M–$10M in Azure ARR |
 
 **Bottom line (large, bold):**  
-**$10M+ revenue influence potential in Year 1 — 15 engagements × $650K average deal size**
+**$10M+ revenue influence potential in Year 1 — 15 engagements × $650K average Part 1 deal size. Part 2 conversion target: $30M+ Azure ARR.**
 
 **Speaker notes:**  
-This is not a "nice to have" initiative — there is a clear revenue number attached to it. The demand exists. Microsoft and AWS are actively seeking Rackspace-led assessment engagements to feed their migration pipelines. The framework lets us capture that demand repeatably and at higher margin than bespoke delivery.
+The VMware/Broadcom signal is the most important row on this slide. Every enterprise customer running VMware vSphere received a licensing renewal notice in 2024/2025 that showed a 3–5× cost increase. These customers are calling Microsoft, AWS, and their SIs simultaneously. CRA is Rackspace's structured response to that call — it produces the independent, vendor-neutral assessment that lets a customer make the hyperscaler decision with board-level confidence rather than choosing the first vendor who pitches them. The $650K figure is the average Part 1 (assessment) deal. Part 2 (migration execution) is where the larger revenue sits: a mid-market customer with 500–2,000 VMs typically generates $2M–$8M in migration execution fees and $1M–$5M in Azure annual run rate. Microsoft's co-sell programme pays Rackspace on Azure ARR — that is the number our PDM cares about, not the Rackspace service fee.
 
 ---
 

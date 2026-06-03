@@ -79,6 +79,17 @@ The Discovery phase establishes the foundation for the entire assessment by iden
 - **Duration:** 3 weeks
 - **Resources:** Discovery architect, network SME, security SME
 
+**Discovery tooling selection and alliance programme implications:**
+
+| Tool | Primary Use Case | Alliance Programme Note |
+|---|---|---|
+| Azure Migrate appliance | Azure-primary engagements; VMware vCenter ≥ 6.5; outputs feed Azure Migrate assessment and AHB modelling | Required for AMM deliverable completeness; CAB lead time 5–10 days |
+| AWS Application Discovery Service (ADS) | AWS-primary engagements; required if pursuing MAP funding | **MAP requires ADS or an AWS-approved partner tool** — GCP Migration Center outputs alone do not satisfy MAP discovery evidence requirements |
+| GCP Migration Center | GCP-primary engagements; strong agentless VMware coverage; good for multi-cloud baseline | Can be used as the primary discovery tool for non-AWS engagements; does not satisfy MAP evidence |
+| RVTools | Supplementary VM inventory from vCenter; fast; no network change required | Good pilot tool and cross-check; not sufficient as sole discovery source for AMM/MAP |
+
+> If the engagement is likely to lead to an AWS recommendation and MAP funding, deploy ADS alongside the primary tool from Day 1 of tooling setup. Retrofitting ADS after Phase 1 is complete is time-consuming and may jeopardise MAP eligibility.
+
 #### 1.4 Application Inventory Collection
 - Extract application list from CMDB or via discovery tooling
 - Collect application metadata (name, owner, criticality, platform, tech stack)
@@ -356,10 +367,25 @@ The Evaluation phase synthesizes analysis findings into readiness scores, evalua
 - Calculate Security readiness scores (identity, encryption, vulnerability management, controls)
 - Calculate Compliance readiness scores (regulatory requirements, audit trails, data residency, certifications)
 - Calculate Business readiness scores (stakeholder alignment, budget, business case, strategic fit)
-- Calculate overall Cloud_Readiness_Score as weighted average
+- Calculate **Data & AI Readiness scores** (see dimension 6 below)
+- Calculate overall Cloud_Readiness_Score as weighted average across all six dimensions
 - Document scoring rationale and supporting evidence
 - **Duration:** 1 week
 - **Resources:** Solution architects, assessment leads, scoring specialists
+
+##### Dimension 6: Data & AI Readiness (added v2.1)
+
+All three major hyperscalers differentiate significantly on AI and data platform capability. This dimension ensures the assessment captures signals that inform both the hyperscaler scoring and the Part 2 opportunity scope.
+
+| Sub-dimension | What to Assess | Azure Signal | AWS Signal | GCP Signal |
+|---|---|---|---|---|
+| Data platform maturity | Data warehouse, data lake, real-time streaming infrastructure | Azure Synapse / Fabric readiness | Redshift / Kinesis readiness | BigQuery / Dataflow readiness |
+| ML/AI workload identification | Existing ML models, inference workloads, AI-adjacent services (recommendation engines, content scoring, fraud detection) | Azure Machine Learning, Azure OpenAI Service | Amazon SageMaker, Amazon Bedrock | Vertex AI, Vertex AI Search |
+| Data gravity | Where does training data, inference data, and analytical data reside? Which hyperscaler region is closest? | Proximity to Azure data services | Proximity to AWS data lake | GCP data affinity |
+| GenAI readiness | LLM API consumption candidates, RAG architecture signals (large Redis/vector cache footprints), vector database requirements | Azure OpenAI Service, Azure AI Search | Amazon Bedrock, Amazon Kendra | Vertex AI, AlloyDB AI |
+| Microsoft 365 Copilot readiness (Azure-specific) | Teams/Exchange Online adoption, SharePoint Online migration status, Microsoft 365 E3/E5 licensing | M365 Copilot requires Teams + SharePoint + OneDrive on cloud — assess migration status | N/A | N/A |
+
+> **Discovery signal:** A large Redis estate (e.g., 200+ VMs across many application stacks) is a strong indicator of microservices architecture and a potential RAG / vector caching use case. Flag these estates for AI readiness follow-up in Phase 2 application interviews.
 
 #### 3.2 Multi-Cloud Evaluation and Right-Sizing
 - Evaluate AWS, Azure, and Google Cloud service compatibility for each application
@@ -533,6 +559,20 @@ The Planning phase develops detailed migration wave plans, finalizes the readine
 - Establish change management procedures
 - **Duration:** 1 week
 - **Resources:** Risk managers, program managers, governance specialists
+
+##### Scope Variance Change Request Protocol
+
+Scope variance — where the discovered estate differs materially from the SoW estimate — is the most common cause of commercial disputes in CRA engagements. The DMG Media UK engagement surfaced a 57% variance (+1,912 VMs above the SoW estimate). The following protocol is mandatory when variance is discovered:
+
+| Trigger | Action | Owner | Timeline |
+|---|---|---|---|
+| Discovered count exceeds SoW estimate by **>15%** | Raise scope variance flag to Delivery Director and Account Manager immediately; do not continue Phase 1 without acknowledgement | Lead Architect | Within 24 hours of discovery |
+| Variance confirmed and stakeholder-validated | Convene scope refinement workshop with customer IT Director and Rackspace PM to agree the actual migration candidate list | PM + Lead Architect | Within 5 business days of flag |
+| Migration candidate list agreed | Issue formal **Change Request (CR)** document to customer covering: revised scope, revised timeline, revised commercial terms | PM + Account Manager | Within 3 business days of workshop |
+| Customer signs CR | Update SoW; update Phase 2–4 resource plan; update billing forecast | PM | Before Phase 2 begins |
+| Customer disputes CR | Escalate to Delivery Director and Customer Executive Sponsor; do not absorb scope without commercial rebaseline | Delivery Director | Within 5 business days |
+
+> **SoW protection clause (required):** Every CRA SoW must include the following or equivalent: *"This engagement assumes approximately [N] in-scope applications and [M] physical/virtual servers based on information provided by [Client] on [date]. If the actual discovered count differs by more than 15% from the agreed scope, Rackspace reserves the right to issue a Change Request adjusting scope, timeline, and commercial terms."* See `Templates/04-planning/sow-template.docx` Section 5 (Scope Variance Clause).
 
 #### 4.4 Readiness Report Authoring and QA
 - Author executive summary and business case

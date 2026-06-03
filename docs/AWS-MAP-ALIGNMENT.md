@@ -66,6 +66,16 @@ AWS Migration Acceleration Programme provides funding and support for migration 
 
 > **Important:** MAP programme terms, funding amounts, and eligibility criteria change annually. Always verify with your AWS PDM (Partner Development Manager) at engagement start. The above is reference-only.
 
+### MAP Discovery Tooling Requirement
+
+**MAP requires AWS Application Discovery Service (ADS) or an AWS-approved partner tool** as the discovery source. GCP Migration Center outputs alone do not satisfy MAP evidence requirements. If the engagement is likely to lead to an AWS recommendation, ADS must be deployed in Phase 1 alongside any other discovery tools. See [docs/METHODOLOGY.md](METHODOLOGY.md) §1.3 for the full discovery tooling selection guide.
+
+| Scenario | Tooling Recommendation |
+|---|---|
+| AWS-primary likely | Deploy ADS agentless collector from Phase 1 Day 1; use RVTools as cross-check |
+| Multi-cloud evaluation (Azure + AWS equally weighted) | Deploy both Azure Migrate appliance and ADS; cross-reference inventories |
+| AWS as secondary only | ADS deployment optional; MAP funding unlikely for secondary recommendation |
+
 ### When to Screen for MAP Eligibility
 
 **Screening must happen at SoW scoping — not after the assessment is complete.** Complete the following checklist before the SoW is signed:
@@ -153,6 +163,7 @@ Use this checklist at engagement kick-off to confirm CRA delivery will satisfy M
 
 ### Phase 3 (Evaluation) — MAP Mobilize Stage
 - [ ] AWS TCO modelled across at least 2 regions with On-Demand + 3-year RI + Savings Plans variants
+- [ ] **AWS Graviton3 pricing variant modelled** for eligible workloads (Linux compute, containerised workloads, media processing) — Graviton3 instances deliver 20–40% cost reduction vs x86 equivalents and are the preferred AWS recommendation for new deployments. Include a Graviton3 column in aws-evaluation.xlsx alongside standard x86 RI pricing.
 - [ ] Migration Evaluator report obtained and cross-referenced against CRA TCO model
 - [ ] Hyperscaler decision matrix completed with AWS scored against Azure and GCP
 - [ ] Business case includes on-prem status quo, Year 1 dual-running, and 3-year cloud cost

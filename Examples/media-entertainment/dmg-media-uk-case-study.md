@@ -34,6 +34,7 @@ Rackspace applied the Cloud Readiness Accelerator (CRA) framework across all fou
 
 DMG Media's on-premises VMware estate had grown organically over many years. The key business drivers for cloud assessment were:
 
+- **VMware estate cost shock**: The Broadcom acquisition of VMware eliminated perpetual licensing for vSphere and vSAN; DMG faced a 3–5× increase in licensing costs at the next renewal cycle under subscription-only pricing. This was the primary commercial trigger for the engagement — not a discretionary cloud strategy review.
 - **Licence and hardware refresh risk**: End-of-life VMware licensing and ageing physical infrastructure in both Slough and Reading data centres
 - **Operating system debt**: A significant portion of the estate running past end-of-support operating systems, creating compliance and security exposure
 - **Scalability constraints**: Media workloads with spiky traffic patterns (breaking news, major events) poorly suited to fixed on-premises capacity
@@ -145,11 +146,11 @@ For each hyperscaler, the following pricing models were modelled independently:
 
 1. **UK South data residency**: DMG Media's regulatory and editorial sensitivity requirements favour UK-domiciled data. Azure UK South is the strongest UK-native region with the broadest PaaS service availability.
 
-2. **Windows and SQL Server licence portability**: A significant portion of DMG's Windows Server and SQL Server estate qualifies for Azure Hybrid Benefit, producing material TCO reduction not available to the same degree on AWS or GCP.
+2. **Windows and SQL Server licence portability and Extended Security Updates**: A significant portion of DMG's Windows Server and SQL Server estate qualifies for Azure Hybrid Benefit, producing material TCO reduction. Additionally, the 224 EoL VMs running Windows Server 2008 and SQL Server legacy versions qualify for **3 years of free Extended Security Updates (ESU) on Azure** — a saving not available on AWS or GCP, where ESU must be purchased separately from Microsoft. The combined AHB + ESU saving was a decisive factor in the Azure financial case at the board level.
 
 3. **Media industry PaaS alignment**: Azure Media Services, Azure CDN (Akamai-backed), and Azure Front Door align directly with DMG's content delivery and video streaming requirements.
 
-4. **Oracle and Solaris migration path**: Azure VMware Solution (AVS) provides the most mature VMware lift-and-shift path for the 265 non-GCE-compatible VMs, including the Solaris and Oracle RAC workloads.
+4. **Oracle and Solaris migration path**: For the 12-node Oracle RAC cluster, **Oracle Database@Azure** (the OCI/Azure interconnect, GA in UK South and North Europe) is the primary migration path — it runs native Oracle Exadata infrastructure in Azure datacentres, preserves Oracle licensing, and eliminates the need for AVS for the Oracle workload specifically. **Azure VMware Solution (AVS)** is the correct path for the 23 Solaris 10 VMs and remaining VMware lift workloads (265 VMs total). These are distinct paths and should be planned separately.
 
 5. **Microsoft AMM funding eligibility**: The engagement scope and TCO output qualified DMG for Microsoft Azure Migration and Modernisation (AMM) programme funding, directly reducing Rackspace engagement cost and strengthening the business case for board sign-off.
 
@@ -209,7 +210,7 @@ The following anonymised output files from this engagement are included as refer
 
 | Metric | Value |
 |---|---|
-| Discovery phase duration | 4 weeks |
+| Discovery phase duration | 7 weeks total (3 weeks tooling setup + 4 weeks active data collection). The 4-week data collection window is the period cited in project status reports; the full Phase 1 duration including tooling stand-up and CAB-gated firewall changes was 7 weeks, consistent with the CRA v2.0 methodology. |
 | VMs inventoried | 4,212 |
 | Applications in scope (SoW) | 39 |
 | Hyperscalers formally evaluated | 3 (AWS, Azure, GCP) |

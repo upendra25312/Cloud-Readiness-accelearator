@@ -75,11 +75,26 @@ The Planning Phase is complete when:
 
 ## Step-by-Step Activity Instructions
 
+### Wave Planning Complexity Tiers
+
+The 2-week default for migration wave planning (Activity 4.1) applies to clean, well-inventoried estates. Complex estates require significantly more time. Use this table to right-size the wave planning duration before the Phase 4 kick-off:
+
+| Tier | Characteristics | Wave Planning Duration | Trigger Conditions |
+|---|---|---|---|
+| **Simple** | < 100 applications; no Oracle/Solaris; < 5% EoL OS; single DC; no database clusters | 2 weeks | Clean CMDB; standard OS; no specialist workloads |
+| **Standard** | 100–300 applications; some database complexity (SQL Server clusters, MySQL HA); 2+ DCs; 5–15% EoL OS | 3 weeks | Most mid-market engagements without Oracle |
+| **Complex** | 300+ applications; OR Oracle RAC/Exadata present; OR Solaris in estate; OR > 15% EoL OS; OR 3+ isolated network zones | 4–6 weeks | Engage Oracle practice + AVS specialist in Phase 4 Week 1, not Week 3 |
+| **Enterprise** | 500+ applications; multiple hyperscaler targets; Oracle Database@Azure + AVS + standard compute all in scope; M&A-complicated estate | 6–8 weeks | Full specialist team required; stagger wave planning by workload tier |
+
+> The DMG Media UK engagement (4,212 VMs, Oracle RAC, Solaris, 47 Redis application stacks, 224 EoL VMs) was a Complex/Enterprise tier. Attempting to complete wave planning in 2 weeks would have produced a wave plan that could not be executed.
+
+---
+
 ### Activity 1: Detailed Roadmap Development
 
 **Objective**: Develop detailed migration roadmap with waves, timelines, and milestones
 
-**Duration**: 4-6 days
+**Duration**: 4-6 days (Simple/Standard tier); see Wave Planning Complexity Tiers above for Complex/Enterprise
 
 **Steps**:
 
@@ -653,7 +668,7 @@ The Part 2 Entry Point should include a named section on available partner fundi
 
 | Partner Programme | Funding Type | CRA Deliverable Required |
 | --- | --- | --- |
-| Microsoft AMM | Assessment funding (up to $25K) + migration execution funding | CRA Phase 1–4 outputs + AMM eligibility screening (see docs/MICROSOFT-CAF-ALIGNMENT.md) |
+| Microsoft AMM | Co-investment credits (via Partner Investment Engine / PIE claim in Partner Center) against assessment delivery and migration execution costs — amount varies by market, partner designation, and programme year; confirm with Rackspace Microsoft Alliance Manager | CRA Phase 1–4 outputs + Partner Center deal registration + AMM eligibility screening (see docs/MICROSOFT-CAF-ALIGNMENT.md) |
 | AWS MAP | Assessment credits + migration credits | CRA Phase 1–2 MRA outputs + ACE deal registration (see docs/AWS-MAP-ALIGNMENT.md) |
 | Google Cloud RAMP | Migration credits | CRA Phase 1–4 outputs + Google Partner Advantage registration (see docs/GOOGLE-PSO-ALIGNMENT.md) |
 
@@ -1049,10 +1064,12 @@ At the end of Phase 4, the wave plan should sequence every in-scope workload int
 | Wave 1 — Non-Critical | Internal tools, staging, analytics | ~400 | Rehost | Weeks 5–12 |
 | Wave 2 — Business Apps | CRM, HR, finance, mid-tier | ~900 | Rehost / Replatform | Weeks 13–20 |
 | Wave 3 — Tier-1 Production | Customer-facing, revenue-critical | ~1,800 | Rehost with DR validated | Weeks 21–32 |
-| Wave 4 — Oracle / Complex | Oracle RAC, Redis, legacy | ~700 | Replatform / Rearchitect | Weeks 33–44 |
+| Wave 4 — Oracle / Complex | Oracle RAC, Redis, legacy OS | ~700 | Oracle RAC → Oracle Database@Azure; Redis → Azure Cache for Redis Enterprise; Solaris → AVS | Weeks 33–44 |
 | Wave 5 — DC Exit | Remaining + decommission | ~362 | Rehost + DC exit validation | Weeks 45–52 |
 
 > **Lesson from DMG Media UK:** Oracle RAC clusters were placed in Wave 4 deliberately — not because they are unimportant, but because they require the longest specialist lead time. The Oracle practice engagement, licensing confirmation, and test migration all take 6–8 weeks minimum. Plan for this in Phase 4, not in Part 2 week 1.
+>
+> **Oracle migration path for Azure engagements (2026):** For Oracle RAC and Oracle Exadata workloads, the primary migration path is **Oracle Database@Azure** — the OCI/Azure interconnect, GA in UK South and North Europe. It runs native Oracle Exadata infrastructure in Azure datacentres, preserves Oracle licensing terms, and eliminates the need for AVS for the Oracle workload. **Azure VMware Solution (AVS) is the correct path for Solaris and remaining VMware lift workloads — not for Oracle RAC.** These two paths must be planned and costed separately in the wave plan. Engage the Rackspace Oracle practice and the Microsoft Oracle Database@Azure team early in Phase 4 — both have 4–6 week onboarding lead times.
 
 ### Part 2 Entry Point — What the Sign-Off Document Contains
 
