@@ -36,7 +36,7 @@ This document is the reference guide for Rackspace–Microsoft co-sell conversat
 | **Strategy** | Define cloud motivation, business outcomes, business justification | Pre-engagement scoping | Business drivers workshop, scope statement, stakeholder alignment (inputs to SoW) |
 | **Plan** | Application inventory, digital estate rationalization, initial migration plan | **Phase 1: Discovery** + **Phase 2: Analysis** | Application inventory, infrastructure profiling, 5-dimension readiness scores, dependency map |
 | **Ready** | Landing zone design, architecture review, skills readiness | **Phase 3: Evaluation** | Right-sizing recommendations, Azure architecture alignment, Azure Hybrid Benefit model, AMM eligibility screening |
-| **Migrate** | Migration wave execution | **Phase 4: Planning** | Migration wave plan, Part 2 entry point, risk register, governance charter. **Oracle RAC workloads:** Oracle Database@Azure (OCI/Azure interconnect) is the primary path for Oracle RAC/Exadata in Azure; AVS is the path for Solaris and VMware lift workloads only. |
+| **Migrate** | Migration wave execution | **Phase 4: Planning** | Migration wave plan, Part 2 entry point, risk register, governance charter. **Oracle RAC workloads:** Oracle Database@Azure (Oracle Exadata Database Service running natively in Azure datacenters, operated by Oracle and billed through Azure) is the primary path for Oracle RAC/Exadata in Azure; AVS is the path for Solaris and VMware-only lift workloads. |
 | **Govern** | Cloud governance policies, cost management | Phase 4 Planning (governance output) | Governance model template, RACI, operating model design |
 | **Manage** | Operational baseline, business commitments | Post-CRA (Part 2 operations) | CRA provides the baseline; ongoing operations model handed to managed services |
 
@@ -103,6 +103,7 @@ AMM funding is **not** a flat-fee payment. It is delivered through Microsoft's P
 - [ ] Is the Microsoft field team aware of this engagement?
 - [ ] **Has the Rackspace Microsoft Alliance Manager registered this opportunity in Microsoft Partner Center (Solutions Partner deal registration) before the SoW is signed?** Deal registration must precede SoW signature — AMM co-investment is not available retroactively.
 - [ ] Is the Rackspace Microsoft Alliance Manager confirmed as the ACE opportunity owner in Partner Center?
+- [ ] **Microsoft Customer Success Unit (CSU) co-delivery option:** For large or strategic accounts (500+ VMs or >£1M estimated Part 2 value), Microsoft CSU can provide a dedicated Azure architect at no cost to Rackspace. Raise this with the Microsoft PDM at the scoping call — it reduces delivery cost and strengthens the joint account relationship.
 
 Identifying AMM eligibility at scoping — rather than post-assessment — can reduce the effective Rackspace engagement cost and strengthen the business case for customer sign-off. (The DMG Media UK engagement identified AMM eligibility late; this is now a named lesson learned in the framework.)
 
@@ -200,10 +201,12 @@ Use this checklist at engagement kick-off to confirm CRA delivery will satisfy C
 ### Phase 4 (Planning) — CAF Migrate Stage
 - [ ] Migration wave plan aligns to Azure landing zone design (hub-spoke or Azure Virtual WAN)
 - [ ] Landing zone design references the **Azure Landing Zone (ALZ) Accelerator** as the starting point — see [ALZ Accelerator documentation](https://learn.microsoft.com/en-us/azure/architecture/landing-zones/alz-overview) and [ALZ Bicep reference implementation](https://github.com/Azure/ALZ-Bicep). ALZ Accelerator is the Microsoft-standard CAF-aligned enterprise landing zone; custom designs should be justified as deviations from ALZ, not the other way around.
-- [ ] Oracle RAC migration path confirmed: **Oracle Database@Azure** (OCI/Azure interconnect, GA in UK South and North Europe) is the primary path for Oracle RAC and Exadata workloads. Azure VMware Solution (AVS) is the path for Solaris and VMware-only lift workloads.
+- [ ] Oracle RAC migration path confirmed: **Oracle Database@Azure** (Oracle Exadata Database Service deployed natively in Azure datacenters, operated by Oracle, GA in UK South and North Europe) is the primary path for Oracle RAC and Exadata workloads. Note: Oracle Database@Azure is NOT the OCI/Azure network interconnect — it is a separate, newer product where Oracle hardware runs inside Azure. Azure VMware Solution (AVS) is the path for Solaris and VMware-only lift workloads. Plan these two paths separately.
+- [ ] **Azure Arc** considered for workloads that cannot migrate to Azure in Phase 1 (regulatory hold, vendor dependency, hardware lease constraints). Azure Arc extends Azure management plane to on-prem and multi-cloud VMs and is increasingly the Year 1 landing zone requirement for partial-migration estates.
 - [ ] Governance model references Azure Policy, Microsoft Defender for Cloud, Azure Cost Management, and the **Microsoft FinOps Toolkit**
 - [ ] Part 2 entry point document produced with Azure-specific execution checklist
 - [ ] Alliance partner deal registration confirmed in Microsoft Partner Center before Part 2 SoW is issued
+- [ ] **Microsoft Partner Center deal registration expiry confirmed** — Partner Center deal registrations require active progression; check renewal status if more than 4 months have elapsed since initial registration
 
 ---
 

@@ -382,7 +382,7 @@ All three major hyperscalers differentiate significantly on AI and data platform
 | Data platform maturity | Data warehouse, data lake, real-time streaming infrastructure | Azure Synapse / Fabric readiness | Redshift / Kinesis readiness | BigQuery / Dataflow readiness |
 | ML/AI workload identification | Existing ML models, inference workloads, AI-adjacent services (recommendation engines, content scoring, fraud detection) | Azure Machine Learning, Azure OpenAI Service | Amazon SageMaker, Amazon Bedrock | Vertex AI, Vertex AI Search |
 | Data gravity | Where does training data, inference data, and analytical data reside? Which hyperscaler region is closest? | Proximity to Azure data services | Proximity to AWS data lake | GCP data affinity |
-| GenAI readiness | LLM API consumption candidates, RAG architecture signals (large Redis/vector cache footprints), vector database requirements | Azure OpenAI Service, Azure AI Search | Amazon Bedrock, Amazon Kendra | Vertex AI, AlloyDB AI |
+| GenAI readiness | LLM API consumption candidates, RAG architecture signals (large Redis/vector cache footprints), vector database requirements, existing data pipeline infrastructure (Kafka, Spark, Databricks) as signal for data platform migration path | **Azure AI Foundry** (unified hub including Azure OpenAI Service, phi models, fine-tuning); Azure AI Search | Amazon Bedrock, Amazon Kendra; **AWS Trainium/Inferentia** for existing ML training pipelines | **Vertex AI Gemini** (Gemini 1.5 Pro/Flash via Vertex API); AlloyDB AI |
 | Microsoft 365 Copilot readiness (Azure-specific) | Teams/Exchange Online adoption, SharePoint Online migration status, Microsoft 365 E3/E5 licensing | M365 Copilot requires Teams + SharePoint + OneDrive on cloud — assess migration status | N/A | N/A |
 
 > **Discovery signal:** A large Redis estate (e.g., 200+ VMs across many application stacks) is a strong indicator of microservices architecture and a potential RAG / vector caching use case. Flag these estates for AI readiness follow-up in Phase 2 application interviews.
@@ -404,7 +404,7 @@ All three major hyperscalers differentiate significantly on AI and data platform
 - Calculate Total Cost of Ownership (TCO) for 3–5 year period
 - Calculate Return on Investment (ROI) including cost savings and benefits
 - Estimate migration costs (assessment, planning, execution, validation)
-- Calculate payback period and net present value
+- Calculate payback period, net present value (NPV), and internal rate of return (IRR) — enterprise finance committees require all three; payback period for operational readers, NPV for absolute value, IRR for comparison against alternative capital investments
 - Conduct sensitivity analysis for different scenarios
 - Document financial assumptions and risk factors
 - **Duration:** 1–2 weeks
@@ -428,6 +428,8 @@ All three major hyperscalers differentiate significantly on AI and data platform
 - Create presentation materials for stakeholder decision-making
 - **Duration:** 1 week
 - **Resources:** Solution architects, assessment leads, business analysts
+
+> **Vendor Neutrality Commitment.** Rackspace holds co-sell and funding relationships with all three major hyperscalers (Microsoft AMM, AWS MAP, Google Cloud PSO). To preserve the integrity of the CRA recommendation, the hyperscaler scoring in Phase 3 must follow the "evidence before recommendation" principle: the weighted decision matrix score is calculated and reviewed by the delivery team *before* commercial or alliance considerations are applied. The final recommendation is the highest-scoring hyperscaler on evidence. Where scores are within 5 points of each other, a tie-break workshop with the customer is mandatory. Alliance funding eligibility is presented as a *consequence* of the recommendation, never as a driver of it. This principle is enforced by the Phase 3 QA peer review gate.
 
 ### Phase Entry Criteria
 
@@ -681,19 +683,35 @@ Scope variance — where the discovered estate differs materially from the SoW e
 
 ## Cross-Phase Considerations
 
+### Project Initiation (Pre-Phase 1) — 2 Weeks
+
+Every CRA engagement begins with a 2-week Project Initiation phase before Phase 1 tooling setup starts. This phase is not optional — skipping it pushes its activities into Phase 1, compressing the tooling window and causing the most common Phase 1 delays.
+
+| Activity | Owner | Output |
+|---|---|---|
+| Engagement charter and RACI sign-off | PM + Delivery Director | Signed charter with named owners for each CRA phase |
+| Tooling licensing procurement | Lead Architect | Azure Migrate / ADS / GCP Migration Center licences confirmed; service accounts requested |
+| CAB ticket submission (firewall rules) | Discovery Architect | Change requests submitted; 5–10 business day lead time starts here, not in Phase 1 |
+| NDA and data-sharing agreement execution | Account Manager | Signed NDA; customer IT contacts confirmed |
+| Alliance partner deal registration | Alliance Manager | ACE / Partner Center / Google Partner Advantage registration completed before SoW countersign |
+| Kick-off meeting and stakeholder map | PM | Steering committee identified; working group leads named |
+
+> Submitting CAB tickets and firewall change requests during Project Initiation (rather than Phase 1 Day 1) eliminates the most common single cause of Phase 1 slippage.
+
 ### Assessment Timeline Summary
 
 The table below reflects the audited (v2) durations. Numbers in the **Sequential** column assume each phase finishes before the next begins. The **Parallelized** column reflects the recommended delivery model in which Phase 2 begins approximately one week before Phase 1 ends.
 
 | Phase | Duration (Mid-Market) | Cumulative (Sequential) | Cumulative (Parallelized) |
 |-------|-----------------------|-------------------------|---------------------------|
-| Phase 1: Discovery | 7 weeks | 7 weeks | 7 weeks |
-| Phase 2: Analysis | 4 weeks | 11 weeks | 9 weeks |
-| Phase 3: Evaluation | 3 weeks | 14 weeks | 11 weeks |
-| Phase 4: Planning | 6 weeks | 20 weeks | 16 weeks |
-| **Total Assessment (Mid-Market)** | — | **20 weeks** | **16 weeks (~4 months)** |
+| **Project Initiation** | **2 weeks** | 2 weeks | 2 weeks |
+| Phase 1: Discovery | 7 weeks | 9 weeks | 9 weeks |
+| Phase 2: Analysis | 4 weeks | 13 weeks | 11 weeks |
+| Phase 3: Evaluation | 3 weeks | 16 weeks | 13 weeks |
+| Phase 4: Planning | 6 weeks | 22 weeks | 18 weeks |
+| **Total End-to-End (Mid-Market)** | — | **22 weeks** | **18 weeks (~4½ months)** |
 
-> **Note.** A 2-week Project Initiation phase typically precedes Phase 1 to cover charter, RACI, tooling licensing, and access requests. Adding this to the parallelized total gives an end-to-end engagement of approximately **18 weeks** (~4½ months) from contract signature to final sign-off.
+> **Note.** The 18-week parallelized total runs from contract signature to final customer sign-off. For planning purposes, use 18 weeks as the standard mid-market engagement duration.
 
 ### Phase Duration by Organization Size
 

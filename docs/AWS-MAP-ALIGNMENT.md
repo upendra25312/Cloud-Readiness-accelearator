@@ -54,7 +54,8 @@ AWS Migration Acceleration Programme provides funding and support for migration 
 | Migration wave plan | Sequenced migration roadmap | CRA Phase 4: migration-wave-planner.xlsx |
 | AWS as primary or co-primary recommendation | Assessment outcome identifies AWS as a recommended platform | CRA Phase 3: hyperscaler-decision-matrix.xlsx (AWS scored and evidenced) |
 | APN Partner with Migration Competency | Partner-led engagement by qualified AWS partner | Rackspace AWS Partner status ✅ |
-| ACE deal registration | Opportunity registered in AWS Customer Engagements (ACE) portal | Must be registered by Rackspace PDM at engagement start |
+| ACE deal registration | Opportunity registered in AWS Customer Engagements (ACE) portal | Must be registered by Rackspace PDM at engagement start — **ACE opportunities have a 90-day inactivity review cycle; ensure the opportunity is progressed or renewed if the engagement runs longer than 3 months** |
+| MAP funding claim via Partner Funding Portal (PFP) | Qualifying deliverables submitted through the AWS Partner Funding Portal | **This is a separate step from ACE registration.** After the assessment completes, the Rackspace PDM must submit the MAP funding claim in the AWS PFP with the qualifying deliverables attached. ACE registration alone does not release MAP funding. |
 
 ### MAP Funding Tiers (Reference)
 
@@ -184,7 +185,7 @@ The DMG Media UK engagement (June 2026) is the CRA framework's reference impleme
 |---|---|
 | MAP alignment | CRA Phases 1–2 produced MRA-equivalent outputs; AWS scored in hyperscaler decision matrix |
 | AWS pricing model | AWS MPA pricing modelled across 3 regions (Frankfurt, Ireland, London) — files in Examples/aws/ |
-| AWS outcome | Azure UK South selected as primary; AWS retained as secondary consideration for specific workloads |
+| AWS outcome | Azure UK South selected as primary; AWS retained as secondary consideration for object storage / CDN-adjacent workloads (S3-compatible tooling already embedded in some DMG product pipelines) and dev/test environments where AWS-native tooling was already in use by engineering teams |
 | Licence review | SQL Server and Windows Server licences reviewed; AWS BYOL and License Included both modelled |
 | Business case | AWS 3-year RI pricing included in multi-cloud comparison in business-case-tco-roi.xlsx |
 

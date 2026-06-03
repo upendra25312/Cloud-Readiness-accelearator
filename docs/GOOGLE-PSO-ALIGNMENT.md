@@ -7,6 +7,20 @@
 
 ---
 
+## Rackspace Google Cloud Partner Designation
+
+Rackspace holds the following Google Cloud partner designations, relevant to CRA co-sell and migration credit conversations:
+
+| Designation | Relevance to CRA |
+|---|---|
+| **Google Cloud Partner** | Qualified Google Cloud partner; enables co-sell registration and migration credit eligibility via Google Partner Advantage |
+| **Google Cloud Ready – Migration** | Validates that Rackspace migration tooling and methodology meets Google Cloud's migration readiness standards — directly relevant to RAMP and credit programme eligibility |
+| **Google Cloud Managed Service Provider (MSP)** | Confirms delivery capability for post-CRA managed operations (Part 2 operations engagement) |
+
+> Always confirm current designation status with the Rackspace Google Cloud Alliance Manager before presenting to a Google PDM. Designations are renewed annually.
+
+---
+
 ## Executive Summary
 
 The Rackspace Cloud Readiness Accelerator (CRA) aligns structurally to the Google Cloud Adoption Framework (GCAF) and integrates with Google Cloud's Migration Center tooling. CRA Phase 1–4 deliverables map directly to the GCAF Assess and Plan stages and produce the technical assessment outputs required for Google Cloud PSO engagement qualification and partner migration credit eligibility.
@@ -73,7 +87,7 @@ Google Cloud provides migration credits and PSO funding for qualified partner-le
 - [ ] Is GCP a likely primary or co-primary recommendation for this customer?
 - [ ] Does the customer have an active Google Cloud account or a committed migration workload?
 - [ ] Is the infrastructure footprint above GCP's minimum threshold for credit programmes?
-- [ ] Has Rackspace registered this opportunity in Google Partner Advantage?
+- [ ] Has Rackspace registered this opportunity in Google Partner Advantage? **Note:** Google Partner Advantage opportunity registrations require active progression — confirm renewal status if the engagement runs longer than expected.
 - [ ] Is the Google Cloud field account team aware of this engagement?
 - [ ] Does the customer have any Google Workspace or Google Cloud-adjacent workloads that create a natural GCP affinity?
 
@@ -110,7 +124,7 @@ CRA Phase 3 and Phase 4 outputs align to the five Google Cloud Architecture Fram
 | **Security, Privacy, and Compliance** | 5-dimension readiness scoring (dimension 3: Security/Compliance) — includes data residency, encryption, IAM, DLP requirements |
 | **Reliability** | Dependency mapping + migration wave plan — DR strategy, RPO/RTO targets per application, regional failover design |
 | **Cost Optimization** | GCP TCO model (gcp-evaluation.xlsx) — On-Demand + 3-year CUD comparison; Committed Use Discount eligibility per workload |
-| **Performance Optimization** | Right-sizing recommendations from infrastructure profiling; GCE machine family mapping (General Purpose, Compute Optimized, Memory Optimized) |
+| **Performance Optimization** | Right-sizing recommendations from infrastructure profiling; GCE machine family mapping (General Purpose, Compute Optimized, Memory Optimized); **Vertex AI Gemini** (Gemini 1.5 Pro/Flash via Vertex API) and Vertex AI Search for GenAI-ready workloads identified in Phase 2 Data & AI Readiness scoring |
 
 A full Google Cloud Architecture Review is a separate engagement; CRA provides the input data and initial assessment that informs its scope.
 
