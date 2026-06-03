@@ -63,12 +63,12 @@ What you do:                What you do:                What you do:            
 • SaaS assessment           • Cloud maturity workshop     decision matrix           • Write Part 2 entry point
 
 Key templates:              Key templates:              Key templates:              Key templates:
-Application Scoping &       Cloud-Readiness-            AWS/Azure/GCP-Evaluation    Migration-Wave-Planning
-  Profiling.xlsx              Assessment-v2.xlsx          -Template.xlsx              -Template.xlsx
-Infrastructure-Profiling    Readiness-Scoring-          Hyperscaler-Decision-       Risk-Assessment-
-  -Template.xlsx              Criteria-Template.xlsx      Matrix-Template.xlsx        Template.xlsx
-Dependency-Mapping          Governance-Foundations-     Business-Case-Template      Governance-Model-
-  -Template.xlsx               Alignment-Tool.xlsx         .xlsx                       Template.xlsx
+application-scoping-        cloud-readiness-            aws-evaluation.xlsx         migration-wave-
+  profiling.xlsx              scoring-v2.xlsx           azure-evaluation.xlsx         planner.xlsx
+infrastructure-             readiness-scoring-          gcp-evaluation.xlsx         risk-assessment.xlsx
+  profiling.xlsx              criteria.xlsx             hyperscaler-decision-       governance-model.xlsx
+dependency-mapping.xlsx     governance-foundations-       matrix.xlsx
+                              alignment.xlsx            business-case-tco-roi.xlsx
 
 Typical duration: 7 wks    Typical duration: 4 wks    Typical duration: 3 wks    Typical duration: 6 wks
 ```

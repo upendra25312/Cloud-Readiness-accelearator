@@ -1,6 +1,6 @@
 # Cloud Readiness Accelerator — Framework Index & Navigation Guide
 
-**Version**: 1.0 | **Task**: 13.1 | **Requirements**: 16.1, 16.2, 17.1
+**Version**: 2.0 | **Updated**: June 2026
 
 ---
 
@@ -19,15 +19,15 @@ The Cloud Readiness Accelerator is a comprehensive, modular framework for conduc
 
 | I want to... | Start here |
 |-------------|-----------|
-| Understand the methodology | `Methodology-Overview.md` |
-| Get started quickly | `QUICK-START-GUIDE.md` |
-| Run a discovery phase | `Discovery-Phase-Guide.md` |
-| Score application readiness | `Templates/Readiness-Scoring-Criteria-Template.md` |
-| Compare cloud providers | `Templates/Hyperscaler-Decision-Matrix-Template.md` |
-| Build a business case | `Templates/Business-Case-Template.md` |
-| Assess risks | `Templates/Risk-Assessment-Template.md` |
-| Plan migration waves | `Templates/Migration-Wave-Planning-Template.md` |
-| Present to executives | `Templates/Executive-Summary-Report-Template.md` |
+| Understand the methodology | [`docs/METHODOLOGY.md`](METHODOLOGY.md) |
+| Get started quickly | [`START-HERE.md`](../START-HERE.md) |
+| Run a discovery phase | [`docs/guides/01-discovery-phase-guide.md`](guides/01-discovery-phase-guide.md) |
+| Score application readiness | [`Templates/02-analysis/readiness-scoring-criteria.xlsx`](../Templates/02-analysis/readiness-scoring-criteria.xlsx) |
+| Compare cloud providers | [`Templates/03-evaluation/hyperscaler-decision-matrix.xlsx`](../Templates/03-evaluation/hyperscaler-decision-matrix.xlsx) |
+| Build a business case | [`Templates/03-evaluation/business-case-tco-roi.xlsx`](../Templates/03-evaluation/business-case-tco-roi.xlsx) |
+| Assess risks | [`Templates/04-planning/risk-assessment.xlsx`](../Templates/04-planning/risk-assessment.xlsx) |
+| Plan migration waves | [`Templates/04-planning/migration-wave-planner.xlsx`](../Templates/04-planning/migration-wave-planner.xlsx) |
+| Present to executives | [`Templates/executive-reporting/cra-executive-summary-v3.pptx`](../Templates/executive-reporting/cra-executive-summary-v3.pptx) |
 
 ---
 
@@ -35,59 +35,77 @@ The Cloud Readiness Accelerator is a comprehensive, modular framework for conduc
 
 | Document | Description | Phase |
 |----------|-------------|-------|
-| `Methodology-Overview.md` | Four-phase assessment model, timelines, resources | All |
-| `Discovery-Phase-Guide.md` | Stakeholder ID, scope, data collection procedures | Discovery |
-| `Analysis-Phase-Guide.md` | Application profiling, technical assessment | Analysis |
-| `Evaluation-Phase-Guide.md` | Scoring, multi-cloud evaluation, business case | Evaluation |
-| `Planning-Phase-Guide.md` | Roadmap, resource planning, governance | Planning |
+| [`docs/METHODOLOGY.md`](METHODOLOGY.md) | Four-phase assessment model, timelines, resources | All |
+| [`docs/guides/01-discovery-phase-guide.md`](guides/01-discovery-phase-guide.md) | Stakeholder ID, scope, data collection procedures | Discovery |
+| [`docs/guides/02-analysis-phase-guide.md`](guides/02-analysis-phase-guide.md) | Application profiling, technical assessment | Analysis |
+| [`docs/guides/03-evaluation-phase-guide.md`](guides/03-evaluation-phase-guide.md) | Scoring, multi-cloud evaluation, business case | Evaluation |
+| [`docs/guides/04-planning-phase-guide.md`](guides/04-planning-phase-guide.md) | Roadmap, resource planning, governance | Planning |
 
 ---
 
 ## Template Library
 
 ### Discovery & Profiling Templates
+
 | Template | Purpose | Phase |
 |----------|---------|-------|
-| `Templates/Infrastructure-Profiling-Template.md` | Server, database, storage, network inventory | Discovery |
-| `Templates/Dependency-Mapping-Template.md` | App-to-app, app-to-infra, external dependencies | Discovery |
+| [`Templates/01-discovery/application-scoping-profiling.xlsx`](../Templates/01-discovery/application-scoping-profiling.xlsx) | Application inventory with tech stack, VM/DB counts, cloud readiness flag | Discovery |
+| [`Templates/01-discovery/infrastructure-profiling.xlsx`](../Templates/01-discovery/infrastructure-profiling.xlsx) | Server, database, storage, network inventory | Discovery |
+| [`Templates/01-discovery/dependency-mapping.xlsx`](../Templates/01-discovery/dependency-mapping.xlsx) | App-to-app, app-to-infra, external dependencies | Discovery |
+| [`Templates/01-discovery/saas-application-assessment.xlsx`](../Templates/01-discovery/saas-application-assessment.xlsx) | SaaS application inventory — vendor, contract, renewal, migration path | Discovery |
 
 ### Scoring & Evaluation Templates
+
 | Template | Purpose | Phase |
 |----------|---------|-------|
-| `Templates/Readiness-Scoring-Criteria-Template.md` | 5-dimension scoring with criteria and guidance | Analysis/Evaluation |
+| [`Templates/02-analysis/cloud-readiness-scoring-v2.xlsx`](../Templates/02-analysis/cloud-readiness-scoring-v2.xlsx) | 5-dimension readiness scoring — Technical, Operational, Security, Compliance, Business | Analysis |
+| [`Templates/02-analysis/readiness-scoring-criteria.xlsx`](../Templates/02-analysis/readiness-scoring-criteria.xlsx) | Scoring definitions, criteria, and weighting guide | Analysis |
+| [`Templates/02-analysis/governance-foundations-alignment.xlsx`](../Templates/02-analysis/governance-foundations-alignment.xlsx) | Cloud governance maturity assessment | Analysis |
 
 ### Multi-Cloud Evaluation Templates
+
 | Template | Purpose | Phase |
 |----------|---------|-------|
-| `Templates/AWS-Evaluation-Template.md` | AWS service mapping, cost estimation, fit scoring | Evaluation |
-| `Templates/Azure-Evaluation-Template.md` | Azure service mapping, PAYG/AHB/RI analysis | Evaluation |
-| `Templates/GCP-Evaluation-Template.md` | GCP service mapping, consumption pricing, TCO | Evaluation |
-| `Templates/Hyperscaler-Decision-Matrix-Template.md` | Cross-provider comparison and recommendation | Evaluation |
+| [`Templates/03-evaluation/aws-evaluation.xlsx`](../Templates/03-evaluation/aws-evaluation.xlsx) | AWS service mapping, On-Demand / 3-yr RI / Savings Plans TCO | Evaluation |
+| [`Templates/03-evaluation/azure-evaluation.xlsx`](../Templates/03-evaluation/azure-evaluation.xlsx) | Azure service mapping, PAYG / 3-yr RI / AHB TCO analysis | Evaluation |
+| [`Templates/03-evaluation/gcp-evaluation.xlsx`](../Templates/03-evaluation/gcp-evaluation.xlsx) | GCP service mapping, On-Demand / 3-yr CUD TCO | Evaluation |
+| [`Templates/03-evaluation/hyperscaler-decision-matrix.xlsx`](../Templates/03-evaluation/hyperscaler-decision-matrix.xlsx) | Cross-provider weighted comparison and primary recommendation | Evaluation |
+| [`Templates/03-evaluation/hyperscaler-weighted-selection-criteria.xlsx`](../Templates/03-evaluation/hyperscaler-weighted-selection-criteria.xlsx) | Weighted selection criteria configuration for the decision matrix | Evaluation |
 
 ### Financial Templates
+
 | Template | Purpose | Phase |
 |----------|---------|-------|
-| `Templates/Business-Case-Template.md` | TCO, ROI, payback, NPV, sensitivity analysis | Evaluation |
+| [`Templates/03-evaluation/business-case-tco-roi.xlsx`](../Templates/03-evaluation/business-case-tco-roi.xlsx) | Full 7-layer TCO, ROI, payback period, NPV, sensitivity analysis | Evaluation |
 
 ### Risk & Compliance Templates
+
 | Template | Purpose | Phase |
 |----------|---------|-------|
-| `Templates/Risk-Assessment-Template.md` | Security, operational, compliance risk registers | Evaluation |
+| [`Templates/04-planning/risk-assessment.xlsx`](../Templates/04-planning/risk-assessment.xlsx) | Technical, licensing, data, operational, and timeline risk registers | Evaluation/Planning |
 
 ### Migration Planning Templates
+
 | Template | Purpose | Phase |
 |----------|---------|-------|
-| `Templates/Migration-Wave-Planning-Template.md` | Wave grouping, sequencing, cutover planning | Planning |
+| [`Templates/04-planning/migration-wave-planner.xlsx`](../Templates/04-planning/migration-wave-planner.xlsx) | Wave grouping, application sequencing, cutover planning | Planning |
+| [`Templates/04-planning/governance-workshop-schedule.docx`](../Templates/04-planning/governance-workshop-schedule.docx) | Governance workshop agenda and schedule | Planning |
 
 ### Reporting Templates
+
 | Template | Purpose | Phase |
 |----------|---------|-------|
-| `Templates/Executive-Summary-Report-Template.md` | Executive summary with key findings | Planning |
+| [`Templates/executive-reporting/cra-executive-summary-v3.pptx`](../Templates/executive-reporting/cra-executive-summary-v3.pptx) | Executive summary deck for CTO/board — 30-slide template | Planning |
+| [`Templates/executive-reporting/cra-executive-summary-template.pptx`](../Templates/executive-reporting/cra-executive-summary-template.pptx) | Executive summary presentation (DMG-derived, Rackspace branded) | Planning |
+| [`Templates/executive-reporting/cra-assessment-report-template-v3.docx`](../Templates/executive-reporting/cra-assessment-report-template-v3.docx) | Full assessment report template (30–50 pages) | Planning |
+| [`Templates/executive-reporting/cra-phase1-report-template.docx`](../Templates/executive-reporting/cra-phase1-report-template.docx) | Phase 1 report template (Discovery findings) | Planning |
+| [`Templates/executive-reporting/part2-entry-point-template.docx`](../Templates/executive-reporting/part2-entry-point-template.docx) | Part 2 entry point — scope, cost, hyperscaler funding, next steps | Planning |
 
 ### Governance Templates
+
 | Template | Purpose | Phase |
 |----------|---------|-------|
-| `Templates/Governance-Model-Template.md` | Governance structure, RACI, stakeholder engagement | All |
+| [`Templates/04-planning/governance-model.xlsx`](../Templates/04-planning/governance-model.xlsx) | Governance structure, RACI matrix, stakeholder engagement model | All |
 
 ---
 
@@ -95,9 +113,9 @@ The Cloud Readiness Accelerator is a comprehensive, modular framework for conduc
 
 | Guide | Purpose |
 |-------|---------|
-| `Integration-Guides/CMDB-Integration-Guide.md` | ServiceNow, BMC data extraction and mapping |
-| `Integration-Guides/Monitoring-Tool-Integration-Guide.md` | Splunk, Datadog, New Relic, Azure Monitor |
-| `Integration-Guides/Cloud-Assessment-Tool-Integration-Guide.md` | AWS Migration Evaluator, Azure Migrate, RVTools |
+| [`docs/integration/cmdb-integration-guide.md`](integration/cmdb-integration-guide.md) | ServiceNow, BMC data extraction and mapping |
+| [`docs/integration/monitoring-tools.md`](integration/monitoring-tools.md) | Splunk, Datadog, New Relic, Azure Monitor |
+| [`docs/integration/cloud-assessment-tools.md`](integration/cloud-assessment-tools.md) | AWS Migration Evaluator, Azure Migrate, RVTools |
 
 ---
 
@@ -105,8 +123,8 @@ The Cloud Readiness Accelerator is a comprehensive, modular framework for conduc
 
 | Guide | Purpose |
 |-------|---------|
-| `Customization-Guides/Industry-Customization-Guide.md` | Financial services, healthcare, retail, manufacturing |
-| `Customization-Guides/Organization-Size-Adaptation-Guide.md` | Small, mid-market, enterprise + tech landscape |
+| [`docs/customization/industry-customization.md`](customization/industry-customization.md) | Financial services, healthcare, retail, manufacturing |
+| [`docs/customization/org-size-adaptation.md`](customization/org-size-adaptation.md) | Small, mid-market, enterprise + tech landscape |
 
 ---
 
@@ -114,42 +132,27 @@ The Cloud Readiness Accelerator is a comprehensive, modular framework for conduc
 
 | Document | Purpose |
 |----------|---------|
-| `Quality-Assurance/Data-Validation-Checklist.md` | Completeness, accuracy, consistency checks, peer review |
+| [`docs/governance/data-validation-checklist.md`](governance/data-validation-checklist.md) | Completeness, accuracy, consistency checks, peer review |
 
 ---
 
-## Decision & Planning Documents
+## Alliance Partner Alignment Docs
 
 | Document | Purpose |
 |----------|---------|
-| `EXECUTIVE-ACTION-SUMMARY.md` | Expert team decision and deployment plan |
-| `EXPERT-TEAM-DECISION.md` | Detailed expert team analysis and recommendation |
-| `DEPLOYMENT-STRATEGY.md` | 4-week deployment strategy |
-| `NEXT-STEPS-ACTION-PLAN.md` | Detailed action plan with weekly execution |
-| `PARALLEL-WORKSTREAMS-PLAN.md` | Weeks 2-3 parallel execution plan |
-| `PHASE-1-DEPLOYMENT-CHECKLIST.md` | Week 1 deployment checklist |
-| `hyperscaler-integration-summary.md` | Hyperscaler response integration reference (moved to `_internal-only/`) |
+| [`docs/MICROSOFT-CAF-ALIGNMENT.md`](MICROSOFT-CAF-ALIGNMENT.md) | CRA alignment to Microsoft CAF and AMM programme |
+| [`docs/AWS-MAP-ALIGNMENT.md`](AWS-MAP-ALIGNMENT.md) | CRA alignment to AWS Migration Acceleration Programme (MAP) |
+| [`docs/GOOGLE-PSO-ALIGNMENT.md`](GOOGLE-PSO-ALIGNMENT.md) | CRA alignment to Google Cloud PSO and Migration Center |
 
 ---
 
-## Specification Documents
+## Reference Examples
 
-| Document | Purpose |
-|----------|---------|
-| `requirements.md` | 20 comprehensive requirements with acceptance criteria |
-| `design.md` | Technical architecture, data models, calculation logic |
-| `tasks.md` | 50+ implementation tasks across 14 work streams |
-
----
-
-## Reference Materials
-
-| Document | Purpose |
-|----------|---------|
-| `QUICK-START-GUIDE.md` | 5-step getting started guide |
-| `QUICK-REFERENCE-CARD.md` | One-page reference card |
-| `ACCELERATOR-SUMMARY.md` | Framework capabilities overview |
-| `IMPLEMENTATION-STATUS.md` | Current implementation progress |
+| Folder | Contents |
+|--------|---------|
+| [`Examples/aws/`](../Examples/aws/) | AWS MPA pricing (3 regions — Frankfurt, Ireland, London); business case decks |
+| [`Examples/azure/`](../Examples/azure/) | Azure Migrate assessments — PAYG and 3-year RI across UK South, North Europe, Germany West Central |
+| [`Examples/media-entertainment/`](../Examples/media-entertainment/) | DMG Media UK case study — full CRA reference engagement |
 
 ---
 
@@ -157,8 +160,9 @@ The Cloud Readiness Accelerator is a comprehensive, modular framework for conduc
 
 | Version | Date | Changes |
 |---------|------|---------|
-| 1.0 | April 25, 2026 | Initial framework release |
+| 2.0 | June 2026 | Updated all file references to reflect Epic 0 reorganization; added new templates from Epics 4A–4F; added alliance docs and reference examples sections |
+| 1.0 | April 2026 | Initial framework release |
 
 ---
 
-*Cloud Readiness Accelerator Framework — © 2026*
+*Cloud Readiness Accelerator — Rackspace Technology — © 2026*

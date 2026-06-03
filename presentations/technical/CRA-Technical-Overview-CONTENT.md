@@ -676,7 +676,7 @@ CRA Framework Root
 │   ├── 02-analysis/             ← cloud-readiness-scoring, governance-foundations-alignment
 │   ├── 03-evaluation/           ← TCO models (azure/aws/gcp), hyperscaler-decision-matrix, business-case
 │   ├── 04-planning/             ← migration-wave-planner, risk-assessment, governance-model, sow
-│   └── executive-reporting/     ← cra-assessment-report-v3.docx, cra-executive-summary-v3.pptx
+│   └── executive-reporting/     ← cra-assessment-report-template-v3.docx, cra-executive-summary-v3.pptx
 │
 ├── presentations/
 │   ├── executive/               ← leadership and customer overview decks

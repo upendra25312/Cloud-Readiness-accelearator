@@ -135,20 +135,23 @@
 ## 🔑 Key Documents
 
 ### For Immediate Execution
-1. **NEXT-STEPS-ACTION-PLAN.md** - Specific actions to execute
-2. **PHASE-1-DEPLOYMENT-CHECKLIST.md** - Week 1 detailed guide
-3. **PARALLEL-WORKSTREAMS-PLAN.md** - Weeks 2-3 detailed guide
+
+1. **[START-HERE.md](../../START-HERE.md)** - 5-minute framework orientation
+2. **[docs/guides/01-discovery-phase-guide.md](01-discovery-phase-guide.md)** - Phase 1 delivery guide
+3. **[CLOUD-READINESS-ACCELERATOR-TODO.md](../../CLOUD-READINESS-ACCELERATOR-TODO.md)** - Current task tracker
 
 ### For Reference
-4. **DEPLOYMENT-STRATEGY.md** - Overall strategy
-5. **EXPERT-TEAM-SUMMARY.md** - Complete summary
-6. **IMPLEMENTATION-STATUS.md** - Current progress
+
+4. **[CLOUD-READINESS-ACCELERATOR-PLAN.md](../../CLOUD-READINESS-ACCELERATOR-PLAN.md)** - Strategy, scope, and roadmap
+5. **[CLOUD-READINESS-ACCELERATOR-PRD.md](../../CLOUD-READINESS-ACCELERATOR-PRD.md)** - Full requirements and quality standards
+6. **[CHANGELOG.md](../../CHANGELOG.md)** - Version history
 
 ### Framework Documentation
-7. **requirements.md** - 20 requirements
-8. **design.md** - Technical architecture
-9. **tasks.md** - 50+ implementation tasks
-10. **Methodology-Overview.md** - 4-phase model
+
+7. **[docs/METHODOLOGY.md](../METHODOLOGY.md)** - Full four-phase methodology
+8. **[docs/FRAMEWORK-INDEX.md](../FRAMEWORK-INDEX.md)** - Complete template and guide index
+9. **[docs/JARGON-REVIEW.md](../JARGON-REVIEW.md)** - Terminology and acronym definitions
+10. **[Examples/media-entertainment/dmg-media-uk-case-study.md](../../Examples/media-entertainment/dmg-media-uk-case-study.md)** - Reference engagement
 
 ---
 
@@ -328,4 +331,4 @@
 
 ---
 
-*For detailed information, refer to NEXT-STEPS-ACTION-PLAN.md*
+*For detailed information, refer to [docs/METHODOLOGY.md](../METHODOLOGY.md) and [START-HERE.md](../../START-HERE.md)*
