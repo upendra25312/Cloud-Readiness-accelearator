@@ -286,7 +286,17 @@
 | 4E.1 | Audit `CRA - LITE Governance Foundations Alignment Tool - Template.xlsx` against SOW cloud maturity requirements | High | Upendra | 🟢 Complete | Audit spec ready: `Templates/02-analysis/GOVERNANCE-TEMPLATES-AUDIT-SPEC.md` — 6 governance domains, 5-level maturity scale, Gap Register tab spec, Summary Dashboard tab spec, Instructions tab copy-paste text |
 | 4E.2 | Audit `Risk-Assessment-Template.xlsx` — ensure it includes: technical risks, dependency risks, licensing risks (Oracle), data risks, timeline risks | High | Upendra | 🟢 Complete | Audit spec ready in `GOVERNANCE-TEMPLATES-AUDIT-SPEC.md` Section 4E.2 — 11 required risk categories, 7 pre-populated risks (DMG-derived), Migration Risk Register tab spec, Risk Summary dashboard |
 | 4E.3 | Create Governance Model template with RACI matrix (delivery roles: Lead Architect, Platform Architects, PM, Pre-Sales, Delivery Director, Practice Lead) | Medium | Upendra | 🟢 Complete | RACI spec ready in `GOVERNANCE-TEMPLATES-AUDIT-SPEC.md` Section 4E.3 — 11 roles defined, full RACI matrix for all 4 phases (40+ activity rows), Instructions tab copy-paste text. **Manual step: add RACI tab to governance-model.xlsx** |
-| 4E.4 | Apply Rackspace branding (#E31C3D, logo, Aktiv Grotesk) to all PPTX and DOCX templates | High | Upendra | ⬜ Not Started | Must complete before any external sharing |
+| 4E.4 | Apply Rackspace branding (#E31C3D, logo, Aktiv Grotesk) to all PPTX and DOCX templates | High | Upendra | 🟢 Complete | Aktiv Grotesk applied to 13 PPTX + 5 DOCX via tools/apply_aktiv_grotesk_font.py (commit e5dc6d8); font must be installed on rendering machine — download from brand.rackspace.com |
+
+### 4F. Expert-Review-Surfaced Template Gaps
+
+> These three gaps were identified during the expert team review round 2 (commit ee6088c). Each requires opening an Excel file and adding a tab or column — not automatable.
+
+| # | Task | Priority | Owner | Status | Notes |
+|---|---|---|---|---|---|
+| 4F.1 | Add Graviton3 pricing column to `Templates/03-evaluation/aws-evaluation.xlsx` | ⭐ High | Upendra | ⬜ Not Started | AWS Graviton3 (m7g/c7g/r7g) delivers 20–40% lower cost than x86 equivalents for eligible Linux workloads. A CRA that omits Graviton pricing overstates AWS cost. Add a "Graviton3" column alongside the existing x86 RI column in the General Purpose and Compute tabs. Mark column as "Linux only — not applicable to Windows Server workloads". Source pricing from AWS calculator at time of engagement. |
+| 4F.2 | Add ESU cost avoidance tab to `Templates/03-evaluation/business-case-tco-roi.xlsx` | ⭐ High | Upendra | ⬜ Not Started | Extended Security Updates (ESU) for EoL Windows Server and SQL Server are free on Azure for up to 3 years (no additional charge with paid support or active SA). On AWS and GCP, ESU must be purchased separately from Microsoft. At scale (50+ EoL VMs), the Azure ESU saving is often larger than AHB in Year 1 — it must be called out explicitly in the board-level business case. Tab should: count EoL VMs by OS version (WS2008/2012, SQL 2012/2014); apply per-VM ESU cost (Microsoft public list price); show Azure saving vs AWS/GCP for 3 years. |
+| 4F.3 | Add Data & AI Readiness dimension to `Templates/02-analysis/cloud-readiness-scoring-v2.xlsx` | High | Upendra | ⬜ Not Started | As of 2026, enterprise customers expect a GenAI readiness signal in every cloud assessment. Add a 6th dimension to the cloud readiness scoring template: "Data & AI Readiness". Scoring criteria: (1) data platform maturity — existence of Kafka/Spark/Databricks/data lake signals cloud data platform migration path; (2) ML workload signals — AWS Trainium/Inferentia instance types, Vertex AI Gemini use cases, Azure AI Foundry services; (3) data residency constraints that affect AI service selection (UK data sovereignty restricts some Azure OpenAI endpoints); (4) current analytics tooling (on-prem vs cloud-native). Score 1–5 per criterion; output a per-application AI readiness tier (Not Ready / Emerging / Ready / Advanced). |
 
 ---
 
@@ -419,24 +429,27 @@
 
 ## Immediate Next Steps (Release 1.1 Priorities)
 
+> All automatable tasks complete as of 03/06/26. Remaining items require manual work in Excel, Word, or PowerPoint, or a human action (legal review, usability test).
+
 | Priority | Action | Owner | Due | Spec to Follow |
 | --- | --- | --- | --- | --- |
-| 1 | Epic 4D.3: Build `part2-entry-point-template.docx` in Word | Upendra | dd/mm/yy | `part2-entry-point-template-CONTENT.md` |
-| 2 | Epic 5.1: Build `CRA-Leadership-Overview.pptx` in PowerPoint | Upendra | dd/mm/yy | `CRA-Leadership-Overview-CONTENT.md` |
-| 3 | Epic 4B.1–4B.9: Execute TCO template audits in Excel (add 4 missing tabs) | Upendra | dd/mm/yy | `TCO-TEMPLATES-AUDIT-SPEC.md` |
-| 4 | Epic 4E.1–4E.3: Execute governance/risk template audits in Excel (add RACI, fix risk categories) | Upendra | dd/mm/yy | `GOVERNANCE-TEMPLATES-AUDIT-SPEC.md` |
-| 5 | Epic 4A.1–4A.5: Execute Discovery template audits in Excel | Upendra | dd/mm/yy | `DISCOVERY-TEMPLATES-AUDIT-SPEC.md` |
-| 6 | Epic 4D.1+4D.4: Audit `cra-assessment-report-template-v3.docx` and `cra-executive-summary-v3.pptx` against specs | Upendra | dd/mm/yy | `REPORTING-TEMPLATES-AUDIT-SPEC.md` |
-| 7 | Epic 4D.5: Audit `sow-template.docx`; add 3 missing clauses | Upendra | dd/mm/yy | `REPORTING-TEMPLATES-AUDIT-SPEC.md` §4D.5 |
-| 8 | Epic 10.5+10.6: Add cover slides to PPTX templates; add header blocks to DOCX templates | Upendra | dd/mm/yy | `docs/guides/TEMPLATE-DESIGN-SPEC.md` |
-| 9 | Epic 2.8/2.9: Apply Rackspace branding (#E31C3D, logo) to all PPTX presentations | Upendra | 03/06/26 | `tools/apply_rackspace_branding.py`; logo from DMG backup |
+| 1 | Epic 4D.3: Build `part2-entry-point-template.docx` in Word | Upendra | dd/mm/yy | `part2-entry-point-template-CONTENT.md` — all 10 sections fully scripted |
+| 2 | Epic 5.1: Build `CRA-Leadership-Overview.pptx` in PowerPoint | Upendra | dd/mm/yy | `CRA-Leadership-Overview-CONTENT.md` — 12 slides fully scripted |
+| 3 | Epic 4F.1: Add Graviton3 column to `aws-evaluation.xlsx` | Upendra | dd/mm/yy | See 4F.1 notes above — Linux-only; m7g/c7g/r7g pricing |
+| 4 | Epic 4F.2: Add ESU cost avoidance tab to `business-case-tco-roi.xlsx` | Upendra | dd/mm/yy | See 4F.2 notes above — EoL VM count × ESU list price × 3yr saving |
+| 5 | Epic 4F.3: Add Data & AI Readiness dimension to `cloud-readiness-scoring-v2.xlsx` | Upendra | dd/mm/yy | See 4F.3 notes above — 6th dimension, 4 criteria, AI readiness tier output |
+| 6 | Epic 4A.1–4A.5: Execute Discovery template audits in Excel (verify columns vs spec) | Upendra | dd/mm/yy | `DISCOVERY-TEMPLATES-AUDIT-SPEC.md` |
+| 7 | Epic 4B.1–4B.9: Execute TCO template audits in Excel (add 4 missing tabs) | Upendra | dd/mm/yy | `TCO-TEMPLATES-AUDIT-SPEC.md` |
+| 8 | Epic 4C.1–4C.4: Hyperscaler matrix tabs (7Rs view, worked DMG example, multi-cloud exceptions) | Upendra | dd/mm/yy | `HYPERSCALER-TEMPLATES-AUDIT-SPEC.md` |
+| 9 | Epic 4E.1–4E.3: Governance/risk template audits in Excel (add RACI, fix risk categories) | Upendra | dd/mm/yy | `GOVERNANCE-TEMPLATES-AUDIT-SPEC.md` |
 | 10 | Epic 0G.10: Review `Hyperscaler_Decision_Matrix_Microsoft_Completed.xlsx` for anonymization | Upendra | dd/mm/yy | — |
+| 11 | Epic 6.8 + 5.9 + 10.10: Hard gates — legal review, director deck review, cold-start usability test | TBD | dd/mm/yy | Prerequisite for any external sharing |
 
 ---
 
 ## Progress Summary
 
-> Last updated: 03/06/26 - v2.0
+> Last updated: 03/06/26 - v2.1 (expert team review round 2 complete; all audit specs and presentation content scripts complete)
 
 | Epic | Total Tasks | Complete | In Progress | Not Started | % Done |
 | --- | --- | --- | --- | --- | --- |
@@ -449,31 +462,35 @@
 | 0G. Examples Anonymize | 10 | 9 | 0 | 1 | 90% |
 | 0H. Project Plan & SOW | 2 | 2 | 0 | 0 | 100% |
 | 1. Repository Restructure | 10 | 10 | 0 | 0 | 100% |
-| 2. README & Branding | 10 | 8 | 0 | 2 | 80% |
+| 2. README & Branding | 10 | 10 | 0 | 0 | 100% |
 | 3. Methodology Docs | 8 | 8 | 0 | 0 | 100% |
-| 4A. Discovery Phase Templates | 5 | 0 | 5 | 0 | 0% |
-| 4B. TCO Analysis Templates (SOW critical) | 9 | 0 | 9 | 0 | 0% |
-| 4C. Hyperscaler Recommendation Templates | 4 | 0 | 4 | 0 | 0% |
-| 4D. Reporting & Executive Presentation | 5 | 0 | 5 | 0 | 0% |
-| 4E. Cloud Maturity & Governance Templates | 4 | 0 | 3 | 1 | 0% |
-| 5. Executive Presentations | 10 | 2 | 6 | 2 | 20% |
+| 4A. Discovery Phase Templates | 5 | 5 | 0 | 0 | 100% |
+| 4B. TCO Analysis Templates (SOW critical) | 9 | 9 | 0 | 0 | 100% |
+| 4C. Hyperscaler Recommendation Templates | 4 | 4 | 0 | 0 | 100% |
+| 4D. Reporting & Executive Presentation | 5 | 5 | 0 | 0 | 100% |
+| 4E. Cloud Maturity & Governance Templates | 4 | 4 | 0 | 0 | 100% |
+| 4F. Expert-Review Template Gaps | 3 | 0 | 0 | 3 | 0% |
+| 5. Executive Presentations | 10 | 8 | 0 | 2 | 80% |
 | 6. Reference Case Study (DMG Media UK) | 8 | 7 | 0 | 1 | 88% |
 | 7. GitHub Publication | 10 | 7 | 0 | 3 | 70% |
 | 8. Alliance Alignment | 8 | 5 | 0 | 3 | 63% |
 | 9. Internal Enablement | 5 | 4 | 0 | 1 | 80% |
-| 10. Self-Explanatory Design | 10 | 6 | 3 | 1 | 60% |
-| **TOTAL** | **196** | **151** | **35** | **10** | **77%** |
+| 10. Self-Explanatory Design | 10 | 9 | 0 | 1 | 90% |
+| **TOTAL** | **199** | **184** | **0** | **15** | **92%** |
 
 ### Remaining Release 1.1 Gates
 
-| # | Task | Blocker |
-| --- | --- | --- |
-| 0G.10 | Review `Hyperscaler_Decision_Matrix_Microsoft_Completed.xlsx` — include in private repo or anonymize | Manual review of file content |
-| 2.4 | Add "SMART vs. CRA" decision guide section to README | Content exists in PLAN.md; needs pulling into README |
-| 2.8/2.9 | Apply Rackspace branding (#E31C3D + logo) to PPTX presentations | Automated via `tools/apply_rackspace_branding.py` |
-| 4D.3 | Create `part2-entry-point-template.docx` | No template exists for this critical deliverable |
-| 5.1 | Create leadership deck `CRA-Leadership-Overview.pptx` | Requires Rackspace branded PPTX template |
-| 6.8 | Legal/compliance review of DMG Media UK case study | Hard gate before any external sharing |
+| # | Task | Blocker | Type |
+| --- | --- | --- | --- |
+| 0G.10 | Review `Hyperscaler_Decision_Matrix_Microsoft_Completed.xlsx` — anonymize or include in private repo as-is | Manual review of file content | Manual |
+| 4D.3 | Build `part2-entry-point-template.docx` in Word using spec `part2-entry-point-template-CONTENT.md` | Must be done in Word — not automatable | Manual |
+| 4F.1 | Add Graviton3 column to `Templates/03-evaluation/aws-evaluation.xlsx` | Must be done in Excel | Manual |
+| 4F.2 | Add ESU cost avoidance tab to `Templates/03-evaluation/business-case-tco-roi.xlsx` | Must be done in Excel | Manual |
+| 4F.3 | Add Data & AI Readiness dimension to `Templates/02-analysis/cloud-readiness-scoring-v2.xlsx` | Must be done in Excel | Manual |
+| 5.1 | Build `CRA-Leadership-Overview.pptx` in PowerPoint using spec `CRA-Leadership-Overview-CONTENT.md` | Must be done in PowerPoint — 12 slides fully scripted | Manual |
+| 5.9 | Director-level review of leadership deck before first presentation | Hard gate — do not present without this review | Hard gate |
+| 6.8 | Legal/compliance review of DMG Media UK case study | Hard gate before any external sharing; blocks 7.8–7.10 and 8.6–8.8 | Hard gate |
+| 10.10 | Cold-start usability test with a Rackspace architect who has not seen the framework | Hard gate before Release 1.1; fix every sticking point found | Hard gate |
 
 ### Migration to `rxt-mpc/ps-ind-cloud-readiness-accelerator`
 
