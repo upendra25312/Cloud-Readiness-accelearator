@@ -1,6 +1,6 @@
 # Cloud Readiness Accelerator — To-Do Tracker
 
-**Version:** 1.9  
+**Version:** 2.0  
 **Date:** 03/06/26  
 **Owner:** Rackspace Cloud Solutions Architecture  
 **Update Frequency:** Weekly
@@ -258,7 +258,7 @@
 | 4B.6 | Add Year 1 dual-running forecast tab to `Business-Case-Template.xlsx` — models overlap period costs | High | Upendra | 🟢 Complete | Spec ready — quarterly breakdown table: on-prem remaining + cloud ramp-up + migration tooling + PS costs + AMM/MAP offset |
 | 4B.7 | Add licensing overlay tab to TCO template: SQL Server (AHB vs BYOL vs PAYG), Oracle (BYOL, EA), third-party | ⭐ High | Upendra | 🟢 Complete | Spec ready — three sub-tables: Windows AHB, SQL AHB, Oracle BYOL; summary row feeds 3yr TCO summary |
 | 4B.8 | Add partner commercial overlay tab: AWS MAP credits, Azure AMM credits, GCP migration credits | High | Upendra | 🟢 Complete | Spec ready — AMM / MAP / PSO rows; 3-year net cost summary table (the board-level headline number) |
-| 4B.9 | Validate TCO models against current Azure/AWS/GCP pricing (rates current at time of validation) | ⭐ High | Upendra | 🟡 In Progress | Spec ready — key SKUs listed (Dsv5, Esv5, m6i, r6i, n2-standard, n2-highmem) with pricing source URLs |
+| 4B.9 | Validate TCO models against current Azure/AWS/GCP pricing (rates current at time of validation) | ⭐ High | Upendra | 🟢 Complete | Pricing Validation tab added to business-case-tco-roi.xlsx: Azure Dsv5/Esv5, AWS m6i/r6i/m7i, GCP n2-standard/n2-highmem reference prices (June 2026), AHB/CUD/RI saving %, regional premiums, 10-item validation checklist, official pricing source URLs |
 
 ### 4C. Hyperscaler Recommendation Templates (Phase 3)
 
@@ -273,10 +273,10 @@
 
 | # | Task | Priority | Owner | Status | Notes |
 |---|---|---|---|---|---|
-| 4D.1 | Audit `Cloud_Readiness_Assessment_Report_Template_v3_Audited.docx` — verify section structure matches SOW: Exec summary → Infrastructure summary → TCO (all layers) → Hyperscaler scoring → Recommendation → Risk register → Part 2 entry point | ⭐ High | Upendra | 🟡 In Progress | Audit spec ready: `Templates/executive-reporting/REPORTING-TEMPLATES-AUDIT-SPEC.md` — 25 required sections, evidence-before-recommendation validation, section length guidelines, DMG lesson 9 applied |
-| 4D.2 | Add a "board-extractable executive narrative" section to the report template — 1-page standalone summary the CTO can lift directly for their board | ⭐ High | Upendra | 🟡 In Progress | Spec ready in `REPORTING-TEMPLATES-AUDIT-SPEC.md` Section 4D.2 — exact 1-page A4 layout specified, all 5 content blocks defined, DMG Media UK populated example included |
+| 4D.1 | Audit `Cloud_Readiness_Assessment_Report_Template_v3_Audited.docx` — verify section structure matches SOW: Exec summary → Infrastructure summary → TCO (all layers) → Hyperscaler scoring → Recommendation → Risk register → Part 2 entry point | ⭐ High | Upendra | 🟢 Complete | Audit complete via tools/audit_report_template.py: 9/24 sections present; 15 placeholder sections added; document header block added; evidence-before-recommendation principle preserved (Recommendation at Section 15, after TCO+Scoring sections 10-14) |
+| 4D.2 | Add a "board-extractable executive narrative" section to the report template — 1-page standalone summary the CTO can lift directly for their board | ⭐ High | Upendra | 🟢 Complete | Board-extractable executive summary added to cra-assessment-report-template-v3.docx: Scope Assessed / Key Findings (5 bullets) / Recommendation (primary + secondary + rationale) / Three-Year Financial Summary table / Next Steps / DMG Media UK worked example (orange-flagged for removal before sending) |
 | 4D.3 | Create `Templates/executive-reporting/part2-entry-point-template.docx` — scope, phases, indicative cost ranges, hyperscaler funding (MAP/AMM/PSO), Oracle modernisation section, next steps | ⭐ High | Upendra | 🟢 Complete | Content scaffold complete: `Templates/executive-reporting/part2-entry-point-template-CONTENT.md` — all 10 sections fully scripted with DMG examples. **Manual step: build in Word using Rackspace DOCX template** |
-| 4D.4 | Audit `Cloud_Readiness_Assessment_Executive_Summary_Template_v3_Audited.pptx` — verify it follows "evidence before recommendation" slide flow; has CSP comparison slide; has recommendation slide with clear rationale | ⭐ High | Upendra | 🟡 In Progress | Audit spec ready in `REPORTING-TEMPLATES-AUDIT-SPEC.md` Section 4D.4 — 18-slide required structure, 5 critical validation checks, slide design standards, speaker notes standard |
+| 4D.4 | Audit `Cloud_Readiness_Assessment_Executive_Summary_Template_v3_Audited.pptx` — verify it follows "evidence before recommendation" slide flow; has CSP comparison slide; has recommendation slide with clear rationale | ⭐ High | Upendra | 🟢 Complete | Audit complete via tools/update_pptx_templates.py: 30 existing slides analysed; Recommendation on slide 23 (satisfies evidence-before-recommendation); 12 placeholder slides added for missing sections (Engagement Scope, Methodology, Infrastructure Summary, App Landscape, Cloud Readiness Profile, TCO Analysis, Licensing Overlay, Partner Funding, Risk Register, Partner Funding Timeline, Part 2 Entry Point, Q&A); each placeholder includes full speaker notes |
 | 4D.5 | Create `Templates/04-planning/sow-template.docx` — generic, reusable SOW for CRA Part 1 engagements; based on DMG SOW fully anonymized | ⭐ High | Upendra | 🟢 Complete | Gap analysis spec ready in `REPORTING-TEMPLATES-AUDIT-SPEC.md` Section 4D.5 — 18 required sections; 3 critical missing clauses (scope variance, utilisation gate, alliance partner registration) with exact copy-paste clause text |
 
 ### 4E. Cloud Maturity & Governance Templates
@@ -393,8 +393,8 @@
 | 10.2 | Add numbered `README.md` sections: "If you are a Cloud Architect…", "If you are a Delivery Manager…", "If you are a VP/Director…" — link each persona to their entry point | ⭐ High | Upendra | 🟢 Complete | "Who Should Use This" table added to README with persona rows: Cloud Architect/SA, Delivery Manager/PM, VP/Director, Alliance Partner, New to CRA |
 | 10.3 | Add a visual framework map (ASCII or embedded diagram) to README showing the 4 phases, their templates, and their outputs | ⭐ High | Upendra | 🟢 Complete | Four-phase ASCII diagram in README "The Four Phases" section |
 | 10.4 | Add an "Instructions" tab to every Excel template with: purpose, who fills it in, when in the engagement, step-by-step instructions | ⭐ High | Upendra | 🟢 Complete | Instructions content ready for ALL templates: Discovery templates in `DISCOVERY-TEMPLATES-AUDIT-SPEC.md`; Analysis + Planning templates in `GOVERNANCE-TEMPLATES-AUDIT-SPEC.md`. **Manual step: paste content into each Excel template's Instructions tab** |
-| 10.5 | Add a cover slide to every PPTX template with: purpose, audience, when to use, what to customize | High | Upendra | 🟡 In Progress | Cover slide spec ready: `docs/guides/TEMPLATE-DESIGN-SPEC.md` Section 10.5 — exact layout, all required fields, per-template content for every CRA PPTX. **Manual step: add cover slide to each PPTX** |
-| 10.6 | Add a header block to every DOCX template with: document purpose, target audience, phase it belongs to, estimated time to complete | High | Upendra | 🟡 In Progress | Header block spec ready: `docs/guides/TEMPLATE-DESIGN-SPEC.md` Section 10.6 — exact table layout, per-template content for all 5 DOCX templates with Important warnings where applicable. **Manual step: add header table to each DOCX** |
+| 10.5 | Add a cover slide to every PPTX template with: purpose, audience, when to use, what to customize | High | Upendra | 🟢 Complete | Cover slides added to all 4 CRA PPTX templates via tools/update_pptx_templates.py: cra-executive-summary-v3.pptx, cra-executive-summary-template.pptx, cloud-strategy-generic.pptx, azure-calculator-walkthrough.pptx. Each cover slide has: Rackspace brand red band, template name, phase label, purpose, audience, when-to-use, version, what-to-customise bullet list, footer |
+| 10.6 | Add a header block to every DOCX template with: document purpose, target audience, phase it belongs to, estimated time to complete | High | Upendra | 🟢 Complete | Header blocks added to all 5 CRA DOCX templates via tools/audit_report_template.py + tools/add_docx_header_blocks.py: cra-assessment-report-template-v3.docx, cra-phase1-report-template.docx, part2-entry-point-template.docx, sow-template.docx, governance-workshop-schedule.docx. Each includes: Document Purpose, Phase, Target Audience, When to Complete, Est. Time, Version, What to Customise, Important warning (where applicable) |
 | 10.7 | Ensure all folder names are self-explanatory: `01-discovery/`, `02-analysis/` etc. — no internal codes or abbreviations | ⭐ High | Upendra | 🟢 Complete | All phase-based folders use `01-discovery/`, `02-analysis/`, `03-evaluation/`, `04-planning/` naming |
 | 10.8 | Add a one-paragraph description at the top of every markdown guide file explaining its scope, target reader, and how it connects to the next step | High | Upendra | 🟢 Complete | Header blocks added to all 4 phase guides — answers "who should read this", "what it covers", "what comes before and after", estimated read time |
 | 10.9 | Add an "Example output" section to each phase guide showing what the deliverables look like at the end of that phase | High | Upendra | 🟢 Complete | Example output sections added to all 4 phase guides — inventory tables, readiness score distributions, TCO comparison structure, wave plan example, Part 2 Entry Point checklist; all drawn from DMG Media UK actuals |
@@ -436,7 +436,7 @@
 
 ## Progress Summary
 
-> Last updated: 03/06/26 - v1.9
+> Last updated: 03/06/26 - v2.0
 
 | Epic | Total Tasks | Complete | In Progress | Not Started | % Done |
 | --- | --- | --- | --- | --- | --- |
