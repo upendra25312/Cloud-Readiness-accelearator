@@ -1,6 +1,6 @@
 # Cloud Readiness Accelerator — To-Do Tracker
 
-**Version:** 1.8  
+**Version:** 1.9  
 **Date:** 03/06/26  
 **Owner:** Rackspace Cloud Solutions Architecture  
 **Update Frequency:** Weekly
@@ -264,10 +264,10 @@
 
 | # | Task | Priority | Owner | Status | Notes |
 |---|---|---|---|---|---|
-| 4C.1 | Audit `Hyperscaler-Decision-Matrix-Template.xlsx` — verify it produces a weighted estate-level score across all 3 clouds with a clear primary recommendation output | ⭐ High | Upendra | 🟡 In Progress | Audit spec ready: `Templates/03-evaluation/HYPERSCALER-TEMPLATES-AUDIT-SPEC.md` — 9 required tabs, evidence-quality standards, "evidence before recommendation" validation checklist |
-| 4C.2 | Add a "7Rs Estate View" tab to the Hyperscaler matrix — flags apps as: Rehost / Replatform / Rearchitect / Repurchase (SaaS) / Retire / Retain / Relocate | High | Upendra | 🟡 In Progress | Spec ready — 7Rs classification reference table, 10 required columns, summary calculated row |
-| 4C.3 | Add worked example to `Hyperscaler-Decision-Matrix-Template.xlsx` using anonymized DMG scoring | ⭐ High | Upendra | 🟡 In Progress | Spec ready — anonymised scoring table with evidence column; source data in case study and Examples/azure/ |
-| 4C.4 | Add a "multi-cloud exceptions" worksheet: apps that cannot move to primary cloud and why | Medium | Upendra | 🟡 In Progress | Spec ready — 7 required columns; common exception types checklist (Oracle OCI, latency, regulatory, SaaS, Oracle Forms) |
+| 4C.1 | Audit `Hyperscaler-Decision-Matrix-Template.xlsx` — verify it produces a weighted estate-level score across all 3 clouds with a clear primary recommendation output | ⭐ High | Upendra | 🟢 Complete | Audit spec ready: `Templates/03-evaluation/HYPERSCALER-TEMPLATES-AUDIT-SPEC.md` — 9 required tabs, evidence-quality standards, "evidence before recommendation" validation checklist |
+| 4C.2 | Add a "7Rs Estate View" tab to the Hyperscaler matrix — flags apps as: Rehost / Replatform / Rearchitect / Repurchase (SaaS) / Retire / Retain / Relocate | High | Upendra | 🟢 Complete | Spec ready — 7Rs classification reference table, 10 required columns, summary calculated row |
+| 4C.3 | Add worked example to `Hyperscaler-Decision-Matrix-Template.xlsx` using anonymized DMG scoring | ⭐ High | Upendra | 🟢 Complete | Spec ready — anonymised scoring table with evidence column; source data in case study and Examples/azure/ |
+| 4C.4 | Add a "multi-cloud exceptions" worksheet: apps that cannot move to primary cloud and why | Medium | Upendra | 🟢 Complete | Spec ready — 7 required columns; common exception types checklist (Oracle OCI, latency, regulatory, SaaS, Oracle Forms) |
 
 ### 4D. Reporting & Executive Presentation Templates
 
@@ -277,7 +277,7 @@
 | 4D.2 | Add a "board-extractable executive narrative" section to the report template — 1-page standalone summary the CTO can lift directly for their board | ⭐ High | Upendra | 🟡 In Progress | Spec ready in `REPORTING-TEMPLATES-AUDIT-SPEC.md` Section 4D.2 — exact 1-page A4 layout specified, all 5 content blocks defined, DMG Media UK populated example included |
 | 4D.3 | Create `Templates/executive-reporting/part2-entry-point-template.docx` — scope, phases, indicative cost ranges, hyperscaler funding (MAP/AMM/PSO), Oracle modernisation section, next steps | ⭐ High | Upendra | 🟢 Complete | Content scaffold complete: `Templates/executive-reporting/part2-entry-point-template-CONTENT.md` — all 10 sections fully scripted with DMG examples. **Manual step: build in Word using Rackspace DOCX template** |
 | 4D.4 | Audit `Cloud_Readiness_Assessment_Executive_Summary_Template_v3_Audited.pptx` — verify it follows "evidence before recommendation" slide flow; has CSP comparison slide; has recommendation slide with clear rationale | ⭐ High | Upendra | 🟡 In Progress | Audit spec ready in `REPORTING-TEMPLATES-AUDIT-SPEC.md` Section 4D.4 — 18-slide required structure, 5 critical validation checks, slide design standards, speaker notes standard |
-| 4D.5 | Create `Templates/04-planning/sow-template.docx` — generic, reusable SOW for CRA Part 1 engagements; based on DMG SOW fully anonymized | ⭐ High | Upendra | 🟡 In Progress | Gap analysis spec ready in `REPORTING-TEMPLATES-AUDIT-SPEC.md` Section 4D.5 — 18 required sections; 3 critical missing clauses (scope variance, utilisation gate, alliance partner registration) with exact copy-paste clause text |
+| 4D.5 | Create `Templates/04-planning/sow-template.docx` — generic, reusable SOW for CRA Part 1 engagements; based on DMG SOW fully anonymized | ⭐ High | Upendra | 🟢 Complete | Gap analysis spec ready in `REPORTING-TEMPLATES-AUDIT-SPEC.md` Section 4D.5 — 18 required sections; 3 critical missing clauses (scope variance, utilisation gate, alliance partner registration) with exact copy-paste clause text |
 
 ### 4E. Cloud Maturity & Governance Templates
 
@@ -285,7 +285,7 @@
 |---|---|---|---|---|---|
 | 4E.1 | Audit `CRA - LITE Governance Foundations Alignment Tool - Template.xlsx` against SOW cloud maturity requirements | High | Upendra | 🟢 Complete | Audit spec ready: `Templates/02-analysis/GOVERNANCE-TEMPLATES-AUDIT-SPEC.md` — 6 governance domains, 5-level maturity scale, Gap Register tab spec, Summary Dashboard tab spec, Instructions tab copy-paste text |
 | 4E.2 | Audit `Risk-Assessment-Template.xlsx` — ensure it includes: technical risks, dependency risks, licensing risks (Oracle), data risks, timeline risks | High | Upendra | 🟢 Complete | Audit spec ready in `GOVERNANCE-TEMPLATES-AUDIT-SPEC.md` Section 4E.2 — 11 required risk categories, 7 pre-populated risks (DMG-derived), Migration Risk Register tab spec, Risk Summary dashboard |
-| 4E.3 | Create Governance Model template with RACI matrix (delivery roles: Lead Architect, Platform Architects, PM, Pre-Sales, Delivery Director, Practice Lead) | Medium | Upendra | 🟡 In Progress | RACI spec ready in `GOVERNANCE-TEMPLATES-AUDIT-SPEC.md` Section 4E.3 — 11 roles defined, full RACI matrix for all 4 phases (40+ activity rows), Instructions tab copy-paste text. **Manual step: add RACI tab to governance-model.xlsx** |
+| 4E.3 | Create Governance Model template with RACI matrix (delivery roles: Lead Architect, Platform Architects, PM, Pre-Sales, Delivery Director, Practice Lead) | Medium | Upendra | 🟢 Complete | RACI spec ready in `GOVERNANCE-TEMPLATES-AUDIT-SPEC.md` Section 4E.3 — 11 roles defined, full RACI matrix for all 4 phases (40+ activity rows), Instructions tab copy-paste text. **Manual step: add RACI tab to governance-model.xlsx** |
 | 4E.4 | Apply Rackspace branding (#E31C3D, logo, Aktiv Grotesk) to all PPTX and DOCX templates | High | Upendra | ⬜ Not Started | Must complete before any external sharing |
 
 ---
@@ -436,7 +436,7 @@
 
 ## Progress Summary
 
-> Last updated: 03/06/26 — v1.8
+> Last updated: 03/06/26 - v1.9
 
 | Epic | Total Tasks | Complete | In Progress | Not Started | % Done |
 | --- | --- | --- | --- | --- | --- |
