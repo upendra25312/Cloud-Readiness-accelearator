@@ -205,8 +205,8 @@
 | 2.5 | Update CONTRIBUTING.md with clear contribution guidelines | Medium | Upendra | 🟢 Complete | Full rewrite — CRA-specific contribution types, quality standards, naming conventions, folder structure, security policy |
 | 2.6 | Create SECURITY.md (security disclosure policy) | Medium | Upendra | 🟢 Complete | SECURITY.md created (commit a62f524) |
 | 2.7 | Update CHANGELOG.md with v1.0, v1.1, v2.0 release history | Medium | Upendra | 🟢 Complete | CHANGELOG.md updated with v1.0 and v1.1.0 entries (commit a62f524) |
-| 2.8 | Apply Rackspace color scheme (#E31C3D) to all PPTX presentations | ⭐ High | Upendra | ⬜ Not Started | **Manual — requires PowerPoint**; executive deck (presentations/executive/) priority |
-| 2.9 | Add Rackspace logo to all PPTX title slides and footers | ⭐ High | Upendra | ⬜ Not Started | **Manual — requires PowerPoint** |
+| 2.8 | Apply Rackspace color scheme (#E31C3D) to all PPTX presentations | ⭐ High | Upendra | 🟢 Complete | Automated via `tools/apply_rackspace_branding.py`; theme XML updated in 8 legacy files (EB0000 -> E31C3D); 4 template PPTX + 8 presentation PPTX; reference: DMG CRA Executive Summary v2 backup.pptx |
+| 2.9 | Add Rackspace logo to all PPTX title slides and footers | ⭐ High | Upendra | 🟢 Complete | White logo (top-right) on all 12 title/cover slides; dark logo (bottom-left footer) on all 197 content slides; logo extracted from DMG backup (image2.png, 1410x180 RGBA); white variant generated programmatically |
 | 2.10 | Review all docs for internal jargon — replace with external-facing language | High | Upendra | 🟢 Complete | Jargon review executed: README.md acronyms expanded (CAF/AMM/MAP/PSO); phase durations corrected to v2.0 actuals; START-HERE.md template names updated to renamed files; AMM/MAP/PSO defined in alliance table; "Hard gate" → "Mandatory phase gate" in METHODOLOGY.md + all phase guides; "v2.0 audit note" labels removed from all 3 phase guides |
 
 ---
@@ -429,7 +429,7 @@
 | 6 | Epic 4D.1+4D.4: Audit `cra-assessment-report-template-v3.docx` and `cra-executive-summary-v3.pptx` against specs | Upendra | dd/mm/yy | `REPORTING-TEMPLATES-AUDIT-SPEC.md` |
 | 7 | Epic 4D.5: Audit `sow-template.docx`; add 3 missing clauses | Upendra | dd/mm/yy | `REPORTING-TEMPLATES-AUDIT-SPEC.md` §4D.5 |
 | 8 | Epic 10.5+10.6: Add cover slides to PPTX templates; add header blocks to DOCX templates | Upendra | dd/mm/yy | `docs/guides/TEMPLATE-DESIGN-SPEC.md` |
-| 9 | Epic 2.8/2.9: Apply Rackspace branding (#E31C3D, logo) to all PPTX presentations | Upendra | dd/mm/yy | `TEMPLATE-DESIGN-SPEC.md` design standards |
+| 9 | Epic 2.8/2.9: Apply Rackspace branding (#E31C3D, logo) to all PPTX presentations | Upendra | 03/06/26 | `tools/apply_rackspace_branding.py`; logo from DMG backup |
 | 10 | Epic 0G.10: Review `Hyperscaler_Decision_Matrix_Microsoft_Completed.xlsx` for anonymization | Upendra | dd/mm/yy | — |
 
 ---
@@ -470,7 +470,7 @@
 | --- | --- | --- |
 | 0G.10 | Review `Hyperscaler_Decision_Matrix_Microsoft_Completed.xlsx` — include in private repo or anonymize | Manual review of file content |
 | 2.4 | Add "SMART vs. CRA" decision guide section to README | Content exists in PLAN.md; needs pulling into README |
-| 2.8/2.9 | Apply Rackspace branding (#E31C3D + logo) to PPTX presentations | Manual — requires PowerPoint |
+| 2.8/2.9 | Apply Rackspace branding (#E31C3D + logo) to PPTX presentations | Automated via `tools/apply_rackspace_branding.py` |
 | 4D.3 | Create `part2-entry-point-template.docx` | No template exists for this critical deliverable |
 | 5.1 | Create leadership deck `CRA-Leadership-Overview.pptx` | Requires Rackspace branded PPTX template |
 | 6.8 | Legal/compliance review of DMG Media UK case study | Hard gate before any external sharing |

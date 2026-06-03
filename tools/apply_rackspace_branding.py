@@ -1,0 +1,344 @@
+#!/usr/bin/env python3
+"""
+2.8: Apply Rackspace color scheme (#E31C3D) to all PPTX presentations
+2.9: Add Rackspace logo to all PPTX title slides and footers
+
+Branding rules (derived from DMG CRA Executive Summary v2 backup reference):
+  - Brand red:      #E31C3D  (Rackspace Red per brand guidelines; #EB0000 in legacy files)
+  - Dark header:    #1A1A1A
+  - Logo (dark bg): assets/rackspace-logo-white.png  (white on transparent)
+  - Logo (light bg):assets/rackspace-logo.png         (dark on transparent)
+  - Logo position on cover: top-right of dark header bar
+  - Logo position footer:   bottom-left, small
+
+Slide sizes handled:
+  - 13.33" x 7.50" (standard 16:9)
+  - 26.67" x 15.00" (Rackspace 2x widescreen)
+"""
+import os
+import zipfile
+import shutil
+import tempfile
+from pptx import Presentation
+from pptx.util import Inches, Pt, Emu
+from pptx.dml.color import RGBColor
+from pptx.enum.text import PP_ALIGN
+from lxml import etree
+
+BASE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+ASSETS = os.path.join(BASE, "assets")
+
+LOGO_WHITE = os.path.join(ASSETS, "rackspace-logo-white.png")  # for dark backgrounds
+LOGO_DARK  = os.path.join(ASSETS, "rackspace-logo.png")        # for light backgrounds
+
+RAX_RED  = RGBColor(0xE3, 0x1C, 0x3D)
+RAX_DARK = RGBColor(0x1A, 0x1A, 0x1A)
+
+# Logo aspect ratio: 1410 x 180 = 7.833:1
+LOGO_RATIO = 1410 / 180  # 7.833
+
+# ── file lists ────────────────────────────────────────────────────────────────
+
+TEMPLATE_FILES = [
+    os.path.join(BASE, "Templates", "executive-reporting",
+                 "cra-executive-summary-v3.pptx"),
+    os.path.join(BASE, "Templates", "executive-reporting",
+                 "cra-executive-summary-template.pptx"),
+    os.path.join(BASE, "Templates", "executive-reporting",
+                 "cloud-strategy-generic.pptx"),
+    os.path.join(BASE, "Templates", "03-evaluation",
+                 "azure-calculator-walkthrough.pptx"),
+]
+
+PRESENTATION_FILES = [
+    os.path.join(BASE, "presentations", "executive",
+                 "CRA-Executive-Overview.pptx"),
+    os.path.join(BASE, "presentations", "executive",
+                 "CRA-Leadership-Overview.pptx"),
+    os.path.join(BASE, "presentations", "executive",
+                 "cra-overview-v1.1.pptx"),
+    os.path.join(BASE, "presentations", "alliance",
+                 "CRA-Microsoft-Partner-Deck.pptx"),
+    os.path.join(BASE, "presentations", "alliance",
+                 "CRA-AWS-Partner-Deck.pptx"),
+    os.path.join(BASE, "presentations", "alliance",
+                 "CRA-GCP-Partner-Deck.pptx"),
+    os.path.join(BASE, "presentations", "technical",
+                 "CRA-Technical-Overview.pptx"),
+    os.path.join(BASE, "docs", "guides",
+                 "data-gathering-guide.pptx"),
+]
+
+ALL_FILES = TEMPLATE_FILES + PRESENTATION_FILES
+
+
+# ── helper: slide geometry ────────────────────────────────────────────────────
+
+def logo_dims_cover(slide_w_in):
+    """Logo size and position on cover slide (top-right, white logo on dark)."""
+    if slide_w_in > 20:  # 26.67" format
+        logo_w = Inches(5.0)
+        logo_h = Inches(5.0 / LOGO_RATIO)
+        margin = Inches(0.4)
+        left = Emu(int(slide_w_in * 914400)) - logo_w - margin
+        top  = Inches(0.25)
+    else:                 # 13.33" format
+        logo_w = Inches(2.8)
+        logo_h = Inches(2.8 / LOGO_RATIO)
+        margin = Inches(0.4)
+        left = Emu(int(slide_w_in * 914400)) - logo_w - margin
+        top  = Inches(0.18)
+    return left, top, logo_w, logo_h
+
+
+def logo_dims_footer(slide_w_in, slide_h_in):
+    """Logo size and position in slide footer (bottom-left, dark logo on white)."""
+    if slide_w_in > 20:  # 26.67" x 15.0"
+        logo_w = Inches(2.5)
+        logo_h = Inches(2.5 / LOGO_RATIO)
+        left = Inches(0.72)
+        top  = Emu(int(slide_h_in * 914400)) - logo_h - Inches(0.15)
+    else:                 # 13.33" x 7.5"
+        logo_w = Inches(1.6)
+        logo_h = Inches(1.6 / LOGO_RATIO)
+        left = Inches(0.2)
+        top  = Emu(int(slide_h_in * 914400)) - logo_h - Inches(0.08)
+    return left, top, logo_w, logo_h
+
+
+# ── helper: detect existing branding ─────────────────────────────────────────
+
+def _slide_texts(slide):
+    texts = []
+    for shape in slide.shapes:
+        if shape.has_text_frame:
+            texts.append(shape.text_frame.text.lower())
+    return texts
+
+
+def cover_slide_has_logo_image(slide):
+    """True if slide 0 already has a Picture shape (logo added)."""
+    for shape in slide.shapes:
+        if shape.shape_type == 13:  # MSO_SHAPE_TYPE.PICTURE
+            return True
+    return False
+
+
+def slide_has_footer_logo(slide, slide_h_emu):
+    """True if the slide already has a logo image in the footer area (bottom 15%)."""
+    threshold = int(slide_h_emu * 0.85)
+    for shape in slide.shapes:
+        if shape.shape_type == 13 and shape.top >= threshold:
+            return True
+    return False
+
+
+def is_cra_cover_slide(slide):
+    """True if this slide was generated by update_pptx_templates.py (has dark+red bars)."""
+    texts = _slide_texts(slide)
+    return any("cra framework v2.0" in t for t in texts)
+
+
+# ── 2.9: add logo to cover slide ─────────────────────────────────────────────
+
+def add_logo_to_cover(slide, slide_w_in):
+    """Add white Rackspace logo (top-right) to an existing CRA cover slide."""
+    if cover_slide_has_logo_image(slide):
+        return False  # already done
+    left, top, w, h = logo_dims_cover(slide_w_in)
+    slide.shapes.add_picture(LOGO_WHITE, left, top, w, h)
+    return True
+
+
+# ── 2.9: add logo footer to content slides ───────────────────────────────────
+
+def add_logo_footer_to_slide(slide, slide_w_in, slide_h_in):
+    """Add small dark Rackspace logo at bottom-left of a content slide."""
+    slide_h_emu = int(slide_h_in * 914400)
+    if slide_has_footer_logo(slide, slide_h_emu):
+        return False
+    left, top, w, h = logo_dims_footer(slide_w_in, slide_h_in)
+    slide.shapes.add_picture(LOGO_DARK, left, top, w, h)
+    return True
+
+
+# ── 2.8: update theme color scheme via ZIP XML edit ──────────────────────────
+
+def update_theme_colors(pptx_path):
+    """
+    Replace #EB0000 with #E31C3D in all theme XML files inside the PPTX.
+    Also replaces FF0000 (pure red used in some legacy files).
+    Returns the number of replacements made.
+    """
+    OLD_COLORS = [b"EB0000", b"eb0000", b"FF0000", b"ff0000"]
+    NEW_COLOR  = b"E31C3D"
+
+    total = 0
+    tmp = pptx_path + ".tmp"
+    try:
+        with zipfile.ZipFile(pptx_path, 'r') as zin:
+            with zipfile.ZipFile(tmp, 'w', zipfile.ZIP_DEFLATED) as zout:
+                for item in zin.infolist():
+                    data = zin.read(item.filename)
+                    # Only process XML/relationship files in theme/ folder
+                    if item.filename.startswith("ppt/theme/") and item.filename.endswith(".xml"):
+                        for old in OLD_COLORS:
+                            count = data.count(old)
+                            if count:
+                                data = data.replace(old, NEW_COLOR)
+                                total += count
+                    zout.writestr(item, data)
+        os.replace(tmp, pptx_path)
+    except Exception as e:
+        if os.path.exists(tmp):
+            os.remove(tmp)
+        raise
+    return total
+
+
+# ── main processing ───────────────────────────────────────────────────────────
+
+def process_template(path, label):
+    """Process a template file: add logo to cover + footer + update theme."""
+    if not os.path.exists(path):
+        print(f"  SKIP (not found): {label}")
+        return
+
+    print(f"\n  {label}")
+
+    # 2.8: Update theme colors FIRST (before opening with python-pptx)
+    replacements = update_theme_colors(path)
+    if replacements:
+        print(f"    2.8: Updated {replacements} theme color refs (EB0000/FF0000 -> E31C3D)")
+    else:
+        print(f"    2.8: Theme already uses E31C3D (or no legacy red found)")
+
+    # Now open with python-pptx for logo work
+    prs = Presentation(path)
+    slides = list(prs.slides)
+    if not slides:
+        print(f"    SKIP: no slides")
+        return
+
+    slide_w = prs.slide_width.inches
+    slide_h = prs.slide_height.inches
+
+    cover_updated = False
+    footer_updated = 0
+
+    for i, slide in enumerate(slides):
+        if i == 0:
+            # 2.9a: logo on cover/title slide
+            if is_cra_cover_slide(slide):
+                if add_logo_to_cover(slide, slide_w):
+                    cover_updated = True
+                    print(f"    2.9a: Logo added to cover slide (top-right)")
+                else:
+                    print(f"    2.9a: Cover slide logo already present")
+            else:
+                # Non-CRA cover: add logo footer
+                if add_logo_footer_to_slide(slide, slide_w, slide_h):
+                    footer_updated += 1
+        else:
+            # 2.9b: logo footer on all content slides
+            if add_logo_footer_to_slide(slide, slide_w, slide_h):
+                footer_updated += 1
+
+    if footer_updated:
+        print(f"    2.9b: Footer logo added to {footer_updated} content slide(s)")
+    else:
+        print(f"    2.9b: Footer logos already present on all slides")
+
+    if replacements or cover_updated or footer_updated:
+        prs.save(path)
+        print(f"    Saved.")
+    else:
+        print(f"    No changes — skipping save.")
+
+
+def process_presentation(path, label):
+    """
+    Process a presentation file (not a template):
+    - Add cover slide if not already present
+    - Add logo to slide 1
+    - Add footer logo to all other slides
+    - Update theme colors
+    """
+    if not os.path.exists(path):
+        print(f"  SKIP (not found): {label}")
+        return
+
+    print(f"\n  {label}")
+
+    # 2.8: Update theme colors
+    replacements = update_theme_colors(path)
+    if replacements:
+        print(f"    2.8: Updated {replacements} theme color refs -> E31C3D")
+    else:
+        print(f"    2.8: No legacy theme red found (already correct or no theme color used)")
+
+    # 2.9: Add logos
+    prs = Presentation(path)
+    slides = list(prs.slides)
+    if not slides:
+        print(f"    SKIP: no slides")
+        return
+
+    slide_w = prs.slide_width.inches
+    slide_h = prs.slide_height.inches
+    footer_updated = 0
+    _slide1_had_logo = cover_slide_has_logo_image(slides[0])
+
+    for i, slide in enumerate(slides):
+        if i == 0:
+            # Add logo at top-right of the title/cover slide
+            if _slide1_had_logo:
+                print(f"    2.9a: Slide 1 logo already present")
+            else:
+                left, top, w, h = logo_dims_cover(slide_w)
+                slide.shapes.add_picture(LOGO_WHITE, left, top, w, h)
+                print(f"    2.9a: Logo added to slide 1 (top-right, white variant)")
+        else:
+            # Footer logo on all other slides
+            if add_logo_footer_to_slide(slide, slide_w, slide_h):
+                footer_updated += 1
+
+    if footer_updated:
+        print(f"    2.9b: Footer logo added to {footer_updated} slide(s)")
+    else:
+        print(f"    2.9b: Footer logos already present")
+
+    # cover_added is True when add_picture was called (logo wasn't present before)
+    cover_added = not _slide1_had_logo
+    if replacements or cover_added or footer_updated:
+        prs.save(path)
+        print(f"    Saved.")
+    else:
+        print(f"    No changes — skipping save.")
+
+
+def main():
+    print("2.8 + 2.9: Applying Rackspace branding to all PPTX files")
+    print("=" * 65)
+
+    # Verify logo assets exist
+    for logo in [LOGO_WHITE, LOGO_DARK]:
+        if not os.path.exists(logo):
+            raise FileNotFoundError(f"Logo asset missing: {logo}")
+
+    print("\n[TEMPLATES] Cover slide logo + footer logos + theme color")
+    print("-" * 65)
+    for path in TEMPLATE_FILES:
+        process_template(path, os.path.basename(path))
+
+    print("\n[PRESENTATIONS] Title slide logo + footer logos + theme color")
+    print("-" * 65)
+    for path in PRESENTATION_FILES:
+        process_presentation(path, os.path.basename(path))
+
+    print("\n" + "=" * 65)
+    print("Done. All PPTX files branded.")
+
+
+if __name__ == "__main__":
+    main()
