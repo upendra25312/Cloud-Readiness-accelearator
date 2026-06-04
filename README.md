@@ -1,10 +1,10 @@
 # Cloud Readiness Accelerator
 
-> **Enterprise-grade, vendor-neutral cloud assessment framework** — four-phase methodology, 35+ battle-tested templates, multi-cloud TCO models, and a structured hyperscaler decision framework. Built by Rackspace Technology cloud architects and validated on real enterprise engagements.
+> **Enterprise-grade, vendor-neutral cloud assessment framework** — four-phase methodology, 20+ battle-tested templates, multi-cloud TCO models, and a structured hyperscaler decision framework. Built by Rackspace Technology cloud architects and validated on real enterprise engagements.
 
 [![Framework Version](https://img.shields.io/badge/Framework-v2.0-0078D4?style=flat-square)](./Templates)
 [![Hyperscalers](https://img.shields.io/badge/Clouds-AWS%20%7C%20Azure%20%7C%20GCP-orange?style=flat-square)](#supported-hyperscalers)
-[![Templates](https://img.shields.io/badge/Templates-35%2B-green?style=flat-square)](./Templates)
+[![Templates](https://img.shields.io/badge/Templates-20%2B-green?style=flat-square)](./Templates)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey?style=flat-square)](./LICENSE)
 
 ---
