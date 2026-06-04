@@ -12,6 +12,7 @@
 ## Table of Contents
 
 - [Overview](#overview)
+- [When to Use This Accelerator vs Microsoft SMART](#when-to-use-this-accelerator-vs-microsoft-smart)
 - [Why This Accelerator](#why-this-accelerator)
 - [Four-Phase Methodology](#four-phase-methodology)
 - [Template Catalog](#template-catalog)
@@ -34,6 +35,70 @@ The **Cloud Readiness Accelerator (CRA)** is a structured, repeatable framework 
 - **Deliver executive-quality outputs** — assessment reports, executive summaries, and migration roadmaps
 
 This accelerator compresses what typically takes months into a structured 6–12 week engagement, giving clients a defensible, data-driven recommendation they can act on.
+
+---
+
+## When to Use This Accelerator vs Microsoft SMART
+
+Microsoft publishes the **[Strategic Migration Assessment and Readiness Tool (SMART)](https://learn.microsoft.com/en-us/assessments/Strategic-Migration-Assessment/)** — a free, 15-minute self-service questionnaire that generates curated Azure guidance. It is a useful starting point, but it operates at a fundamentally different level to the CRA. Understanding the distinction avoids using the wrong tool for the job.
+
+### Side-by-Side Comparison
+
+| Dimension | CRA (this repo) | Microsoft SMART |
+|---|---|---|
+| **Format** | Structured 6–12 week consulting engagement | 15-minute online questionnaire |
+| **Input data** | Real discovery data — VM inventory, sizing, dependencies, contracts | Self-reported answers to multiple-choice questions |
+| **Output** | Board-ready TCO model, assessment report, hyperscaler recommendation, migration wave plan | Curated guidance links and a readiness score |
+| **TCO modelling** | Full three-cloud, multi-region, multi-pricing-tier financial model | None |
+| **Hyperscaler scope** | AWS, Azure, GCP — vendor-neutral scoring matrix | Azure only |
+| **Governance** | Governance Foundations Alignment mapped to all three WAFs | Azure CAF references only |
+| **Defensibility** | Every score, weight, and finding is documented and auditable | Score is self-reported; cannot withstand procurement or board scrutiny |
+| **Commercial output** | Signed SOW, risk register, wave plan, Phase 2 business case | None |
+| **Who delivers it** | Rackspace architect team with client stakeholders | Client self-service |
+| **Cost** | Paid consulting engagement | Free |
+| **Ideal estate size** | 200–10,000+ VMs / complex hybrid estates | Any — designed for early exploration |
+
+### Use Microsoft SMART When
+
+- The client is at **initial exploration stage** and has not committed to an assessment engagement — SMART gives them enough framing to have an informed first conversation
+- You want to **qualify inbound demand quickly** — a SMART score can surface readiness gaps before scoping a paid engagement
+- The client is **Azure-only** with a simple estate (under 200 VMs) and needs directional guidance, not a formal business case
+- You need to **complement a CRA delivery** with Microsoft's own framework evidence — SMART results can be included as supporting material in the CRA report to reinforce the Azure recommendation
+- **Pre-sales**: use SMART during the discovery call to establish a readiness baseline before presenting the CRA as the next step
+
+### Use the CRA When
+
+- The client needs a **board-level, defensible business case** — procurement, finance, or a group board must approve the cloud programme
+- The estate is **complex or large** — VMware, multi-data-centre, mixed OS, SaaS sprawl, or significant legacy debt
+- **Hyperscaler selection is genuinely open** — the client has not pre-committed to Azure and needs a vendor-neutral evaluation they can trust
+- The engagement has a **commercial deliverable** — a signed Phase 2 SOW, an alliance co-sell motion, or a partner-funded assessment
+- **Scope risk is real** — history of scope surprises (the DMG Media engagement found 57% more VMs than the SoW assumed) requires proper discovery tooling and structured profiling, not a questionnaire
+- The organisation has **governance, security, or compliance requirements** that must be formally assessed and documented
+- There is a **migration execution phase** to follow — the CRA produces the wave plan, governance model, and risk register that Phase 2 teams need on day one
+
+### How They Work Together
+
+The two tools are complementary, not competing. A recommended sequence for a new pursuit:
+
+```
+Client self-completes SMART  →  Rackspace reviews score with client  →
+Scope CRA engagement  →  CRA delivery  →  SMART score included in final report
+as Microsoft-aligned evidence  →  Co-sell motion with Microsoft alliance team
+```
+
+Using SMART before a CRA engagement also signals to Microsoft that the client is in active assessment — which can unlock **Microsoft-funded assessment credits** or **partner incentives** through the Solution Assessment programme.
+
+### Other Microsoft Assessments Worth Knowing
+
+| Assessment | Duration | Best Use |
+|---|---|---|
+| [Cloud Adoption Strategy Evaluator](https://learn.microsoft.com/en-us/assessments/8fefc6d5-97ac-42b3-8e97-d82701e55bab/) | 10 min | Pre-engagement: test whether the client has a coherent cloud business case |
+| [Cloud Journey Tracker](https://learn.microsoft.com/en-us/assessments/cloud-journey-tracker/) | 15 min | Navigate client to the right Cloud Adoption Framework path — useful in first meetings |
+| [Azure Landing Zone Review](https://learn.microsoft.com/en-us/assessments/21765fea-dfe6-4bc4-8bb7-db9df5a6f6c0/) | 30 min | Post-CRA: assess Azure platform readiness before migration execution begins |
+| [App and Data Modernization Readiness Tool](https://learn.microsoft.com/en-us/assessments/50adbf76-60fb-47ce-a787-f9d5f52f6a48/) | 30 min | Phase 2 scoping: evaluate readiness for app refactoring and data platform migration |
+| [Azure Well-Architected Review](https://learn.microsoft.com/en-us/assessments/azure-architecture-review/) | 60 min | Post-migration: workload-level reliability, security, and cost optimisation review |
+
+These Microsoft assessments slot into the CRA lifecycle — they do not replace it. Position them to clients as **Microsoft's own validation layer** that sits alongside the Rackspace-delivered CRA.
 
 ---
 
